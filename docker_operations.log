@@ -1,0 +1,82 @@
+2023-11-22 20:36:37,143 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-22 20:41:06,027 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-22 20:41:06,147 - Authentication (publickey) successful!
+2023-11-22 20:41:07,270 - 45903cf5d785df871991622a61b64c3dc6fb069fbf8350fa36ee88b20ed951df
+
+2023-11-22 20:41:07,323 - Running command: ./bitcoin --p2p 0.0.0.0:6000 --api 0.0.0.0:7000 --shardId 0 --nodeId 1 --experNumber 34 --shardNum 5 --shardSize 5 --blockSize 2048 --k 6 --eDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff --iDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+2023-11-22 20:41:07,366 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-22 20:41:07,486 - Authentication (publickey) successful!
+2023-11-22 20:41:11,444 - 01fcd9f53010b74b2d17f7a684f365dd105c4b1a496d69bb4ba9ef4cfd0dfe7c
+
+2023-11-22 20:41:11,595 - Running command: ./bitcoin --p2p 0.0.0.0:6000 --api 0.0.0.0:7000 -c 10.108.4.58:6000 --shardId 0 --nodeId 1 --experNumber 34 --shardNum 5 --shardSize 5 --blockSize 2048 --k 6 --eDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff --iDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+2023-11-22 20:41:49,619 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-22 20:41:49,740 - Authentication (publickey) successful!
+2023-11-22 20:42:00,365 - my-bitcoin-app
+
+2023-11-22 20:42:00,409 - my-bitcoin-app
+
+2023-11-22 20:42:00,478 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-22 20:42:00,586 - Authentication (publickey) successful!
+2023-11-22 20:42:13,067 - my-bitcoin-app
+
+2023-11-22 20:42:13,282 - my-bitcoin-app
+
+2023-11-23 08:54:29,233 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-23 08:54:29,351 - Authentication (publickey) successful!
+2023-11-23 08:54:30,851 - b137a385cc9508bf155b810e7901fee916bf53c76f3f8e34c8f8276b957b9708
+
+2023-11-23 08:54:30,888 - Running command: ./bitcoin --p2p 0.0.0.0:6000 --api 0.0.0.0:7000 --shardId 0 --nodeId 1 --experNumber 34 --shardNum 5 --shardSize 5 --blockSize 2048 --k 6 --eDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff --iDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+2023-11-23 08:54:30,933 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-23 08:54:31,049 - Authentication (publickey) successful!
+2023-11-23 08:54:35,215 - 303dc6472b984fbad637d48ba350f32cd5172ebd9121d4ffa0a54f18b74519ed
+
+2023-11-23 08:54:35,388 - Running command: ./bitcoin --p2p 0.0.0.0:6000 --api 0.0.0.0:7000 -c 10.108.4.58:6000 --shardId 0 --nodeId 1 --experNumber 34 --shardNum 5 --shardSize 5 --blockSize 2048 --k 6 --eDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff --iDiff 000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+
+2023-11-23 08:54:45,022 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-23 08:54:45,103 - Authentication (publickey) successful!
+2023-11-23 08:54:55,430 - my-bitcoin-app
+
+2023-11-23 08:54:55,471 - my-bitcoin-app
+
+2023-11-23 08:54:55,516 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-23 08:54:55,624 - Authentication (publickey) successful!
+2023-11-23 08:55:08,597 - my-bitcoin-app
+
+2023-11-23 08:55:08,739 - my-bitcoin-app
+
+2023-11-29 22:03:18,537 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:03:18,670 - Authentication (publickey) successful!
+2023-11-29 22:03:18,706 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:03:18,822 - Authentication (publickey) successful!
+2023-11-29 22:06:48,536 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:06:48,625 - Authentication (publickey) successful!
+2023-11-29 22:06:48,940 - 
+2023-11-29 22:06:48,988 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:06:49,102 - Authentication (publickey) successful!
+2023-11-29 22:06:52,524 - 
+2023-11-29 22:09:24,787 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:09:24,877 - Authentication (publickey) successful!
+2023-11-29 22:09:25,198 - 
+2023-11-29 22:09:25,251 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:09:25,343 - Authentication (publickey) failed.
+2023-11-29 22:09:25,370 - Authentication (password) successful!
+2023-11-29 22:09:29,433 - 
+2023-11-29 22:10:30,794 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:10:30,898 - Authentication (publickey) successful!
+2023-11-29 22:10:31,182 - 
+2023-11-29 22:10:31,223 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:10:31,319 - Authentication (publickey) failed.
+2023-11-29 22:10:31,345 - Authentication (password) successful!
+2023-11-29 22:10:35,828 - 
+2023-11-29 22:17:00,967 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:17:01,051 - Authentication (publickey) successful!
+2023-11-29 22:17:01,351 - 
+2023-11-29 22:17:01,385 - 
+2023-11-29 22:17:01,439 - Connected (version 2.0, client OpenSSH_8.2p1)
+2023-11-29 22:17:01,522 - Authentication (publickey) failed.
+2023-11-29 22:17:01,554 - Authentication (password) successful!
+2023-11-29 22:17:05,704 - 
+2023-11-29 22:17:08,910 - 

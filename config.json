@@ -1,0 +1,50 @@
+{
+  "servers": [
+    {
+      "ip": "10.108.4.58",
+      "user": "root",
+      "ssh_key": "../../.ssh/id_rsa.pub",
+      "passwd": "ZB1NJQ3PoCfvPGz5rv",
+      "docker_options": [
+        "-p 6000:6000",
+        "-p 7000:7000",
+        "-e P2P='0.0.0.0:6000'",
+        "-e API='0.0.0.0:7000'",
+        "-e C_PARAM=''",
+        "-e SHARD_ID='0'",
+        "-e NODE_ID='1'",
+        "-e EXPER_NUMBER='34'",
+        "-e SHARD_NUM='5'",
+        "-e SHARD_SIZE='5'",
+        "-e BLOCK_SIZE='2048'",
+        "-e K='6'",
+        "-e EDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+      ],
+      "container_name": "my-bitcoin-app"
+    },
+    {
+      "ip": "10.108.6.241",
+      "user": "root",
+      "ssh_key": "../../.ssh/id_rsa.pub",
+      "passwd": "ZB1NJQ3PoCfvPGz5rv",
+      "docker_options": [
+        "-p 6000:6000",
+        "-p 7000:7000",
+        "-e P2P='0.0.0.0:6000'",
+        "-e API='0.0.0.0:7000'",
+        "-e C_PARAM='10.108.4.58:6000'",
+        "-e SHARD_ID='0'",
+        "-e NODE_ID='1'",
+        "-e EXPER_NUMBER='34'",
+        "-e SHARD_NUM='5'",
+        "-e SHARD_SIZE='5'",
+        "-e BLOCK_SIZE='2048'",
+        "-e K='6'",
+        "-e EDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+      ],
+      "container_name": "my-bitcoin-app"
+    }
+  ]
+}
