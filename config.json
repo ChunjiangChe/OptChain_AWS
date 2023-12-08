@@ -1,48 +1,25 @@
 {
-  "servers": [
+  "instances": [
     {
-      "ip": "10.108.4.58",
-      "user": "root",
-      "ssh_key": "../../.ssh/id_rsa.pub",
-      "passwd": "ZB1NJQ3PoCfvPGz5rv",
+      "region": "Virginia",
+      "ip": "52.207.199.152",
+      "user": "ubuntu",
+      "ssh_key": "./AWS_key/Virginia.pem",
       "docker_options": [
         "-p 6000:6000",
         "-p 7000:7000",
         "-e P2P='0.0.0.0:6000'",
         "-e API='0.0.0.0:7000'",
-        "-e C_PARAM=''",
-        "-e SHARD_ID='0'",
-        "-e NODE_ID='1'",
-        "-e EXPER_NUMBER='34'",
-        "-e SHARD_NUM='5'",
-        "-e SHARD_SIZE='5'",
+        "-e C_PARAM='ec2-3-27-145-131.ap-southeast-2.compute.amazonaws.com:6000'",
+        "-e SHARD_ID='1'",
+        "-e NODE_ID='0'",
+        "-e EXPER_NUMBER='0'",
+        "-e SHARD_NUM='3'",
+        "-e SHARD_SIZE='1'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
-      ],
-      "container_name": "my-bitcoin-app"
-    },
-    {
-      "ip": "10.108.6.241",
-      "user": "root",
-      "ssh_key": "../../.ssh/id_rsa.pub",
-      "passwd": "ZB1NJQ3PoCfvPGz5rv",
-      "docker_options": [
-        "-p 6000:6000",
-        "-p 7000:7000",
-        "-e P2P='0.0.0.0:6000'",
-        "-e API='0.0.0.0:7000'",
-        "-e C_PARAM='10.108.4.58:6000'",
-        "-e SHARD_ID='0'",
-        "-e NODE_ID='1'",
-        "-e EXPER_NUMBER='34'",
-        "-e SHARD_NUM='5'",
-        "-e SHARD_SIZE='5'",
-        "-e BLOCK_SIZE='2048'",
-        "-e K='6'",
-        "-e EDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ],
       "container_name": "my-bitcoin-app"
     }

@@ -11,10 +11,10 @@ def load_config(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-def ssh_connect(hostname, key_path):
+def ssh_connect(hostname, username, key_path):
     client = paramiko.SSHClient()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(hostname, username='root', key_filename=key_path)
+    client.connect(hostname, username=username, key_filename=key_path)
     return client
 
 def docker_command(client, command):
@@ -25,7 +25,7 @@ def docker_command(client, command):
 def main():
     config = load_config('config.json')
     for server in config['servers']:
-        client = ssh_connect(server['ip'], server['ssh_key'])
+        client = ssh_connect(server['ip'], server['user'], server['ssh_key'])
         docker_stop_command = "docker stop {}".format(server['container_name'])
         docker_remove_command = "docker rm {}".format(server['container_name'])
         docker_command(client, docker_stop_command)
