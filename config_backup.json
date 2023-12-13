@@ -48,7 +48,7 @@
     },
     {
       "region": "London",
-      "ip": "ec2-35-178-171-224.eu-west-2.compute.amazonaws.com",
+      "ip": "3.11.172.47",
       "user": "ubuntu",
       "ssh_key": "./AWS_key/London.pem",
       "docker_options": [
