@@ -1,36 +1,14 @@
-import json
-import paramiko
-import logging
-
-# 设置日志
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s',
-                    handlers=[logging.FileHandler('docker_operations.log', mode='a'),
-                              logging.StreamHandler()])
-
-def load_config(file_path):
-    with open(file_path, 'r') as file:
-        return json.load(file)
-
-def ssh_connect(hostname, username, key_path):
-    client = paramiko.SSHClient()
-    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    client.connect(hostname, username=username, key_filename=key_path)
-    return client
-
-def docker_command(client, command):
-    stdin, stdout, stderr = client.exec_command(command)
-    output = stdout.read().decode()
-    logging.info(output)
-
-def main():
-    config = load_config('config.json')
-    for server in config['servers']:
-        client = ssh_connect(server['ip'], server['user'], server['ssh_key'])
-        docker_stop_command = "docker stop {}".format(server['container_name'])
-        docker_remove_command = "docker rm {}".format(server['container_name'])
-        docker_command(client, docker_stop_command)
-        docker_command(client, docker_remove_command)
-        client.close()
+import server_utility
 
 if __name__ == "__main__":
-    main()
+    config = server_utility.load_config('config.json')
+    for instance in config['instances']:
+        ins_handle = server_utility.ssh_connect(instance['ip'], instance['user'], instance['ssh_key'])
+        docker_stop_command = "sudo docker stop {}".format(instance['container_name'])
+        docker_remove_command = "sudo docker rm {}".format(instance['container_name'])
+        server_utility.get_docker_logs(ins_handle, instance['container_name'], instance['ip'], True)
+        server_utility.run_cmd_in_ins(ins_handle, docker_stop_command)
+        server_utility.run_cmd_in_ins(ins_handle, docker_remove_command)
+        ins_handle.close()
+
+
