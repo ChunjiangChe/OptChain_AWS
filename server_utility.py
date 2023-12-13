@@ -39,7 +39,6 @@ def get_docker_logs(ins, container_name, ip, store_or_not):
     command = f"sudo docker logs {container_name}"
     output, error = run_cmd_in_ins(ins, command)
     if store_or_not:
-        # 使用服务器 IP 来命名日志文件
         log_file_path = f"./exec_log/{ip}_{container_name}_logs.txt"
         with open(log_file_path, "w") as log_file:
             log_file.write("output: {}".format(output))
