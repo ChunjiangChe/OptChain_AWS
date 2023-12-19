@@ -1,0 +1,27 @@
+{
+  "instances": [
+    {
+      "region": "Virginia",
+      "ip": "52.207.199.152",
+      "user": "ubuntu",
+      "ssh_key": "./AWS_key/Virginia.pem",
+      "docker_options": [
+        "-p 6000:6000",
+        "-p 7000:7000",
+        "-e P2P='0.0.0.0:6000'",
+        "-e API='0.0.0.0:7000'",
+        "-e C_PARAM=''",
+        "-e SHARD_ID='0'",
+        "-e NODE_ID='0'",
+        "-e EXPER_NUMBER='0'",
+        "-e SHARD_NUM='3'",
+        "-e SHARD_SIZE='1'",
+        "-e BLOCK_SIZE='2048'",
+        "-e K='6'",
+        "-e EDIFF='ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+      ],
+      "container_name": "my-bitcoin-app"
+    }
+  ]
+}
