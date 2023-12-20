@@ -161,7 +161,7 @@ We do sampling uniformly along the X-axis. Specifically, in a scenario described
 * given $\mu$ and $\sigma$
 * bandwidths vary from [$\mu - \alpha$, $\mu + \alpha$]
 
-Then we choose [$\mu-\alpha$, $\mu-\alpha$ + $\frac{2\alpha}{50}$, $\mu-\alpha + 2\frac{2\alpha}{50}$, ..., $\mu + \alpha - \frac{2\alpha}{50}$], and get the corresponging y value as the bandwidth.
+Then we choose [$\mu-\alpha$, $\mu-\alpha + \frac{2\alpha}{50}$, $\mu-\alpha + 2\frac{2\alpha}{50}$, ..., $\mu + \alpha - \frac{2\alpha}{50}$], and get the corresponging y value as the bandwidth.
 
 
 
