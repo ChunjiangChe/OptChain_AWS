@@ -1,0 +1,34 @@
+{
+  "AWS": [
+    {
+      "region": "Virginia",
+      "ssh_key": "./AWS_key/Virginia.pem",
+      "instances": [
+        {
+          "ip": "52.207.199.152",
+          "user": "ubuntu"
+        }
+      ]
+    },
+    {
+      "region": "Sydney",
+      "ssh_key": "./AWS_key/Sydney.pem",
+      "instances": [
+        {
+          "ip": "13.237.175.142",
+          "user": "ubuntu"
+        }
+      ]
+    },
+    {
+      "region": "London",
+      "ssh_key": "./AWS_key/London.pem",
+      "instances": [
+        {
+          "ip": "3.11.172.47",
+          "user": "ubuntu"
+        }
+      ]
+    }
+  ]
+}

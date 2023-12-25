@@ -6,11 +6,11 @@ def limit_bandwidth(ins, bandwidth, port, network_interface):
     cmd3 = "sudo tc class add dev {} parent 1:1 classid 1:2 htb rate 200mbit".format(network_interface)
     cmd4 = "sudo tc class add dev {} parent 1:1 classid 1:3 htb rate {}mbit".format(network_interface, bandwidth)
     cmd5 = "sudo tc filter add dev {} parent 1:0 prio 1 u32 match ip dport {} 0xffff flowid 1:3".format(network_interface, port)
-    server_utility.run_cmd_in_ins(ins, cmd1)
-    server_utility.run_cmd_in_ins(ins, cmd2)
-    server_utility.run_cmd_in_ins(ins, cmd3)
-    server_utility.run_cmd_in_ins(ins, cmd4)
-    server_utility.run_cmd_in_ins(ins, cmd5)
+    server_utility.run_cmd_in_ins(ins, cmd1, True)
+    server_utility.run_cmd_in_ins(ins, cmd2, True)
+    server_utility.run_cmd_in_ins(ins, cmd3, True)
+    server_utility.run_cmd_in_ins(ins, cmd4, True)
+    server_utility.run_cmd_in_ins(ins, cmd5, True)
 
 if __name__ == "__main__":
     bandwidth = 20

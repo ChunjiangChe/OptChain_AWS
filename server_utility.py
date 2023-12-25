@@ -25,19 +25,20 @@ def ssh_connect(hostname, username, key_path):
     return client
 
 
-def run_cmd_in_ins(ins, cmd):
+def run_cmd_in_ins(ins, cmd, if_print):
     print("Running: {}".format(cmd))
     stdin, stdout, stderr = ins.exec_command(cmd)
     output = stdout.read().decode()
     error = stderr.read().decode()
-    print("Output: {}".format(output))
-    print("Error: {}".format(error))
+    if if_print:
+        print("Output: {}".format(output))
+        print("Error: {}".format(error))
     return output, error
 
 
-def get_docker_logs(ins, container_name, ip, store_or_not):
+def get_docker_logs(ins, container_name, ip, store_or_not, if_print):
     command = f"sudo docker logs {container_name}"
-    output, error = run_cmd_in_ins(ins, command)
+    output, error = run_cmd_in_ins(ins, command, if_print)
     if store_or_not:
         log_file_path = f"./exec_log/{ip}_{container_name}_logs.txt"
         with open(log_file_path, "w") as log_file:
