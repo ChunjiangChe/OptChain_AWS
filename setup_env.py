@@ -17,27 +17,17 @@ def allow_ufw(ins):
 
 
 
-def test_command(ins):
-    test_cmd = "echo 'hello'"
-    server_utility.run_cmd_in_ins(ins, test_cmd, True)
-
 if __name__ == "__main__":
-    port = 6000
-    config = server_utility.load_config("config.json")
-    for instance in config["instances"]:
-        ins_handle = server_utility.ssh_connect(instance["ip"], instance["user"], instance["ssh_key"])
-        configue_env(ins_handle, config["image"])
+    hyperparameters = server_utility.load_config("./hyperparameter.json")
+    instances_config = server_utility.load_config("instances.json")
+    user = instances_config["user"]
+    for instance in instances_config["instances"]:
+        region = instance["region"]
+        ssh_key = instance["ssh_key"]
+        for ip in instance["ips"]:
+            ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
+            configue_env(ins_handle, hyperparameters["image"])
         #allow_ufw(ins_handle)
-        limit_bandwidth.limit_bandwidth(ins_handle, instance["bandwidth"], port, config["network_interface"])
+        #limit_bandwidth.limit_bandwidth(ins_handle, instance["bandwidth"], port, config["network_interface"])
 
-        #test_command(ins_handle)
-        # docker_run_command = (
-        #     "docker run -d --name {} ".format(server["container_name"])
-        #     + " ".join(server["docker_options"])
-        #     + " yezzizzey/my-bitcoin-app"
-        # )
-
-        ## 获取并保存容器日志，使用服务器 IP 作为文件名的一部分
-        # get_docker_logs(client, server["container_name"], server["ip"])
-
-        ins_handle.close()
+            ins_handle.close()

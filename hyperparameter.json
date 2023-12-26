@@ -1,0 +1,7 @@
+{
+  "image": "hkustelric/manifoldchain:2.0",
+  "container": "manifoldchain",
+  "network_interface": "ens5",
+  "p2p_port": 6000,
+  "api_port": 7000
+}

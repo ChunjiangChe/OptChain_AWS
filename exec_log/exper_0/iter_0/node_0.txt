@@ -1,0 +1,14 @@
+output: Running command: ./bitcoin --p2p 0.0.0.0:6000 --api 0.0.0.0:7000 --shardId 0 --nodeId 0 --experNumber 0 --shardNum 3 --shardSize 1 --blockSize 2048 --k 6 --eDiff 000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff --iDiff 0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+err: [2023-12-26T12:18:06Z INFO  bitcoin] configuration: Configuration { difficulty: 0000..ffff, thredshold: 0000..ffff, block_size: 2048, k: 6, initial_balance: 1000, initial_utxo_num: 3, user_size: 3, num_tx_recv: 3, shard_id: 0, node_id: 0, max_shard_num: 256, shard_num: 3, shard_size: 1, tx_merkle_proof_len: 1, network_delay: 0, exper_number: 0 }
+[2023-12-26T12:18:06Z INFO  bitcoin::manifoldchain::network::server] P2P server listening at 0.0.0.0:6000
+[2023-12-26T12:18:06Z INFO  bitcoin::manifoldchain::miner] Miner initialized into paused mode
+[2023-12-26T12:18:06Z INFO  bitcoin::manifoldchain::miner::worker] Miner initialized into paused mode
+[2023-12-26T12:18:06Z INFO  bitcoin::manifoldchain::transaction::generator] Generator initialized into pause mode
+[2023-12-26T12:18:06Z INFO  bitcoin::manifoldchain::api] API server listening at 0.0.0.0:7000
+[2023-12-26T12:18:17Z INFO  bitcoin::manifoldchain::network::server] Incoming peer from 52.207.199.152:42980
+[2023-12-26T12:18:17Z INFO  bitcoin::manifoldchain::network::server] Coming node's shard id: 1
+[2023-12-26T12:18:25Z INFO  bitcoin::manifoldchain::network::server] Incoming peer from 3.11.172.47:34284
+[2023-12-26T12:18:25Z INFO  bitcoin::manifoldchain::network::server] Coming node's shard id: 2
+[2023-12-26T12:18:26Z INFO  bitcoin::manifoldchain::transaction::generator] Generator starting in continuous mode with theta 50000000
+[2023-12-26T12:18:28Z INFO  bitcoin::manifoldchain::miner] Miner starting in continuous mode with lambda 0
+[2023-12-26T12:18:28Z INFO  bitcoin::manifoldchain::miner] re-package the block

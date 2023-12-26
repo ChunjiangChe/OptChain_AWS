@@ -17,6 +17,10 @@ def load_config(file_path):
     with open(file_path, "r") as file:
         return json.load(file)
 
+def write_config(file_path, dic):
+    with open(file_path, "w") as file:
+        return json.dump(dic, file)
+
 
 def ssh_connect(hostname, username, key_path):
     client = paramiko.SSHClient()
@@ -36,15 +40,10 @@ def run_cmd_in_ins(ins, cmd, if_print):
     return output, error
 
 
-def get_docker_logs(ins, container_name, ip, store_or_not, if_print):
+def get_docker_logs(ins, container_name, if_print):
     command = f"sudo docker logs {container_name}"
     output, error = run_cmd_in_ins(ins, command, if_print)
-    if store_or_not:
-        log_file_path = f"./exec_log/{ip}_{container_name}_logs.txt"
-        with open(log_file_path, "w") as log_file:
-            log_file.write("output: {}".format(output))
-            log_file.write("err: {}".format(error))
-        print(f"Logs for {container_name} on server {ip} saved to {log_file_path}")
-
+    return output, error
+        
 
 
