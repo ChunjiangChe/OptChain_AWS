@@ -1,1 +1,1 @@
-longest chain: b'["ac8..655"]'
+longest chain: b'["ac8..655:1970-01-01 00:00:00","forking_rate: 1.00"]'

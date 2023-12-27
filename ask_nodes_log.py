@@ -17,7 +17,7 @@ if __name__ == "__main__":
         node_id = instance["node_id"]
         api_addr = "{}:{}".format(ip, api_port)
         #url = "https://{}/network/ping".format(api_addr)
-        url = "http://{}/blockchain/longest-chain".format(api_addr)
+        url = "http://{}/blockchain/longest-chain-with-time".format(api_addr)
         print(url)
         res = requests.get(url)
         print(res.status_code)

@@ -1,5 +1,5 @@
 {
-  "image": "hkustelric/manifoldchain:2.0",
+  "image": "hkustelric/manifoldchain:2.1",
   "container": "manifoldchain",
   "network_interface": "ens5",
   "mining_interval": 0,
@@ -8,11 +8,11 @@
   "iteration": 0,
   "instances": [
     {
-      "region": "Sydney",
-      "ip": "13.237.175.142",
+      "region": "Virginia",
+      "ip": "52.207.199.152",
       "user": "ubuntu",
       "node_id": 0,
-      "ssh_key": "./AWS_key/Sydney.pem",
+      "ssh_key": "./AWS_key/Virginia.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6000:6000",
@@ -32,18 +32,18 @@
       ]
     },
     {
-      "region": "Virginia",
-      "ip": "52.207.199.152",
+      "region": "London",
+      "ip": "3.11.172.47",
       "user": "ubuntu",
       "node_id": 1,
-      "ssh_key": "./AWS_key/Virginia.pem",
+      "ssh_key": "./AWS_key/London.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6000:6000",
         "-p 7000:7000",
         "-e P2P='0.0.0.0:6000'",
         "-e API='0.0.0.0:7000'",
-        "-e PEERS='13.237.175.142:6000'",
+        "-e PEERS='52.207.199.152:6000'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='1'",
         "-e EXPER_NUMBER='0'",
@@ -56,18 +56,18 @@
       ]
     },
     {
-      "region": "London",
-      "ip": "3.11.172.47",
+      "region": "Sydney",
+      "ip": "13.237.175.142",
       "user": "ubuntu",
       "node_id": 2,
-      "ssh_key": "./AWS_key/London.pem",
+      "ssh_key": "./AWS_key/Sydney.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6000:6000",
         "-p 7000:7000",
         "-e P2P='0.0.0.0:6000'",
         "-e API='0.0.0.0:7000'",
-        "-e PEERS='13.237.175.142:6000,52.207.199.152:6000'",
+        "-e PEERS='52.207.199.152:6000,3.11.172.47:6000'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='2'",
         "-e EXPER_NUMBER='0'",

@@ -5,5 +5,5 @@
 ```
 sudo apt-get update
 sudo apt install docker.io
-sudo docker pull yezzizzey/my-bitcoin-app
+sudo docker pull hkustelric/manifoldchain:2.0
 ```
