@@ -1,6 +1,6 @@
 {
-  "shard_num": 3,
-  "shard_size": 1,
+  "shard_num": 5,
+  "shard_size": 10,
   "block_size": 2048,
   "confirmation_depth": 6,
   "mining_interval": 0,
@@ -9,11 +9,19 @@
   "iteration": 0,
   "inclusive_diff": "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
   "exclusive_diffs": [
-    "000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-    "000000e7ae147ae147ae147ae147ae147ae147ae147ae147ae147ae147ae1479",
-    "00000188f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28c"
+    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
   ],
   "propagation_delay": 100,
-  "bandwidths": [[20], [20], [20]],
+  "bandwidths": [
+    [5, 5, 10, 10, 20, 20, 40, 40, 60, 60],
+    [5, 5, 10, 10, 20, 20, 40, 40, 60, 60],
+    [5, 5, 10, 10, 20, 20, 40, 40, 60, 60],
+    [5, 5, 10, 10, 20, 20, 40, 40, 60, 60],
+    [5, 5, 10, 10, 20, 20, 40, 40, 60, 60]
+  ],
   "description": "test on AWS clound"
 }

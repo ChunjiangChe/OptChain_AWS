@@ -15,6 +15,10 @@ def allow_ufw(ins):
     server_utility.run_cmd_in_ins(ins, set_ufw_1, True)
     server_utility.run_cmd_in_ins(ins, set_ufw_2, True)
 
+def ban_ip(ins):
+    cmd = "sudo ufw deny from 94.102.61.44 to any"
+    server_utility.run_cmd_in_ins(ins, cmd, True)
+
 
 
 if __name__ == "__main__":
@@ -26,8 +30,8 @@ if __name__ == "__main__":
         ssh_key = instance["ssh_key"]
         for ip in instance["ips"]:
             ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
-            configue_env(ins_handle, hyperparameters["image"])
+            #configue_env(ins_handle, hyperparameters["image"])
         #allow_ufw(ins_handle)
         #limit_bandwidth.limit_bandwidth(ins_handle, instance["bandwidth"], port, config["network_interface"])
-
+            ban_ip(ins_handle)
             ins_handle.close()

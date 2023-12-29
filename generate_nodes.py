@@ -24,7 +24,7 @@ if __name__ == "__main__":
         region_name = region["region"]
         for ip in region["ips"]:
             nodes.append((ip, ssh_key, region_name))
-    random.shuffle(nodes)
+    #random.shuffle(nodes)
 
 
     exper_config = server_utility.load_config("./expers/exper_{}/config.json".format(exper_id))
@@ -70,13 +70,11 @@ if __name__ == "__main__":
             # add inter peers
             for k in range(j):
                 past_inter_node_id = i * shard_size + k
-                peers.append("{}:6000".format(nodes[past_inter_node_id][0]))
+                peers.append("{}:{}".format(nodes[past_inter_node_id][0], p2p_port))
             # add outer peers
             for h in range(i):
-                past_outer_node_id_0 = h * shard_size
-                past_outer_node_id_1 = h * shard_size + 1
-                peers.append("{}:6000".format(nodes[past_outer_node_id_0][0]))
-                #peers.append("{}:6000".format(nodes[past_outer_node_id_1][0]))
+                past_outer_node_id = h * shard_size + j
+                peers.append("{}:{}".format(nodes[past_outer_node_id][0], p2p_port))
             peers_parameter = ""
             if len(peers) > 0:
                 for peer in peers:

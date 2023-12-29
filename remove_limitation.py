@@ -17,6 +17,8 @@ if __name__=="__main__":
         ip = instance["ip"]
         user = instance["user"]
         ssh_key = instance["ssh_key"]
+        node_id = instance["node_id"]
+        print("handle node {}".format(node_id))
         ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
         remove_limitation(ins_handle, network_interface)
         ins_handle.close()
