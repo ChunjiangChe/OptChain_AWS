@@ -5,15 +5,15 @@
   "confirmation_depth": 6,
   "mining_interval": 0,
   "tx_generation_interval": 50000000,
-  "runtime": 1500,
+  "runtime": 2000,
   "iteration": 0,
-  "inclusive_diff": "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "inclusive_diff": "0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
   "exclusive_diffs": [
-    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    "0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
   ],
   "propagation_delay": 100,
   "bandwidths": [

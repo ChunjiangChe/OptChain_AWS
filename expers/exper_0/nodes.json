@@ -4,15 +4,15 @@
   "network_interface": "ens5",
   "mining_interval": 0,
   "tx_generation_interval": 50000000,
-  "runtime": 1500,
+  "runtime": 2000,
   "iteration": 0,
   "instances": [
     {
-      "region": "Virginia",
-      "ip": "52.207.199.152",
+      "region": "Canada",
+      "ip": "3.96.129.74",
       "user": "ubuntu",
       "node_id": 0,
-      "ssh_key": "./AWS_key/Virginia.pem",
+      "ssh_key": "./AWS_key/Canada.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
@@ -27,23 +27,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Virginia",
-      "ip": "3.227.140.65",
+      "region": "Stockholm",
+      "ip": "16.170.11.208",
       "user": "ubuntu",
       "node_id": 1,
-      "ssh_key": "./AWS_key/Virginia.pem",
+      "ssh_key": "./AWS_key/Stockholm.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042'",
+        "-e PEERS='3.96.129.74:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='1'",
         "-e EXPER_NUMBER='0'",
@@ -51,23 +51,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Virginia",
-      "ip": "3.85.252.146",
+      "region": "Canada",
+      "ip": "15.157.129.37",
       "user": "ubuntu",
       "node_id": 2,
-      "ssh_key": "./AWS_key/Virginia.pem",
+      "ssh_key": "./AWS_key/Canada.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='2'",
         "-e EXPER_NUMBER='0'",
@@ -75,23 +75,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Virginia",
-      "ip": "44.222.24.121",
+      "region": "Sydney",
+      "ip": "52.64.36.99",
       "user": "ubuntu",
       "node_id": 3,
-      "ssh_key": "./AWS_key/Virginia.pem",
+      "ssh_key": "./AWS_key/Sydney.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042,3.85.252.146:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042,15.157.129.37:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='3'",
         "-e EXPER_NUMBER='0'",
@@ -99,23 +99,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Virginia",
-      "ip": "34.235.25.14",
+      "region": "Sydney",
+      "ip": "13.211.68.104",
       "user": "ubuntu",
       "node_id": 4,
-      "ssh_key": "./AWS_key/Virginia.pem",
+      "ssh_key": "./AWS_key/Sydney.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042,3.85.252.146:6042,44.222.24.121:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042,15.157.129.37:6042,52.64.36.99:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='4'",
         "-e EXPER_NUMBER='0'",
@@ -123,23 +123,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Sydney",
-      "ip": "13.237.175.142",
+      "region": "Ireland",
+      "ip": "54.229.102.39",
       "user": "ubuntu",
       "node_id": 5,
-      "ssh_key": "./AWS_key/Sydney.pem",
+      "ssh_key": "./AWS_key/Ireland.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042,3.85.252.146:6042,44.222.24.121:6042,34.235.25.14:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042,15.157.129.37:6042,52.64.36.99:6042,13.211.68.104:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='5'",
         "-e EXPER_NUMBER='0'",
@@ -147,23 +147,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Sydney",
-      "ip": "13.238.16.52",
+      "region": "Stockholm",
+      "ip": "51.20.235.91",
       "user": "ubuntu",
       "node_id": 6,
-      "ssh_key": "./AWS_key/Sydney.pem",
+      "ssh_key": "./AWS_key/Stockholm.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042,3.85.252.146:6042,44.222.24.121:6042,34.235.25.14:6042,13.237.175.142:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042,15.157.129.37:6042,52.64.36.99:6042,13.211.68.104:6042,54.229.102.39:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='6'",
         "-e EXPER_NUMBER='0'",
@@ -171,23 +171,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Sydney",
-      "ip": "13.236.234.12",
+      "region": "Saopaulo",
+      "ip": "54.233.134.56",
       "user": "ubuntu",
       "node_id": 7,
-      "ssh_key": "./AWS_key/Sydney.pem",
+      "ssh_key": "./AWS_key/Saopaulo.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042,3.85.252.146:6042,44.222.24.121:6042,34.235.25.14:6042,13.237.175.142:6042,13.238.16.52:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042,15.157.129.37:6042,52.64.36.99:6042,13.211.68.104:6042,54.229.102.39:6042,51.20.235.91:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='7'",
         "-e EXPER_NUMBER='0'",
@@ -195,23 +195,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Sydney",
-      "ip": "13.211.68.104",
+      "region": "Califonia",
+      "ip": "184.169.143.147",
       "user": "ubuntu",
       "node_id": 8,
-      "ssh_key": "./AWS_key/Sydney.pem",
+      "ssh_key": "./AWS_key/California.pem",
       "bandwidth": 60,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042,3.85.252.146:6042,44.222.24.121:6042,34.235.25.14:6042,13.237.175.142:6042,13.238.16.52:6042,13.236.234.12:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042,15.157.129.37:6042,52.64.36.99:6042,13.211.68.104:6042,54.229.102.39:6042,51.20.235.91:6042,54.233.134.56:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='8'",
         "-e EXPER_NUMBER='0'",
@@ -219,23 +219,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Sydney",
-      "ip": "52.64.36.99",
+      "region": "Mumbai",
+      "ip": "15.206.65.186",
       "user": "ubuntu",
       "node_id": 9,
-      "ssh_key": "./AWS_key/Sydney.pem",
+      "ssh_key": "./AWS_key/Mumbai.pem",
       "bandwidth": 60,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.227.140.65:6042,3.85.252.146:6042,44.222.24.121:6042,34.235.25.14:6042,13.237.175.142:6042,13.238.16.52:6042,13.236.234.12:6042,13.211.68.104:6042'",
+        "-e PEERS='3.96.129.74:6042,16.170.11.208:6042,15.157.129.37:6042,52.64.36.99:6042,13.211.68.104:6042,54.229.102.39:6042,51.20.235.91:6042,54.233.134.56:6042,184.169.143.147:6042'",
         "-e SHARD_ID='0'",
         "-e NODE_ID='9'",
         "-e EXPER_NUMBER='0'",
@@ -243,23 +243,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "London",
-      "ip": "3.11.172.47",
+      "region": "Tokyo",
+      "ip": "54.65.236.177",
       "user": "ubuntu",
       "node_id": 10,
-      "ssh_key": "./AWS_key/London.pem",
+      "ssh_key": "./AWS_key/Tokyo.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042'",
+        "-e PEERS='3.96.129.74:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='10'",
         "-e EXPER_NUMBER='0'",
@@ -267,23 +267,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "London",
-      "ip": "13.40.0.209",
+      "region": "Califonia",
+      "ip": "54.153.74.173",
       "user": "ubuntu",
       "node_id": 11,
-      "ssh_key": "./AWS_key/London.pem",
+      "ssh_key": "./AWS_key/California.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,3.227.140.65:6042'",
+        "-e PEERS='54.65.236.177:6042,16.170.11.208:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='11'",
         "-e EXPER_NUMBER='0'",
@@ -291,13 +291,13 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
       "region": "London",
-      "ip": "3.11.22.70",
+      "ip": "13.40.0.209",
       "user": "ubuntu",
       "node_id": 12,
       "ssh_key": "./AWS_key/London.pem",
@@ -307,7 +307,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.85.252.146:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,15.157.129.37:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='12'",
         "-e EXPER_NUMBER='0'",
@@ -315,23 +315,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "London",
-      "ip": "18.168.236.54",
+      "region": "Virginia",
+      "ip": "3.227.140.65",
       "user": "ubuntu",
       "node_id": 13,
-      "ssh_key": "./AWS_key/London.pem",
+      "ssh_key": "./AWS_key/Virginia.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.11.22.70:6042,44.222.24.121:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,13.40.0.209:6042,52.64.36.99:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='13'",
         "-e EXPER_NUMBER='0'",
@@ -339,23 +339,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "London",
-      "ip": "3.9.255.151",
+      "region": "Mumbai",
+      "ip": "13.200.56.250",
       "user": "ubuntu",
       "node_id": 14,
-      "ssh_key": "./AWS_key/London.pem",
+      "ssh_key": "./AWS_key/Mumbai.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.11.22.70:6042,18.168.236.54:6042,34.235.25.14:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,13.40.0.209:6042,3.227.140.65:6042,13.211.68.104:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='14'",
         "-e EXPER_NUMBER='0'",
@@ -363,23 +363,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Canada",
-      "ip": "15.157.129.37",
+      "region": "Saopaulo",
+      "ip": "15.229.237.71",
       "user": "ubuntu",
       "node_id": 15,
-      "ssh_key": "./AWS_key/Canada.pem",
+      "ssh_key": "./AWS_key/Saopaulo.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.11.22.70:6042,18.168.236.54:6042,3.9.255.151:6042,13.237.175.142:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,13.40.0.209:6042,3.227.140.65:6042,13.200.56.250:6042,54.229.102.39:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='15'",
         "-e EXPER_NUMBER='0'",
@@ -387,23 +387,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Canada",
-      "ip": "3.96.9.244",
+      "region": "Ireland",
+      "ip": "34.252.71.196",
       "user": "ubuntu",
       "node_id": 16,
-      "ssh_key": "./AWS_key/Canada.pem",
+      "ssh_key": "./AWS_key/Ireland.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.11.22.70:6042,18.168.236.54:6042,3.9.255.151:6042,15.157.129.37:6042,13.238.16.52:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,13.40.0.209:6042,3.227.140.65:6042,13.200.56.250:6042,15.229.237.71:6042,51.20.235.91:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='16'",
         "-e EXPER_NUMBER='0'",
@@ -411,23 +411,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Canada",
-      "ip": "3.96.129.74",
+      "region": "Virginia",
+      "ip": "3.85.252.146",
       "user": "ubuntu",
       "node_id": 17,
-      "ssh_key": "./AWS_key/Canada.pem",
+      "ssh_key": "./AWS_key/Virginia.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.11.22.70:6042,18.168.236.54:6042,3.9.255.151:6042,15.157.129.37:6042,3.96.9.244:6042,13.236.234.12:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,13.40.0.209:6042,3.227.140.65:6042,13.200.56.250:6042,15.229.237.71:6042,34.252.71.196:6042,54.233.134.56:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='17'",
         "-e EXPER_NUMBER='0'",
@@ -435,23 +435,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Canada",
-      "ip": "15.156.10.179",
+      "region": "Virginia",
+      "ip": "52.207.199.152",
       "user": "ubuntu",
       "node_id": 18,
-      "ssh_key": "./AWS_key/Canada.pem",
+      "ssh_key": "./AWS_key/Virginia.pem",
       "bandwidth": 60,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.11.22.70:6042,18.168.236.54:6042,3.9.255.151:6042,15.157.129.37:6042,3.96.9.244:6042,3.96.129.74:6042,13.211.68.104:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,13.40.0.209:6042,3.227.140.65:6042,13.200.56.250:6042,15.229.237.71:6042,34.252.71.196:6042,3.85.252.146:6042,184.169.143.147:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='18'",
         "-e EXPER_NUMBER='0'",
@@ -459,23 +459,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Canada",
-      "ip": "15.156.235.37",
+      "region": "Saopaulo",
+      "ip": "18.229.193.205",
       "user": "ubuntu",
       "node_id": 19,
-      "ssh_key": "./AWS_key/Canada.pem",
+      "ssh_key": "./AWS_key/Saopaulo.pem",
       "bandwidth": 60,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='3.11.172.47:6042,13.40.0.209:6042,3.11.22.70:6042,18.168.236.54:6042,3.9.255.151:6042,15.157.129.37:6042,3.96.9.244:6042,3.96.129.74:6042,15.156.10.179:6042,52.64.36.99:6042'",
+        "-e PEERS='54.65.236.177:6042,54.153.74.173:6042,13.40.0.209:6042,3.227.140.65:6042,13.200.56.250:6042,15.229.237.71:6042,34.252.71.196:6042,3.85.252.146:6042,52.207.199.152:6042,15.206.65.186:6042'",
         "-e SHARD_ID='1'",
         "-e NODE_ID='19'",
         "-e EXPER_NUMBER='0'",
@@ -483,13 +483,13 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
       "region": "Saopaulo",
-      "ip": "15.229.237.71",
+      "ip": "54.232.150.21",
       "user": "ubuntu",
       "node_id": 20,
       "ssh_key": "./AWS_key/Saopaulo.pem",
@@ -499,7 +499,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.11.172.47:6042'",
+        "-e PEERS='3.96.129.74:6042,54.65.236.177:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='20'",
         "-e EXPER_NUMBER='0'",
@@ -507,23 +507,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Saopaulo",
-      "ip": "54.233.163.132",
+      "region": "Stockholm",
+      "ip": "13.50.83.214",
       "user": "ubuntu",
       "node_id": 21,
-      "ssh_key": "./AWS_key/Saopaulo.pem",
+      "ssh_key": "./AWS_key/Stockholm.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,3.227.140.65:6042,13.40.0.209:6042'",
+        "-e PEERS='54.232.150.21:6042,16.170.11.208:6042,54.153.74.173:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='21'",
         "-e EXPER_NUMBER='0'",
@@ -531,23 +531,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Saopaulo",
-      "ip": "18.229.193.205",
+      "region": "Sydney",
+      "ip": "13.237.175.142",
       "user": "ubuntu",
       "node_id": 22,
-      "ssh_key": "./AWS_key/Saopaulo.pem",
+      "ssh_key": "./AWS_key/Sydney.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,3.85.252.146:6042,3.11.22.70:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,15.157.129.37:6042,13.40.0.209:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='22'",
         "-e EXPER_NUMBER='0'",
@@ -555,23 +555,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Saopaulo",
-      "ip": "54.232.150.21",
+      "region": "Canada",
+      "ip": "15.156.235.37",
       "user": "ubuntu",
       "node_id": 23,
-      "ssh_key": "./AWS_key/Saopaulo.pem",
+      "ssh_key": "./AWS_key/Canada.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,18.229.193.205:6042,44.222.24.121:6042,18.168.236.54:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,13.237.175.142:6042,52.64.36.99:6042,3.227.140.65:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='23'",
         "-e EXPER_NUMBER='0'",
@@ -579,23 +579,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Saopaulo",
-      "ip": "54.233.134.56",
+      "region": "London",
+      "ip": "3.11.172.47",
       "user": "ubuntu",
       "node_id": 24,
-      "ssh_key": "./AWS_key/Saopaulo.pem",
+      "ssh_key": "./AWS_key/London.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,18.229.193.205:6042,54.232.150.21:6042,34.235.25.14:6042,3.9.255.151:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,13.237.175.142:6042,15.156.235.37:6042,13.211.68.104:6042,13.200.56.250:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='24'",
         "-e EXPER_NUMBER='0'",
@@ -603,13 +603,13 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
       "region": "Califonia",
-      "ip": "13.56.31.109",
+      "ip": "54.153.89.176",
       "user": "ubuntu",
       "node_id": 25,
       "ssh_key": "./AWS_key/California.pem",
@@ -619,7 +619,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,18.229.193.205:6042,54.232.150.21:6042,54.233.134.56:6042,13.237.175.142:6042,15.157.129.37:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,13.237.175.142:6042,15.156.235.37:6042,3.11.172.47:6042,54.229.102.39:6042,15.229.237.71:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='25'",
         "-e EXPER_NUMBER='0'",
@@ -627,23 +627,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Califonia",
-      "ip": "184.169.143.147",
+      "region": "Sydney",
+      "ip": "13.238.16.52",
       "user": "ubuntu",
       "node_id": 26,
-      "ssh_key": "./AWS_key/California.pem",
+      "ssh_key": "./AWS_key/Sydney.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,18.229.193.205:6042,54.232.150.21:6042,54.233.134.56:6042,13.56.31.109:6042,13.238.16.52:6042,3.96.9.244:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,13.237.175.142:6042,15.156.235.37:6042,3.11.172.47:6042,54.153.89.176:6042,51.20.235.91:6042,34.252.71.196:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='26'",
         "-e EXPER_NUMBER='0'",
@@ -651,23 +651,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Califonia",
-      "ip": "54.153.74.173",
+      "region": "Mumbai",
+      "ip": "13.201.153.227",
       "user": "ubuntu",
       "node_id": 27,
-      "ssh_key": "./AWS_key/California.pem",
+      "ssh_key": "./AWS_key/Mumbai.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,18.229.193.205:6042,54.232.150.21:6042,54.233.134.56:6042,13.56.31.109:6042,184.169.143.147:6042,13.236.234.12:6042,3.96.129.74:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,13.237.175.142:6042,15.156.235.37:6042,3.11.172.47:6042,54.153.89.176:6042,13.238.16.52:6042,54.233.134.56:6042,3.85.252.146:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='27'",
         "-e EXPER_NUMBER='0'",
@@ -675,13 +675,13 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
       "region": "Califonia",
-      "ip": "54.177.163.83",
+      "ip": "13.56.31.109",
       "user": "ubuntu",
       "node_id": 28,
       "ssh_key": "./AWS_key/California.pem",
@@ -691,7 +691,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,18.229.193.205:6042,54.232.150.21:6042,54.233.134.56:6042,13.56.31.109:6042,184.169.143.147:6042,54.153.74.173:6042,13.211.68.104:6042,15.156.10.179:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,13.237.175.142:6042,15.156.235.37:6042,3.11.172.47:6042,54.153.89.176:6042,13.238.16.52:6042,13.201.153.227:6042,184.169.143.147:6042,52.207.199.152:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='28'",
         "-e EXPER_NUMBER='0'",
@@ -699,23 +699,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Califonia",
-      "ip": "54.153.89.176",
+      "region": "Virginia",
+      "ip": "44.222.24.121",
       "user": "ubuntu",
       "node_id": 29,
-      "ssh_key": "./AWS_key/California.pem",
+      "ssh_key": "./AWS_key/Virginia.pem",
       "bandwidth": 60,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.229.237.71:6042,54.233.163.132:6042,18.229.193.205:6042,54.232.150.21:6042,54.233.134.56:6042,13.56.31.109:6042,184.169.143.147:6042,54.153.74.173:6042,54.177.163.83:6042,52.64.36.99:6042,15.156.235.37:6042'",
+        "-e PEERS='54.232.150.21:6042,13.50.83.214:6042,13.237.175.142:6042,15.156.235.37:6042,3.11.172.47:6042,54.153.89.176:6042,13.238.16.52:6042,13.201.153.227:6042,13.56.31.109:6042,15.206.65.186:6042,18.229.193.205:6042'",
         "-e SHARD_ID='2'",
         "-e NODE_ID='29'",
         "-e EXPER_NUMBER='0'",
@@ -723,8 +723,8 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
@@ -739,7 +739,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.11.172.47:6042,15.229.237.71:6042'",
+        "-e PEERS='3.96.129.74:6042,54.65.236.177:6042,54.232.150.21:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='30'",
         "-e EXPER_NUMBER='0'",
@@ -747,23 +747,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Tokyo",
-      "ip": "57.181.110.7",
+      "region": "Califonia",
+      "ip": "54.177.163.83",
       "user": "ubuntu",
       "node_id": 31,
-      "ssh_key": "./AWS_key/Tokyo.pem",
+      "ssh_key": "./AWS_key/California.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,3.227.140.65:6042,13.40.0.209:6042,54.233.163.132:6042'",
+        "-e PEERS='54.95.126.92:6042,16.170.11.208:6042,54.153.74.173:6042,13.50.83.214:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='31'",
         "-e EXPER_NUMBER='0'",
@@ -771,23 +771,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Tokyo",
-      "ip": "52.193.48.3",
+      "region": "Sydney",
+      "ip": "13.236.234.12",
       "user": "ubuntu",
       "node_id": 32,
-      "ssh_key": "./AWS_key/Tokyo.pem",
+      "ssh_key": "./AWS_key/Sydney.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,3.85.252.146:6042,3.11.22.70:6042,18.229.193.205:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,15.157.129.37:6042,13.40.0.209:6042,13.237.175.142:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='32'",
         "-e EXPER_NUMBER='0'",
@@ -795,13 +795,13 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
       "region": "Tokyo",
-      "ip": "54.65.236.177",
+      "ip": "57.181.110.7",
       "user": "ubuntu",
       "node_id": 33,
       "ssh_key": "./AWS_key/Tokyo.pem",
@@ -811,7 +811,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,52.193.48.3:6042,44.222.24.121:6042,18.168.236.54:6042,54.232.150.21:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,13.236.234.12:6042,52.64.36.99:6042,3.227.140.65:6042,15.156.235.37:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='33'",
         "-e EXPER_NUMBER='0'",
@@ -819,23 +819,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Tokyo",
-      "ip": "54.150.242.75",
+      "region": "Stockholm",
+      "ip": "51.21.35.134",
       "user": "ubuntu",
       "node_id": 34,
-      "ssh_key": "./AWS_key/Tokyo.pem",
+      "ssh_key": "./AWS_key/Stockholm.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,52.193.48.3:6042,54.65.236.177:6042,34.235.25.14:6042,3.9.255.151:6042,54.233.134.56:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,13.236.234.12:6042,57.181.110.7:6042,13.211.68.104:6042,13.200.56.250:6042,3.11.172.47:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='34'",
         "-e EXPER_NUMBER='0'",
@@ -843,23 +843,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Stockholm",
-      "ip": "51.20.235.91",
+      "region": "Ireland",
+      "ip": "3.254.242.208",
       "user": "ubuntu",
       "node_id": 35,
-      "ssh_key": "./AWS_key/Stockholm.pem",
+      "ssh_key": "./AWS_key/Ireland.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,52.193.48.3:6042,54.65.236.177:6042,54.150.242.75:6042,13.237.175.142:6042,15.157.129.37:6042,13.56.31.109:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,13.236.234.12:6042,57.181.110.7:6042,51.21.35.134:6042,54.229.102.39:6042,15.229.237.71:6042,54.153.89.176:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='35'",
         "-e EXPER_NUMBER='0'",
@@ -867,23 +867,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Stockholm",
-      "ip": "16.16.114.2",
+      "region": "Canada",
+      "ip": "15.156.10.179",
       "user": "ubuntu",
       "node_id": 36,
-      "ssh_key": "./AWS_key/Stockholm.pem",
+      "ssh_key": "./AWS_key/Canada.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,52.193.48.3:6042,54.65.236.177:6042,54.150.242.75:6042,51.20.235.91:6042,13.238.16.52:6042,3.96.9.244:6042,184.169.143.147:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,13.236.234.12:6042,57.181.110.7:6042,51.21.35.134:6042,3.254.242.208:6042,51.20.235.91:6042,34.252.71.196:6042,13.238.16.52:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='36'",
         "-e EXPER_NUMBER='0'",
@@ -891,23 +891,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Stockholm",
-      "ip": "16.170.11.208",
+      "region": "Tokyo",
+      "ip": "54.150.242.75",
       "user": "ubuntu",
       "node_id": 37,
-      "ssh_key": "./AWS_key/Stockholm.pem",
+      "ssh_key": "./AWS_key/Tokyo.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,52.193.48.3:6042,54.65.236.177:6042,54.150.242.75:6042,51.20.235.91:6042,16.16.114.2:6042,13.236.234.12:6042,3.96.129.74:6042,54.153.74.173:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,13.236.234.12:6042,57.181.110.7:6042,51.21.35.134:6042,3.254.242.208:6042,15.156.10.179:6042,54.233.134.56:6042,3.85.252.146:6042,13.201.153.227:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='37'",
         "-e EXPER_NUMBER='0'",
@@ -915,23 +915,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Stockholm",
-      "ip": "51.21.35.134",
+      "region": "London",
+      "ip": "3.11.22.70",
       "user": "ubuntu",
       "node_id": 38,
-      "ssh_key": "./AWS_key/Stockholm.pem",
+      "ssh_key": "./AWS_key/London.pem",
       "bandwidth": 60,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,52.193.48.3:6042,54.65.236.177:6042,54.150.242.75:6042,51.20.235.91:6042,16.16.114.2:6042,16.170.11.208:6042,13.211.68.104:6042,15.156.10.179:6042,54.177.163.83:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,13.236.234.12:6042,57.181.110.7:6042,51.21.35.134:6042,3.254.242.208:6042,15.156.10.179:6042,54.150.242.75:6042,184.169.143.147:6042,52.207.199.152:6042,13.56.31.109:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='38'",
         "-e EXPER_NUMBER='0'",
@@ -939,13 +939,13 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
       "region": "Stockholm",
-      "ip": "13.50.83.214",
+      "ip": "16.16.114.2",
       "user": "ubuntu",
       "node_id": 39,
       "ssh_key": "./AWS_key/Stockholm.pem",
@@ -955,7 +955,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='54.95.126.92:6042,57.181.110.7:6042,52.193.48.3:6042,54.65.236.177:6042,54.150.242.75:6042,51.20.235.91:6042,16.16.114.2:6042,16.170.11.208:6042,51.21.35.134:6042,52.64.36.99:6042,15.156.235.37:6042,54.153.89.176:6042'",
+        "-e PEERS='54.95.126.92:6042,54.177.163.83:6042,13.236.234.12:6042,57.181.110.7:6042,51.21.35.134:6042,3.254.242.208:6042,15.156.10.179:6042,54.150.242.75:6042,3.11.22.70:6042,15.206.65.186:6042,18.229.193.205:6042,44.222.24.121:6042'",
         "-e SHARD_ID='3'",
         "-e NODE_ID='39'",
         "-e EXPER_NUMBER='0'",
@@ -963,23 +963,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Mumbai",
-      "ip": "15.206.65.186",
+      "region": "London",
+      "ip": "18.168.236.54",
       "user": "ubuntu",
       "node_id": 40,
-      "ssh_key": "./AWS_key/Mumbai.pem",
+      "ssh_key": "./AWS_key/London.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='52.207.199.152:6042,3.11.172.47:6042,15.229.237.71:6042,54.95.126.92:6042'",
+        "-e PEERS='3.96.129.74:6042,54.65.236.177:6042,54.232.150.21:6042,54.95.126.92:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='40'",
         "-e EXPER_NUMBER='0'",
@@ -987,23 +987,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Mumbai",
-      "ip": "13.201.153.227",
+      "region": "Saopaulo",
+      "ip": "54.233.163.132",
       "user": "ubuntu",
       "node_id": 41,
-      "ssh_key": "./AWS_key/Mumbai.pem",
+      "ssh_key": "./AWS_key/Saopaulo.pem",
       "bandwidth": 5,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,3.227.140.65:6042,13.40.0.209:6042,54.233.163.132:6042,57.181.110.7:6042'",
+        "-e PEERS='18.168.236.54:6042,16.170.11.208:6042,54.153.74.173:6042,13.50.83.214:6042,54.177.163.83:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='41'",
         "-e EXPER_NUMBER='0'",
@@ -1011,23 +1011,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Mumbai",
-      "ip": "13.200.171.223",
+      "region": "Ireland",
+      "ip": "3.248.137.211",
       "user": "ubuntu",
       "node_id": 42,
-      "ssh_key": "./AWS_key/Mumbai.pem",
+      "ssh_key": "./AWS_key/Ireland.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,3.85.252.146:6042,3.11.22.70:6042,18.229.193.205:6042,52.193.48.3:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,15.157.129.37:6042,13.40.0.209:6042,13.237.175.142:6042,13.236.234.12:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='42'",
         "-e EXPER_NUMBER='0'",
@@ -1035,23 +1035,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Mumbai",
-      "ip": "13.200.56.250",
+      "region": "Virginia",
+      "ip": "34.235.25.14",
       "user": "ubuntu",
       "node_id": 43,
-      "ssh_key": "./AWS_key/Mumbai.pem",
+      "ssh_key": "./AWS_key/Virginia.pem",
       "bandwidth": 10,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,13.200.171.223:6042,44.222.24.121:6042,18.168.236.54:6042,54.232.150.21:6042,54.65.236.177:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,3.248.137.211:6042,52.64.36.99:6042,3.227.140.65:6042,15.156.235.37:6042,57.181.110.7:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='43'",
         "-e EXPER_NUMBER='0'",
@@ -1059,23 +1059,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Mumbai",
-      "ip": "65.1.225.19",
+      "region": "Canada",
+      "ip": "3.96.9.244",
       "user": "ubuntu",
       "node_id": 44,
-      "ssh_key": "./AWS_key/Mumbai.pem",
+      "ssh_key": "./AWS_key/Canada.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,13.200.171.223:6042,13.200.56.250:6042,34.235.25.14:6042,3.9.255.151:6042,54.233.134.56:6042,54.150.242.75:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,3.248.137.211:6042,34.235.25.14:6042,13.211.68.104:6042,13.200.56.250:6042,3.11.172.47:6042,51.21.35.134:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='44'",
         "-e EXPER_NUMBER='0'",
@@ -1083,23 +1083,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Ireland",
-      "ip": "3.254.242.208",
+      "region": "Tokyo",
+      "ip": "52.193.48.3",
       "user": "ubuntu",
       "node_id": 45,
-      "ssh_key": "./AWS_key/Ireland.pem",
+      "ssh_key": "./AWS_key/Tokyo.pem",
       "bandwidth": 20,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,13.200.171.223:6042,13.200.56.250:6042,65.1.225.19:6042,13.237.175.142:6042,15.157.129.37:6042,13.56.31.109:6042,51.20.235.91:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,3.248.137.211:6042,34.235.25.14:6042,3.96.9.244:6042,54.229.102.39:6042,15.229.237.71:6042,54.153.89.176:6042,3.254.242.208:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='45'",
         "-e EXPER_NUMBER='0'",
@@ -1107,23 +1107,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Ireland",
-      "ip": "54.229.102.39",
+      "region": "Mumbai",
+      "ip": "65.1.225.19",
       "user": "ubuntu",
       "node_id": 46,
-      "ssh_key": "./AWS_key/Ireland.pem",
+      "ssh_key": "./AWS_key/Mumbai.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,13.200.171.223:6042,13.200.56.250:6042,65.1.225.19:6042,3.254.242.208:6042,13.238.16.52:6042,3.96.9.244:6042,184.169.143.147:6042,16.16.114.2:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,3.248.137.211:6042,34.235.25.14:6042,3.96.9.244:6042,52.193.48.3:6042,51.20.235.91:6042,34.252.71.196:6042,13.238.16.52:6042,15.156.10.179:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='46'",
         "-e EXPER_NUMBER='0'",
@@ -1131,23 +1131,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Ireland",
-      "ip": "54.216.31.199",
+      "region": "Mumbai",
+      "ip": "13.200.171.223",
       "user": "ubuntu",
       "node_id": 47,
-      "ssh_key": "./AWS_key/Ireland.pem",
+      "ssh_key": "./AWS_key/Mumbai.pem",
       "bandwidth": 40,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,13.200.171.223:6042,13.200.56.250:6042,65.1.225.19:6042,3.254.242.208:6042,54.229.102.39:6042,13.236.234.12:6042,3.96.129.74:6042,54.153.74.173:6042,16.170.11.208:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,3.248.137.211:6042,34.235.25.14:6042,3.96.9.244:6042,52.193.48.3:6042,65.1.225.19:6042,54.233.134.56:6042,3.85.252.146:6042,13.201.153.227:6042,54.150.242.75:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='47'",
         "-e EXPER_NUMBER='0'",
@@ -1155,13 +1155,13 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
       "region": "Ireland",
-      "ip": "34.252.71.196",
+      "ip": "54.216.31.199",
       "user": "ubuntu",
       "node_id": 48,
       "ssh_key": "./AWS_key/Ireland.pem",
@@ -1171,7 +1171,7 @@
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,13.200.171.223:6042,13.200.56.250:6042,65.1.225.19:6042,3.254.242.208:6042,54.229.102.39:6042,54.216.31.199:6042,13.211.68.104:6042,15.156.10.179:6042,54.177.163.83:6042,51.21.35.134:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,3.248.137.211:6042,34.235.25.14:6042,3.96.9.244:6042,52.193.48.3:6042,65.1.225.19:6042,13.200.171.223:6042,184.169.143.147:6042,52.207.199.152:6042,13.56.31.109:6042,3.11.22.70:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='48'",
         "-e EXPER_NUMBER='0'",
@@ -1179,23 +1179,23 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     },
     {
-      "region": "Ireland",
-      "ip": "3.248.137.211",
+      "region": "London",
+      "ip": "3.9.255.151",
       "user": "ubuntu",
       "node_id": 49,
-      "ssh_key": "./AWS_key/Ireland.pem",
+      "ssh_key": "./AWS_key/London.pem",
       "bandwidth": 60,
       "parameters": [
         "-p 6042:6042",
         "-p 7149:7149",
         "-e P2P='0.0.0.0:6042'",
         "-e API='0.0.0.0:7149'",
-        "-e PEERS='15.206.65.186:6042,13.201.153.227:6042,13.200.171.223:6042,13.200.56.250:6042,65.1.225.19:6042,3.254.242.208:6042,54.229.102.39:6042,54.216.31.199:6042,34.252.71.196:6042,52.64.36.99:6042,15.156.235.37:6042,54.153.89.176:6042,13.50.83.214:6042'",
+        "-e PEERS='18.168.236.54:6042,54.233.163.132:6042,3.248.137.211:6042,34.235.25.14:6042,3.96.9.244:6042,52.193.48.3:6042,65.1.225.19:6042,13.200.171.223:6042,54.216.31.199:6042,15.206.65.186:6042,18.229.193.205:6042,44.222.24.121:6042,16.16.114.2:6042'",
         "-e SHARD_ID='4'",
         "-e NODE_ID='49'",
         "-e EXPER_NUMBER='0'",
@@ -1203,8 +1203,8 @@
         "-e SHARD_SIZE='10'",
         "-e BLOCK_SIZE='2048'",
         "-e K='6'",
-        "-e EDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
-        "-e IDIFF='0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
+        "-e EDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'",
+        "-e IDIFF='0000000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff'"
       ]
     }
   ]

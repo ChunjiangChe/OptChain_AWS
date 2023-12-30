@@ -24,7 +24,7 @@ if __name__ == "__main__":
         region_name = region["region"]
         for ip in region["ips"]:
             nodes.append((ip, ssh_key, region_name))
-    #random.shuffle(nodes)
+    random.shuffle(nodes)
 
 
     exper_config = server_utility.load_config("./expers/exper_{}/config.json".format(exper_id))

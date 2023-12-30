@@ -1,7 +1,7 @@
 #!/bin/bash
 
 exper_id=0
-runtime=720
+runtime=2000
 
 python3 start_tx_generators.py $exper_id
 python3 start_miners.py $exper_id
