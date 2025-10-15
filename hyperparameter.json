@@ -1,7 +1,8 @@
 {
-  "image": "hkustelric/manifoldchain:2.1",
-  "container": "manifoldchain",
+  "image": "hkustelric/optchain:latest",
+  "container": "optchain",
   "network_interface": "ens5",
-  "p2p_port": 6042,
-  "api_port": 7149
+  "miners_per_instance": 4,
+  "p2p_ports": [6042, 6043, 6044, 6045],
+  "api_ports": [7149, 7150, 7151, 7152]
 }

@@ -30,8 +30,8 @@ if __name__ == "__main__":
         ssh_key = instance["ssh_key"]
         for ip in instance["ips"]:
             ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
-            #configue_env(ins_handle, hyperparameters["image"])
+            configue_env(ins_handle, hyperparameters["image"])
         #allow_ufw(ins_handle)
         #limit_bandwidth.limit_bandwidth(ins_handle, instance["bandwidth"], port, config["network_interface"])
-            ban_ip(ins_handle)
+            # ban_ip(ins_handle)
             ins_handle.close()

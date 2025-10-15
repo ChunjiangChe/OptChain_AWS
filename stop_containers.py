@@ -8,8 +8,8 @@ def exit_node(instance, container):
     ssh_key = instance["ssh_key"]
     node_id = instance["node_id"]
     ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
-    docker_stop_command = "sudo docker stop {}".format(container)
-    docker_remove_command = "sudo docker rm {}".format(container)
+    docker_stop_command = "sudo docker stop {}{}".format(container, node_id)
+    docker_remove_command = "sudo docker rm {}{}".format(container, node_id)
 
     #output, error = server_utility.get_docker_logs(ins_handle, container, False)
     #log_file_path = "./exec_log/exper_{}/iter_{}/node_{}.txt".format(exper_id, iteration, node_id)
@@ -23,13 +23,17 @@ def exit_node(instance, container):
     ins_handle.close()
 
 if __name__ == "__main__":
-    exper_id = sys.argv[1]
+    if len(sys.argv) < 3:
+        print("Usage: python generate_nodes.py <protocol> <exper_id> <exper_iter>")
+        sys.exit(1)
+    protocol = str(sys.argv[1])
+    exper_id = sys.argv[2]
+    exper_iter = sys.argv[3]
 
     hyperparameters = server_utility.load_config("./hyperparameter.json")
-    nodes_config = server_utility.load_config("./expers/exper_{}/nodes.json".format(exper_id))
+    nodes_config = server_utility.load_config("./expers/{}/exper_{}/nodes.json".format(protocol, exper_id))
 
     container = hyperparameters["container"]
-    iteration = nodes_config["iteration"]
 
     tds = []
 
