@@ -3,37 +3,54 @@ import requests
 import sys
 import threading
 
-def ask_log(instance, api_port, exper_id, iteration):
+def ask_log(instance, protocol, exper_id, exper_iter):
     ip = instance['ip']
     node_id = instance["node_id"]
+    api_port = instance['api_port']
     api_addr = "{}:{}".format(ip, api_port)
     #url = "https://{}/network/ping".format(api_addr)
-    url = "http://{}/blockchain/longest-chain-with-time".format(api_addr)
-    print(url)
-    res = requests.get(url)
-    print(res.status_code)
-    print(res.content)
-    log_file_path = "./exper_log/exper_{}/iter_{}/node_{}.txt".format(exper_id, iteration, node_id)
-    with open(log_file_path, "w") as log_file:
-        log_file.write("longest chain: {}".format(res.content))
-    print("Exper logs for node on instance {} saved to {}".format(ip, log_file_path))
+    if protocol == "optchain":
+        prop_url = "http://{}/blockchain/proposer-chain".format(api_addr)
+        print(prop_url)
+        prop_blocks = requests.get(prop_url)
+        print(prop_blocks.status_code)
+        print(prop_blocks.content)
+
+        avai_url = "http://{}/blockchain/availability-chain".format(api_addr)
+        print(avai_url)
+        avai_blocks = requests.get(avai_url)
+        print(avai_blocks.status_code)
+        print(avai_blocks.content)
+
+        log_file_path = "./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id)
+        with open(log_file_path, "w") as log_file:
+            log_file.write("proposer chain: {}\navailability chain: {}".format(prop_blocks.content, avai_blocks.content))
+        print("Exper logs for node on instance {} saved to {}".format(ip, log_file_path))
+    else:
+        print("protocol not supported")
+        return
 
 
 if __name__ == "__main__":
-    exper_id = sys.argv[1]
+    if len(sys.argv) < 3:
+        print("Usage: python generate_nodes.py <protocol> <exper_id> <exper_iter>")
+        sys.exit(1)
+    protocol = str(sys.argv[1])
+    exper_id = sys.argv[2]
+    exper_iter = sys.argv[3]
 
     hyperparameters = server_utility.load_config("./hyperparameter.json")
-    nodes_config = server_utility.load_config("./expers/exper_{}/nodes.json".format(exper_id))
+    nodes_config = server_utility.load_config("./expers/{}/exper_{}/nodes.json".format(protocol, exper_id))
     
-    api_port = hyperparameters["api_port"]
-    iteration = nodes_config["iteration"]
+    
     
     tds = []
 
     for instance in nodes_config['instances']:
-        t = threading.Thread(target=ask_log, args=(instance, api_port, exper_id, iteration))
+        t = threading.Thread(target=ask_log, args=(instance, protocol, exper_id, exper_iter))
         t.start()
         tds.append(t)
+        # t.join()
     
     for td in tds:
         td.join()

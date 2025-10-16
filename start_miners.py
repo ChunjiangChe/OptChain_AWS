@@ -3,8 +3,9 @@ import requests
 import sys
 import threading
 
-def start_miners(instance, api_port, mining_interval):
+def start_miners(instance, mining_interval):
     ip = instance["ip"]
+    api_port = instance['api_port']
     api_addr = "{}:{}".format(ip, api_port)
     #url = "https://{}/network/ping".format(api_addr)
     url = "http://{}/miner/start?lambda={}".format(api_addr, mining_interval)
@@ -14,18 +15,22 @@ def start_miners(instance, api_port, mining_interval):
     print(res.content)
 
 if __name__ == "__main__":
-    exper_id = sys.argv[1]
+    if len(sys.argv) < 3:
+        print("Usage: python generate_nodes.py <protocol> <exper_id> <exper_iter>")
+        sys.exit(1)
+    protocol = str(sys.argv[1])
+    exper_id = sys.argv[2]
+    exper_iter = sys.argv[3]
 
     hyperparameters = server_utility.load_config("./hyperparameter.json")
-    nodes_config = server_utility.load_config("./expers/exper_{}/nodes.json".format(exper_id))
+    nodes_config = server_utility.load_config("./expers/{}/exper_{}/nodes.json".format(protocol, exper_id))
 
-    api_port = hyperparameters["api_port"]
     mining_interval = nodes_config["mining_interval"]
 
     tds = []
 
     for instance in nodes_config['instances']:
-        t = threading.Thread(target=start_miners, args=(instance, api_port, mining_interval))
+        t = threading.Thread(target=start_miners, args=(instance, mining_interval))
         t.start()
         tds.append(t)
 

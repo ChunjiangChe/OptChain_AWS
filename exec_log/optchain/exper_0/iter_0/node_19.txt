@@ -1,0 +1,4 @@
+output: ./powchain optchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149
+./powchain optchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149 -c 13.42.226.32:6044 -c 56.125.251.159:6043 -c 98.83.47.81:6043
+Running command: ./powchain optchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149 -c 13.42.226.32:6044 -c 56.125.251.159:6043 -c 98.83.47.81:6043 --shardId 1 --nodeId 3 --experNumber 0 --experIter 0 --shardNum 4 --shardSize 16 --blockSize 2048 --symbolSize 256 --propSize 5 --avaiSize 5 --eReq 3 --iReq 1 --k 6 --tDiff 00001c7fffffffffffffffffffffffffffffffffffffffffffffffffffffffff --pDiff 000005b333333333333333333333333333333333333333333333333333333333 --aDiff 00000123d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3c --iDiff 00000048f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f
+err: 

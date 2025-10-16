@@ -10,9 +10,9 @@
   "confirmation_depth": 6,
   "mining_interval": 0,
   "runtime": 200,
-  "tx_diff": "0001c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-  "prop_diff": "00005b3333333333333333333333333333333333333333333333333333333333",
-  "avai_diff": "0000123d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d7",
-  "in_avai_diff": "0000003333333333333333333333333333333333333333333333333333333333",
+  "tx_diff": "00001c7fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "prop_diff": "000005b333333333333333333333333333333333333333333333333333333333",
+  "avai_diff": "00000123d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3d70a3c",
+  "in_avai_diff": "00000048f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f",
   "description": "test for demo"
 }

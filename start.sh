@@ -2,14 +2,14 @@
 
 
 exper_id=0
-runtime=10
+exper_iter=0
+runtime=100
 
-python3 start_nodes.py $exper_id
+python3 start_nodes.py optchain $exper_id $exper_iter
 
 sleep 120
 
-python3 start_tx_generators.py $exper_id
-python3 start_miners.py $exper_id
+python3 start_miners.py optchain $exper_id $exper_iter
 
 c=0
 while [ $c -lt $runtime ]; do
@@ -18,7 +18,7 @@ while [ $c -lt $runtime ]; do
   echo "$c"
 done
 
-python3 ask_nodes_log.py $exper_id
-python3 stop_containers.py $exper_id
-python3 remove_limitation.py $exper_id
+python3 ask_nodes_log.py optchain $exper_id $exper_iter
+python3 stop_containers.py optchain $exper_id $exper_iter
+# python3 remove_limitation.py $exper_id
 
