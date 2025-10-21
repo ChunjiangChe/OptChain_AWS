@@ -36,5 +36,6 @@ if __name__ == "__main__":
         t = threading.Thread(target=view_nodes, args=(instance, container, exper_id, exper_iter))
         t.start()
         tds.append(t)
+        # t.join()
     for td in tds:
         td.join()

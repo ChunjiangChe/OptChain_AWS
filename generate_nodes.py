@@ -28,11 +28,13 @@ def get_protocol_config(protocol, exper_id):
                 node_ip, node_p2p_port, node_api_port,node_key, region_name = nodes[node_id]
 
                 peers = []
-                for k in range(i):
-                    for h in range(j):
+                for k in range(i+1):
+                    h_range = j if k == i else shard_size
+                    for h in range(h_range):
                         past_node_id = k * shard_size + h
                         past_node_ip, past_node_p2p_port, past_node_api_port, past_node_key, past_region_name = nodes[past_node_id]
                         peers.append("{}:{}".format(past_node_ip, past_node_p2p_port))
+                print("peer size: {}".format(len(peers)))
                 peers_parameter = ""
                 if len(peers) > 0:
                     for peer in peers:

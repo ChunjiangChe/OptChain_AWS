@@ -14,13 +14,13 @@ def ask_log(instance, protocol, exper_id, exper_iter):
         print(prop_url)
         prop_blocks = requests.get(prop_url)
         print(prop_blocks.status_code)
-        print(prop_blocks.content)
+        # print(prop_blocks.content)
 
         avai_url = "http://{}/blockchain/availability-chain".format(api_addr)
         print(avai_url)
         avai_blocks = requests.get(avai_url)
         print(avai_blocks.status_code)
-        print(avai_blocks.content)
+        # print(avai_blocks.content)
 
         log_file_path = "./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id)
         with open(log_file_path, "w") as log_file:

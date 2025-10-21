@@ -1,5 +1,5 @@
 {
-  "image": "hkustelric/optchain:latest",
+  "image": "hkustelric/optchain:debug",
   "container": "optchain",
   "network_interface": "ens5",
   "miners_per_instance": 4,

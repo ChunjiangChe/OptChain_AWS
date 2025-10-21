@@ -4,7 +4,9 @@ import threading
 
 def update_image(ip, user, ssh_key, image):
     ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
+    delete_docker_cmd = "sudo docker rmi -f $(sudo docker images -q)"
     pull_docker_cmd = "sudo docker pull {}".format(image)
+    server_utility.run_cmd_in_ins(ins_handle, delete_docker_cmd, True)
     server_utility.run_cmd_in_ins(ins_handle, pull_docker_cmd, True)
     ins_handle.close()
 
