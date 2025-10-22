@@ -44,6 +44,7 @@ def get_protocol_config(protocol, exper_id):
                 parameters = [\
                         "-p {}:{}".format(node_p2p_port, node_p2p_port),\
                         "-p {}:{}".format(node_api_port, node_api_port),\
+                        "-e PROTOCOL='optchain'",\
                         "-e P2P='0.0.0.0:{}'".format(node_p2p_port),\
                         "-e API='0.0.0.0:{}'".format(node_api_port),\
                         "-e PEERS='{}'".format(peers_parameter),\
@@ -64,6 +65,70 @@ def get_protocol_config(protocol, exper_id):
                         "-e PROP_DIFF='{}'".format(prop_dff),\
                         "-e AVAI_DIFF='{}'".format(avai_dff),\
                         "-e IN_AVAI_DIFF='{}'".format(in_avai_dff)\
+                        ]
+
+                # generate the node config
+                node_config = {\
+                            "region": region_name,\
+                            "ip": node_ip,\
+                            "p2p_port": node_p2p_port,\
+                            "api_port": node_api_port,\
+                            "user": user_name,\
+                            "node_id": node_id,\
+                            "ssh_key": node_key,\
+                            "parameters": parameters\
+                            }
+                nodes_config.append(node_config)
+        return nodes_config
+    elif protocol == "manifoldchain":
+        exper_config = server_utility.load_config("./expers/manifoldchain/exper_{}/config.json".format(exper_id))
+    
+        shard_num = exper_config["shard_num"]
+        shard_size = exper_config["shard_size"]
+        block_size = exper_config["block_size"]
+        confirmation_depth = exper_config["confirmation_depth"]
+        domestic_rate = exper_config["domestic_rate"]
+        ex_diffs = exper_config["ex_diffs"]
+        in_diff = exper_config["in_diff"]
+
+        nodes_config = []
+        for i in range(shard_num):
+            for j in range(shard_size):
+                node_id = i * shard_size + j
+                node_ip, node_p2p_port, node_api_port,node_key, region_name = nodes[node_id]
+                ex_diff = ex_diffs[i]
+                peers = []
+                for k in range(i+1):
+                    h_range = j if k == i else shard_size
+                    for h in range(h_range):
+                        past_node_id = k * shard_size + h
+                        past_node_ip, past_node_p2p_port, past_node_api_port, past_node_key, past_region_name = nodes[past_node_id]
+                        peers.append("{}:{}".format(past_node_ip, past_node_p2p_port))
+                print("peer size: {}".format(len(peers)))
+                peers_parameter = ""
+                if len(peers) > 0:
+                    for peer in peers:
+                        peers_parameter = "{}{},".format(peers_parameter, peer)
+                    peers_parameter = peers_parameter[0:len(peers_parameter)-1]
+                # generate the parameters
+                parameters = [\
+                        "-p {}:{}".format(node_p2p_port, node_p2p_port),\
+                        "-p {}:{}".format(node_api_port, node_api_port),\
+                        "-e PROTOCOL='manifoldchain'",\
+                        "-e P2P='0.0.0.0:{}'".format(node_p2p_port),\
+                        "-e API='0.0.0.0:{}'".format(node_api_port),\
+                        "-e PEERS='{}'".format(peers_parameter),\
+                        "-e SHARD_ID='{}'".format(i),\
+                        "-e NODE_ID='{}'".format(j),\
+                        "-e EXPER_NUMBER='{}'".format(exper_id),\
+                        "-e EXPER_ITER='{}'".format(exper_iter),\
+                        "-e SHARD_NUM='{}'".format(shard_num),\
+                        "-e SHARD_SIZE='{}'".format(shard_size),\
+                        "-e BLOCK_SIZE='{}'".format(block_size),\
+                        "-e K='{}'".format(confirmation_depth),\
+                        "-e DOMESTIC_RATE='{}'".format(domestic_rate),\
+                        "-e EX_DIFF='{}'".format(ex_diff),\
+                        "-e IN_DIFF='{}'".format(in_diff)\
                         ]
 
                 # generate the node config

@@ -26,6 +26,17 @@ def ask_log(instance, protocol, exper_id, exper_iter):
         with open(log_file_path, "w") as log_file:
             log_file.write("proposer chain: {}\navailability chain: {}".format(prop_blocks.content, avai_blocks.content))
         print("Exper logs for node on instance {} saved to {}".format(ip, log_file_path))
+    elif protocol == "manifoldchain":
+        chain_url = "http://{}/blockchain/longest-chain-with-time".format(api_addr)
+        print(chain_url)
+        blocks = requests.get(chain_url)
+        print(blocks.status_code)
+        # print(blocks.content)
+
+        log_file_path = "./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id)
+        with open(log_file_path, "w") as log_file:
+            log_file.write("longest chain: {}".format(blocks.content))
+        print("Exper logs for node on instance {} saved to {}".format(ip, log_file_path))
     else:
         print("protocol not supported")
         return
