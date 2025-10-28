@@ -2,7 +2,7 @@
   "image": "hkustelric/optchain:latest",
   "container": "optchain",
   "network_interface": "ens5",
-  "miners_per_instance": 4,
-  "p2p_ports": [6042, 6043, 6044, 6045],
-  "api_ports": [7149, 7150, 7151, 7152]
+  "miners_per_instance": 1,
+  "p2p_ports": [6042],
+  "api_ports": [7149]
 }
