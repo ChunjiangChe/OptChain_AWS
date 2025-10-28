@@ -1,15 +1,15 @@
 #!/bin/bash
 
 
-exper_id=1
+exper_id=2
 exper_iter=0
 runtime=100
 protocol="optchain"
 
+python3 limit_bandwidth.py $protocol $exper_id $exper_iter > bandwidth_monitor.txt
 python3 start_nodes.py $protocol $exper_id $exper_iter
 
 sleep 120
-
 python3 start_miners.py $protocol $exper_id $exper_iter
 
 c=0
@@ -24,5 +24,5 @@ python3 ask_nodes_log.py $protocol $exper_id $exper_iter
 python3 stop_containers.py
 python3 view_node.py $protocol $exper_id $exper_iter
 python3 rm_containers.py
-# python3 remove_limitation.py $exper_id
+python3 remove_limitation.py $protocol $exper_id $exper_iter
 

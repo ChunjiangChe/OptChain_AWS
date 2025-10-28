@@ -23,6 +23,20 @@ def clear_download_only(ins, network_interface):
     for c in cmds:
         server_utility.run_cmd_in_ins(ins, c, True)
 
+# def clear_download_only(ins, iface):
+#     # 清理（不删除真实网卡）
+#     script = f"""bash -lc '
+# set -euo pipefail
+# tc qdisc del dev {iface} ingress 2>/dev/null || true
+# tc qdisc del dev ifb0 root 2>/dev/null || true
+# tc qdisc del dev ifb0 ingress 2>/dev/null || true
+# ip link set dev ifb0 down 2>/dev/null || true
+# ip link delete ifb0 type ifb 2>/dev/null || true
+# tc qdisc show dev {iface} || true
+# ip link show ifb0 >/dev/null 2>&1 && tc qdisc show dev ifb0 || echo "(ifb0 not present)"
+# '"""
+#     server_utility.run_cmd_in_ins(ins, script, True)
+
 if __name__=="__main__":
 
     if len(sys.argv) < 3:

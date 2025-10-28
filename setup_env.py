@@ -19,12 +19,19 @@ def ban_ip(ins):
     cmd = "sudo ufw deny from 94.102.61.44 to any"
     server_utility.run_cmd_in_ins(ins, cmd, True)
 
+def install_limit_bandwidth_script(ins):
+    sftp = ins.open_sftp()
+    sftp.put("limit_AWS_bandwidth.sh", "./limit_AWS_bandwidth.sh")
+    cmd = "sudo chmod +x limit_AWS_bandwidth.sh"
+    server_utility.run_cmd_in_ins(ins, cmd, True)
+
 def setup_node(ip, user, ssh_key, ports, image):
     ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
-    configue_env(ins_handle, hyperparameters["image"])
-    allow_ufw(ins_handle, ports)
-#limit_bandwidth.limit_bandwidth(ins_handle, instance["bandwidth"], port, config["network_interface"])
+    # configue_env(ins_handle, hyperparameters["image"])
+    # allow_ufw(ins_handle, ports)
+
     # ban_ip(ins_handle)
+    install_limit_bandwidth_script(ins_handle)
     ins_handle.close()
 
 
