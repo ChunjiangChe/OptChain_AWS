@@ -3,7 +3,7 @@ import sys
 import random
 import os
 
-def get_protocol_config(protocol, exper_id):
+def get_protocol_config(protocol, exper_id, nodes):
     if protocol == "optchain":
         exper_config = server_utility.load_config("./expers/optchain/exper_{}/config.json".format(exper_id))
     
@@ -20,12 +20,14 @@ def get_protocol_config(protocol, exper_id):
         prop_dff = exper_config["prop_diff"]
         avai_dff = exper_config["avai_diff"]
         in_avai_dff = exper_config["in_avai_diff"]
+        bandwidths = exper_config["bandwidths"]
 
         nodes_config = []
         for i in range(shard_num):
             for j in range(shard_size):
                 node_id = i * shard_size + j
-                node_ip, node_p2p_port, node_api_port,node_key, region_name = nodes[node_id]
+                node_ip, node_p2p_port, node_api_port, node_key, region_name = nodes[node_id]
+                bandwidth = bandwidths[node_id]
 
                 peers = []
                 for k in range(i+1):
@@ -76,6 +78,7 @@ def get_protocol_config(protocol, exper_id):
                             "user": user_name,\
                             "node_id": node_id,\
                             "ssh_key": node_key,\
+                            "bandwidth": bandwidth, \
                             "parameters": parameters\
                             }
                 nodes_config.append(node_config)
@@ -200,7 +203,7 @@ if __name__ == "__main__":
     mining_interval = exper_config["mining_interval"]
     runtime = exper_config["runtime"]
 
-    nodes_config = get_protocol_config(protocol, exper_id)
+    nodes_config = get_protocol_config(protocol, exper_id, nodes)
     # generate the whole config
     config = {\
               "image": image,\
