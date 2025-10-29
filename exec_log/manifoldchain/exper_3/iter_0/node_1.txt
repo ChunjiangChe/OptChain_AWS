@@ -1,0 +1,2 @@
+output: Running command: ./powchain manifoldchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149 -c 54.199.229.177:6042 --shardId 0 --nodeId 1 --experNumber 3 --experIter 0 --shardNum 4 --shardSize 16 --blockSize 4096 --k 6 --domesticRatio 0.7 --eDiff 00000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffd --iDiff 0000026666666666666666666666666666666666666666666666666666666664
+err: 

@@ -93,6 +93,7 @@ def get_protocol_config(protocol, exper_id, nodes):
         domestic_rate = exper_config["domestic_rate"]
         ex_diffs = exper_config["ex_diffs"]
         in_diff = exper_config["in_diff"]
+        bandwidths = exper_config["bandwidths"]
 
         nodes_config = []
         for i in range(shard_num):
@@ -100,6 +101,8 @@ def get_protocol_config(protocol, exper_id, nodes):
                 node_id = i * shard_size + j
                 node_ip, node_p2p_port, node_api_port,node_key, region_name = nodes[node_id]
                 ex_diff = ex_diffs[i]
+                bandwidth = bandwidths[node_id]
+
                 peers = []
                 for k in range(i+1):
                     h_range = j if k == i else shard_size
@@ -143,6 +146,7 @@ def get_protocol_config(protocol, exper_id, nodes):
                             "user": user_name,\
                             "node_id": node_id,\
                             "ssh_key": node_key,\
+                            "bandwidth": bandwidth,\
                             "parameters": parameters\
                             }
                 nodes_config.append(node_config)

@@ -1,0 +1,19 @@
+{
+  "shard_num": 4,
+  "shard_size": 16,
+  "block_size": 4096,
+  "confirmation_depth": 6,
+  "mining_interval": 0,
+  "runtime": 200,
+  "domestic_rate": 0.7,
+  "in_diff": "0000026666666666666666666666666666666666666666666666666666666664",
+  "ex_diffs": [
+    "00000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffd",
+    "00000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffd",
+    "00000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffd",
+    "00000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffd",
+    "00000bfffffffffffffffffffffffffffffffffffffffffffffffffffffffffd"
+  ],
+  "bandwidths": [60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60],
+  "description": "test for demo"
+}
