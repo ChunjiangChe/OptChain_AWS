@@ -62,190 +62,41 @@
 49
 65
 130
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 6mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 18mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 13mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 35mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 36mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 17mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 9mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 20mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 37mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 33mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 26mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 21mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 14mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 27mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 10mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 19mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 11mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=35mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 30mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 18mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 11mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 9mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=13mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 7mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=9mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=18mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 39mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 6mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=36mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=33mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=20mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=37mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=14mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=17mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=6mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=26mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 12mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 25mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 26mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 28mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 19mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 60mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 56mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=21mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=27mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 85mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 41mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 17mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 16mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 22mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 24mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 12mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 33mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 14mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 29mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=10mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 28mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 43mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 15mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 23mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 49mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 16mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 13mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 15mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 105mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 31mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 20mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 16mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=18mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=11mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 130mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 8mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 22mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 73mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 46mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=19mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
 Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 52mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 65mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 8mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 31mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 24mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 11mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 26mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 23mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 130mbit
 Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 21mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=30mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=9mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=11mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=7mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=39mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=6mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=25mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=12mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 60mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 20mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 13mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 105mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 18mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 7mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 16mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 15mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 30mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 16mbit
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=26mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 73mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=23mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=130mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 28mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 21mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=20mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
@@ -255,17 +106,120 @@ Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=60mbit，其�
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 8mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=11mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 10mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 24mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 43mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=52mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 85mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=21mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 14mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 18mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 9mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 65mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 16mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=13mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 49mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=7mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=18mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 15mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 11mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=105mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 12mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 19mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 24mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 35mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 12mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=15mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 39mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=16mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 56mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 33mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 28mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=73mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=30mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 31mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 46mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 14mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=16mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 9mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 22mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 37mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 13mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 22mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 36mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 20mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 27mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 8mbit
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=28mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=19mbit，其他端口不受限
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 17mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 17mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 25mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 31mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 29mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 41mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 19mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 33mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 26mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 6mbit
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 6mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=21mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=56mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=9mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=24mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
@@ -275,12 +229,56 @@ Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=85mbit，其�
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=17mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=43mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=41mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=14mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=8mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=18mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=10mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=65mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=12mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=15mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=49mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=12mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=19mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=39mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
@@ -289,12 +287,26 @@ Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=16mbit，其�
 
 Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=22mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=24mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=24mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=11mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=35mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=56mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=28mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
@@ -304,34 +316,21 @@ Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=33mbit，其�
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=29mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=22mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=12mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=14mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=28mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=46mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=15mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=23mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=49mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=37mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
@@ -340,34 +339,16 @@ Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=13mbit，其�
 
 Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=16mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=43mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=105mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=15mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=16mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=73mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=31mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=9mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=36mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
@@ -381,46 +362,65 @@ Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=8mbit，其他
 
 Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=130mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=22mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=8mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=27mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=17mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=17mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=25mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=6mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=65mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=52mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=46mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=31mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=21mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=41mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=24mbit，其他端口不受限
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=29mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=33mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=6mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=26mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=19mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.

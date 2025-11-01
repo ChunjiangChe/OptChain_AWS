@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-exper_id=4
+exper_id=6
 exper_iter=0
 runtime=100
 protocol="optchain"
