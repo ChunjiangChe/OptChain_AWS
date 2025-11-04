@@ -1,11 +1,11 @@
 import math
 # Input hex string (with leading zeros preserved)
-prop_size = 3
+prop_size = 16
 avai_size = prop_size
-shard_num = 1
-tx_hex = "000010ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+shard_num = 16
+tx_hex = "0000affffffffffffffffffffffffffffffffffffffffffffffffffffffffffe"
 alpha = 0.67
-alpha_var = 0.1
+alpha_var = 0.42
 lambda_p = 0.18
 lambda_ex_plus_in = lambda_p / shard_num
 propagation_delay = 0.1 #100ms
@@ -31,6 +31,7 @@ in_avai_num = avai_num // (in_multi_factor_round * shard_num + 1)
 manifoldchain_in_num = in_avai_num * avai_size
 manifoldchain_ex_num = avai_num * avai_size
 
+
 # Format back to hex, padded to the same length
 prop_hex = f"{prop_num:0{len(tx_hex)}x}"
 avai_hex = f"{avai_num:0{len(tx_hex)}x}"
@@ -45,5 +46,10 @@ print("Availability diff :", avai_hex)
 print("Inclusive Availability diff :", in_avai_hex)
 print("Manifoldchain Inclusive diff :", manifoldchain_in_hex)
 print("Manifoldchain Exclusive diff :", manifoldchain_ex_hex)
+
+
+# tx_num_2 = tx_num * 2
+# tx_num_2_hex = f"{tx_num_2:0{len(tx_hex)}x}"
+# print("Tx diff 2x :", tx_num_2_hex)
 
 

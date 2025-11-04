@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-exper_id=6
-exper_iter=0
+exper_id=9
+exper_iter=1
 runtime=100
 protocol="optchain"
 
