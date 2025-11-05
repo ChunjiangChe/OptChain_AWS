@@ -47,4 +47,20 @@ Experiment 1:
     propagation_delay = 0.1 #100ms
     bandwidth_mbps = 6 #6Mbps
     prop_avai_block_size_mb = 0.001 #0.001MB
-* shard_num = 16: exper 9 iter 0
+
+
+OptChain: 
+* shard_num = 16: 
+    exper 10 
+        iter 0, 1
+* shard_num = 8
+    exper 13
+        iter 0, 1(correct)
+* shard_num = 4
+    exper 14
+        iter 0
+
+Manifoldchain:
+* shard_num = 4
+    exper 5
+        iter 0

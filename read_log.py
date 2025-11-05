@@ -101,6 +101,8 @@ def analyze_chain_log(file_path: str):
     print(f"6) Availability per second -> Inclusive: {incl_rps:.6f}, Exclusive: {excl_rps:.6f}")
     print(f"7) Forking rates -> Proposer: {proposer_fork}, Availability: {avail_fork}")
 
+    return avail_cnt
+
 # Example usage:
 # analyze_chain_log("chain_log.txt")
 if __name__ == "__main__":
@@ -115,6 +117,9 @@ if __name__ == "__main__":
     shard_num = nodes_config["shard_num"]
     shard_size = nodes_config["shard_size"]
 
+    total_avail_blocks = 0
     for i in range(shard_num):
         node_id = i * shard_size
-        analyze_chain_log("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
+        avai_num = analyze_chain_log("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
+        total_avail_blocks += avai_num
+    print(f"average availability blocks per shard: {total_avail_blocks / shard_num}")
