@@ -3,6 +3,44 @@ import re
 import sys
 from datetime import datetime
 import server_utility
+import ast
+
+def analyze_manifoldchain(file_path):
+    with open(file_path, 'r') as f:
+        content = f.read().strip()
+
+    # Extract the list inside b'[...]'
+    match = re.search(r"b'(\[.*\])'", content)
+    if not match:
+        print(f"[Error] No valid chain list found in {file_path}")
+        return
+
+    chain_str = match.group(1).replace('\\"', '"').replace("\\'", "'")
+
+    try:
+        chain_list = ast.literal_eval(chain_str)
+    except Exception as e:
+        print(f"[Error] Failed to parse chain list in {file_path}: {e}")
+        return
+
+    # Extract and remove forking rate element if present
+    forking_rate = None
+    if chain_list and isinstance(chain_list[-1], str) and "forking_rate" in chain_list[-1]:
+        try:
+            forking_rate = float(chain_list[-1].split(":")[1].strip())
+            chain_list = chain_list[:-1]
+        except Exception:
+            pass
+
+    # Remove genesis block (timestamp = 1970-01-01)
+    chain_list = [b for b in chain_list if "1970-01-01" not in b]
+
+    num_blocks = len(chain_list)
+
+    print(f"{file_path}")
+    print(f"Number of blocks (excluding genesis): {num_blocks}")
+    print(f"Forking rate: {forking_rate if forking_rate is not None else 'N/A'}")
+
 
 def analyze_chain_log(file_path: str):
     """Parse proposer/availability chains from a log file and print metrics."""
@@ -101,7 +139,7 @@ def analyze_chain_log(file_path: str):
     print(f"6) Availability per second -> Inclusive: {incl_rps:.6f}, Exclusive: {excl_rps:.6f}")
     print(f"7) Forking rates -> Proposer: {proposer_fork}, Availability: {avail_fork}")
 
-    return avail_cnt
+    return excl_cnt, incl_cnt
 
 # Example usage:
 # analyze_chain_log("chain_log.txt")
@@ -117,9 +155,18 @@ if __name__ == "__main__":
     shard_num = nodes_config["shard_num"]
     shard_size = nodes_config["shard_size"]
 
-    total_avail_blocks = 0
-    for i in range(shard_num):
-        node_id = i * shard_size
-        avai_num = analyze_chain_log("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
-        total_avail_blocks += avai_num
-    print(f"average availability blocks per shard: {total_avail_blocks / shard_num}")
+    if protocol == "optchain":
+        avai_size = nodes_config["avai_size"]
+
+        throughput = 0
+        for i in range(shard_num):
+            node_id = i * shard_size
+            excl_cnt, incl_cnt = analyze_chain_log("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
+            throughput += (excl_cnt + (incl_cnt / shard_num)) * avai_size
+        print(f"throughput: {throughput}")
+    elif protocol == "manifoldchain":
+        total_blocks = 0
+        for i in range(shard_num):
+            node_id = i * shard_size
+            analyze_manifoldchain("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
+        

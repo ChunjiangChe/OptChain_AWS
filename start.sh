@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-exper_id=21
+exper_id=6
 exper_iter=0
 runtime=100
-protocol="optchain"
+protocol="manifoldchain"
 
 python3 limit_bandwidth.py $protocol $exper_id $exper_iter > bandwidth_monitor.txt
 python3 start_nodes.py $protocol $exper_id $exper_iter

@@ -4,14 +4,23 @@ OptChain:
     exper 20 (prop_size = 64)
         iter 0
 * shard_num = 8
-    exper 22 (prop_size = 32)
+    exper 23 (prop_size = 32)
         iter 0
 * shard_num = 4
     exper 15 (prop_size = 16)
+        iter 0
+* shard_num = 2
+    exper 24 (prop_size = 8)
+        iter 0
+* shard_num = 1
+    exper 25 (prop_size = 4)
         iter 0
 
 
 Manifoldchain:
 * shard_num = 4
     exper 5
+        iter 0
+* shard_num = 16
+    exper 26
         iter 0

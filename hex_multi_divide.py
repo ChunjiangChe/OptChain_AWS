@@ -1,7 +1,7 @@
 import math
 # Input hex string (with leading zeros preserved)
 
-base_hex = "0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc00"
+base_hex = "00000d7ffffffffffffffffffffffffffffffffffffffffffffffffffffffff7"
 # Convert to integer
 base_num = int(base_hex, 16)
 
