@@ -10,7 +10,7 @@ df = df[df['mbps'] >= 5].reset_index(drop=True)
 
 num_trials = 100
 sample_size = 64
-shard_num = 4
+shard_num = 8
 
 # Step 1: 100 trials, each sampling 64 data points and sorting them
 sorted_bandwidths = np.zeros((num_trials, sample_size))

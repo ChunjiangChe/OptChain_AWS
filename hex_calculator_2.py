@@ -1,11 +1,11 @@
 import math
 # Input hex string (with leading zeros preserved)
-prop_size = 8
+prop_size = 16
 avai_size = prop_size
-shard_num = 4
-shard_size = 16
-base_avai_hex = "00000171c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c7"
-base_shard_size = 4
+shard_num = 16
+shard_size = 4
+base_avai_hex = "00019c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c71c7"
+base_shard_size = 2
 alpha = 0.67
 alpha_var = 0.42
 lambda_p = 0.2

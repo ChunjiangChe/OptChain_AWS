@@ -1,64 +1,15 @@
 Experiment 1:
-* shard_num = 1: exper 6 iter0
-    prop_size = 3
-    avai_size = prop_size
-    shard_num = 1
-    tx_hex = "000005ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-    alpha = 0.67
-    alpha_var = 0.1
-    lambda_p = 0.18
-    lambda_ex_plus_in = lambda_p / shard_num
-    propagation_delay = 0.1 #100ms
-    bandwidth_mbps = 6 #6Mbps
-    prop_avai_block_size_mb = 0.001 #0.001MB
-* shard_num = 2: exper 7 iter 1
-    prop_size = 3
-    avai_size = prop_size
-    shard_num = 2
-    tx_hex = "000005ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-    alpha = 0.67
-    alpha_var = 0.42
-    lambda_p = 0.18
-    lambda_ex_plus_in = lambda_p / shard_num
-    propagation_delay = 0.1 #100ms
-    bandwidth_mbps = 6 #6Mbps
-    prop_avai_block_size_mb = 0.001 #0.001MB
-* shard_num = 4: exper 5 iter 0
-    prop_size = 3
-    avai_size = prop_size
-    shard_num = 4
-    tx_hex = "00001fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-    alpha = 0.67
-    alpha_var = 0.42 
-    lambda_p = 0.17
-    lambda_ex_plus_in = lambda_p / shard_num
-    propagation_delay = 0.1 #100ms
-    bandwidth_mbps = 6 #6Mbps
-    prop_avai_block_size_mb = 0.001 #0.001MB
-* shard_num = 8: exper 8 iter 1
-    prop_size = 3
-    avai_size = prop_size
-    shard_num = 8
-    tx_hex = "00002affffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-    alpha = 0.67
-    alpha_var = 0.42
-    lambda_p = 0.18
-    lambda_ex_plus_in = lambda_p / shard_num
-    propagation_delay = 0.1 #100ms
-    bandwidth_mbps = 6 #6Mbps
-    prop_avai_block_size_mb = 0.001 #0.001MB
-
-
 OptChain: 
 * shard_num = 16: 
-    exper 10 
-        iter 0, 1
-* shard_num = 8
-    exper 13
-        iter 0, 1(correct)
-* shard_num = 4
-    exper 14
+    exper 20 (prop_size = 64)
         iter 0
+* shard_num = 8
+    exper 22 (prop_size = 32)
+        iter 0
+* shard_num = 4
+    exper 15 (prop_size = 16)
+        iter 0
+
 
 Manifoldchain:
 * shard_num = 4

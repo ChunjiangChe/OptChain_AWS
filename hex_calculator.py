@@ -1,12 +1,12 @@
 import math
 # Input hex string (with leading zeros preserved)
-prop_size = 8
+prop_size = 32
 avai_size = prop_size
-shard_num = 4
-tx_hex = "0000017ffffffffffffffffffffffffffffffffffffffffffffffffffffffff2"
+shard_num = 8
+tx_hex = "00007fffffffffffffffffffffffffffffffffffffffffffffffffffffffee00"
 alpha = 0.67
 alpha_var = 0.42
-lambda_p = 0.04
+lambda_p = 0.08
 lambda_ex_plus_in = lambda_p / shard_num
 propagation_delay = 0.1 #100ms
 bandwidth_mbps = 6 #6Mbps
