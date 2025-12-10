@@ -9,6 +9,8 @@ OptChain:
 * shard_num = 4
     exper 15 (prop_size = 16)
         iter 0
+    full: exper 27 (prop_size = 16)
+        iter 0
 * shard_num = 2
     exper 24 (prop_size = 8)
         iter 0

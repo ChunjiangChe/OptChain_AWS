@@ -22,9 +22,15 @@ def ask_log(instance, protocol, exper_id, exper_iter):
         print(avai_blocks.status_code)
         # print(avai_blocks.content)
 
+        order_url = "http://{}/blockchain/ordering-chain".format(api_addr)
+        print(order_url)
+        order_blocks = requests.get(order_url)
+        print(order_blocks.status_code)
+        # print(avai_blocks.content)
+
         log_file_path = "./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id)
         with open(log_file_path, "w") as log_file:
-            log_file.write("proposer chain: {}\navailability chain: {}".format(prop_blocks.content, avai_blocks.content))
+            log_file.write("proposer chain: {}\navailability chain: {}\nordering chain: {}".format(prop_blocks.content, avai_blocks.content, order_blocks.content))
         print("Exper logs for node on instance {} saved to {}".format(ip, log_file_path))
     elif protocol == "manifoldchain":
         chain_url = "http://{}/blockchain/longest-chain-with-time".format(api_addr)

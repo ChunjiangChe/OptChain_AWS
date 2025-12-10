@@ -9,7 +9,6 @@ def analyze_manifoldchain(file_path):
     with open(file_path, 'r') as f:
         content = f.read().strip()
 
-    # Extract the list inside b'[...]'
     match = re.search(r"b'(\[.*\])'", content)
     if not match:
         print(f"[Error] No valid chain list found in {file_path}")
@@ -23,7 +22,6 @@ def analyze_manifoldchain(file_path):
         print(f"[Error] Failed to parse chain list in {file_path}: {e}")
         return
 
-    # Extract and remove forking rate element if present
     forking_rate = None
     if chain_list and isinstance(chain_list[-1], str) and "forking_rate" in chain_list[-1]:
         try:
@@ -32,9 +30,7 @@ def analyze_manifoldchain(file_path):
         except Exception:
             pass
 
-    # Remove genesis block (timestamp = 1970-01-01)
     chain_list = [b for b in chain_list if "1970-01-01" not in b]
-
     num_blocks = len(chain_list)
 
     print(f"{file_path}")
@@ -43,106 +39,174 @@ def analyze_manifoldchain(file_path):
 
 
 def analyze_chain_log(file_path: str):
-    """Parse proposer/availability chains from a log file and print metrics."""
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
+    """
+    Parse proposer, availability, and ordering chains from a log file.
+    Calculates metrics including the total cmts included by the ordering chain
+    handling the hash format mismatch (4 bytes in ordering vs 3 bytes in availability).
+    """
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+    except FileNotFoundError:
+        print(f"Error: File {file_path} not found.")
+        return 0, 0
 
-    # --- Helper functions ---
-    def extract_list_from_log(raw_line: str) -> list[str]:
-        start = raw_line.find('[')
-        end = raw_line.rfind(']')
-        if start == -1 or end == -1 or end <= start:
-            raise ValueError("Malformed log section")
-        return json.loads(raw_line[start:end+1])
+    # --- Helper: Extract JSON list from b'...' string ---
+    def load_chain_list(chain_name, raw_content):
+        pattern = f"{chain_name}: b'(\\[.*?\\])'"
+        match = re.search(pattern, raw_content, flags=re.DOTALL)
+        if not match:
+            return []
+        try:
+            return json.loads(match.group(1))
+        except json.JSONDecodeError:
+            print(f"Error: Failed to decode JSON for {chain_name}")
+            return []
 
-    def parse_ts(ts: str) -> datetime:
-        return datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
+    # --- Helper: Parse specific chain metrics ---
+    def process_chain_data(chain_entries, chain_type):
+        """Returns: (block_count, forking_rate, total_items_count)"""
+        if not chain_entries:
+            return 0, 0.0, 0
 
-    def extract_forking_rate(entries: list[str]) -> float | None:
-        if entries and "forking rate" in entries[-1]:
-            m = re.search(r"forking rate:\s*([0-9]*\.?[0-9]+)", entries[-1])
-            return float(m.group(1)) if m else None
-        return None
+        # Extract Forking Rate if present
+        forking_rate = 0.0
+        if isinstance(chain_entries[-1], str) and "forking rate" in chain_entries[-1]:
+            try:
+                fr_match = re.search(r"forking rate:\s*([0-9]*\.?[0-9]+)", chain_entries[-1])
+                if fr_match:
+                    forking_rate = float(fr_match.group(1))
+            except:
+                pass
+            chain_entries = chain_entries[:-1]
 
-    def parse_proposer_items(items):
-        pairs = []
-        for s in items:
-            if "forking rate" in s:
+        valid_blocks = 0
+        total_items = 0
+
+        for entry in chain_entries:
+            if "1970-01-01" in entry:
                 continue
-            blk, ts = s.split(":", 1)
-            pairs.append((blk, parse_ts(ts)))
-        return pairs
+            
+            valid_blocks += 1
+            # Extract content in the last brackets [...]
+            content_match = re.search(r"\[(.*?)\]$", entry)
+            
+            if content_match:
+                inner_content = content_match.group(1).strip()
+                if not inner_content:
+                    count = 0
+                elif chain_type == "ordering":
+                    # Ordering content format: [(hash, shard), (hash, shard)]
+                    count = inner_content.count('(')
+                else:
+                    # Proposer/Availability content format: [hash, hash, hash]
+                    count = inner_content.count(',') + 1
+                total_items += count
 
-    def parse_availability_items(items):
-        triples = []
-        for s in items:
-            if "forking rate" in s:
-                continue
-            blk, rest = s.split(":", 1)
-            m = re.match(r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\((Inclusive|Exclusive)\)", rest)
-            if m:
-                triples.append((blk, parse_ts(m.group(1)), m.group(2)))
-        return triples
+        return valid_blocks, forking_rate, total_items
 
-    def ignore_genesis(seq):
-        return seq[1:] if seq else []
+    # 1. Load raw lists
+    prop_raw = load_chain_list("proposer chain", content)
+    avail_raw = load_chain_list("availability chain", content)
+    order_raw = load_chain_list("ordering chain", content)
 
-    def rate_per_second(timestamps, count):
-        if not timestamps or count <= 0:
-            return 0.0
-        start, end = min(timestamps), max(timestamps)
-        span = (end - start).total_seconds()
-        return count / span if span > 0 else float("inf")
+    # 2. Process basic metrics
+    prop_cnt, prop_fork, prop_cmts = process_chain_data(prop_raw, "proposer")
+    avail_cnt, avail_fork, avail_cmts = process_chain_data(avail_raw, "availability")
+    order_cnt, order_fork, order_hashes = process_chain_data(order_raw, "ordering")
 
-    # --- Split into proposer and availability sections ---
-    proposer_match = re.search(r"proposer chain: b'(\[.*?\])", content, flags=re.DOTALL)
-    availability_match = re.search(r"availability chain: b'(\[.*?\])", content, flags=re.DOTALL)
-    if not proposer_match or not availability_match:
-        raise ValueError("Missing proposer or availability chain sections in log")
+    # 3. Calculate "Total cmts of availability blocks included by ordering blocks"
+    
+    # Step A: Build a map for Availability Blocks -> Number of Cmts
+    # Key = Hash (e.g., "000..ccc"), Value = cmt_count
+    avail_block_cmts = {}
+    
+    for entry in avail_raw:
+        if "forking rate" in entry or "1970-01-01" in entry:
+            continue
+        
+        # Extract Block Hash (everything before the first colon)
+        parts = entry.split(':', 1)
+        if not parts: continue
+        blk_hash = parts[0].strip()
+        
+        # Calculate number of cmts inside this block
+        cmt_count = 0
+        content_match = re.search(r"\[(.*?)\]$", entry)
+        if content_match:
+            inner = content_match.group(1).strip()
+            if inner:
+                cmt_count = inner.count(',') + 1
+        
+        avail_block_cmts[blk_hash] = cmt_count
 
-    proposer_raw = "b'" + proposer_match.group(1) + "'"
-    availability_raw = "b'" + availability_match.group(1) + "'"
+    # Step B: Iterate Ordering Blocks and accumulate sum
+    total_included_cmts = 0
+    
+    for entry in order_raw:
+        if "forking rate" in entry or "1970-01-01" in entry:
+            continue
+        
+        content_match = re.search(r"\[(.*?)\]$", entry)
+        if content_match:
+            inner = content_match.group(1).strip()
+            # Extract hashes from tuples like (0000..aaf6, 0)
+            # We capture the hash part: "0000..aaf6"
+            refs = re.findall(r"\(([^,]+),", inner)
+            
+            for raw_ref_hash in refs:
+                raw_ref_hash = raw_ref_hash.strip()
+                
+                # --- HASH CONVERSION LOGIC ---
+                # Ordering uses 4 chars start/end (e.g., 0000..aaf6)
+                # Availability uses 3 chars start/end (e.g., 000..af6)
+                # Logic: Take first 3 chars of prefix, last 3 chars of suffix
+                
+                if ".." in raw_ref_hash:
+                    prefix, suffix = raw_ref_hash.split("..", 1)
+                    # Safe slicing: if string is short, it takes what it can, 
+                    # but typically these are 4 chars long in ordering.
+                    new_prefix = prefix[:3]
+                    new_suffix = suffix[-3:]
+                    converted_hash = f"{new_prefix}..{new_suffix}"
+                else:
+                    converted_hash = raw_ref_hash
 
-    proposer_entries = extract_list_from_log(proposer_raw)
-    availability_entries = extract_list_from_log(availability_raw)
+                # Lookup with converted hash
+                if converted_hash in avail_block_cmts:
+                    total_included_cmts += avail_block_cmts[converted_hash]
 
-    proposer_fork = extract_forking_rate(proposer_entries)
-    avail_fork = extract_forking_rate(availability_entries)
+    # 4. Print Results
+    print(f"--- Analysis for {file_path} ---")
+    print("1. Number of blocks (excluding genesis):")
+    print(f"   - Proposer:     {prop_cnt}")
+    print(f"   - Availability: {avail_cnt}")
+    print(f"   - Ordering:     {order_cnt}")
+    
+    print("\n2. Forking Rates:")
+    print(f"   - Proposer:     {prop_fork}")
+    print(f"   - Availability: {avail_fork}")
+    print(f"   - Ordering:     {order_fork}")
 
-    proposer_list = parse_proposer_items(proposer_entries)
-    availability_list = parse_availability_items(availability_entries)
+    print("\n3. Number of cmts (transactions):")
+    print(f"   - Proposer Chain:         {prop_cmts}")
+    print(f"   - Availability Chain:     {avail_cmts}")
+    print(f"   - Included by Ordering:   {total_included_cmts}")
 
-    proposer_no_gen = ignore_genesis(proposer_list)
-    availability_no_gen = ignore_genesis(availability_list)
+    print("\n4. Number of hashes (availability refs):")
+    print(f"   - Ordering Chain:         {order_hashes}")
+    print("-" * 30)
 
-    prop_cnt = len(proposer_no_gen)
-    avail_cnt = len(availability_no_gen)
-    incl_cnt = sum(1 for _,_,t in availability_no_gen if t == "Inclusive")
-    excl_cnt = sum(1 for _,_,t in availability_no_gen if t == "Exclusive")
-
-    prop_ts = [ts for _, ts in proposer_no_gen]
-    avail_ts = [ts for _, ts, _ in availability_no_gen]
-    incl_ts = [ts for _, ts, t in availability_no_gen if t == "Inclusive"]
-    excl_ts = [ts for _, ts, t in availability_no_gen if t == "Exclusive"]
-
-    prop_rps = rate_per_second(prop_ts, prop_cnt/proposer_fork)
-    avail_rps = rate_per_second(avail_ts, avail_cnt/avail_fork)
-    incl_rps = rate_per_second(incl_ts, incl_cnt)
-    excl_rps = rate_per_second(excl_ts, excl_cnt)
-
-    print("=== Chain Analysis ===")
-    print(f"1) Proposer blocks (non-genesis): {prop_cnt}")
-    print(f"2) Availability blocks (non-genesis): {avail_cnt}")
-    print(f"3) Availability breakdown -> Inclusive: {incl_cnt}, Exclusive: {excl_cnt}")
-    print(f"4) Proposer blocks per second: {prop_rps:.6f}")
-    print(f"5) Availability blocks per second: {avail_rps:.6f}")
-    print(f"6) Availability per second -> Inclusive: {incl_rps:.6f}, Exclusive: {excl_rps:.6f}")
-    print(f"7) Forking rates -> Proposer: {proposer_fork}, Availability: {avail_fork}")
+    # Calculate inclusive/exclusive counts for return values
+    incl_cnt = 0
+    excl_cnt = 0
+    for entry in avail_raw:
+        if "1970-01-01" in entry or "forking rate" in entry: continue
+        if "(Inclusive)" in entry: incl_cnt += 1
+        elif "(Exclusive)" in entry: excl_cnt += 1
 
     return excl_cnt, incl_cnt
 
-# Example usage:
-# analyze_chain_log("chain_log.txt")
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print("Usage: python generate_nodes.py <protocol> <exper_id> <exper_iter>")
@@ -169,4 +233,3 @@ if __name__ == "__main__":
         for i in range(shard_num):
             node_id = i * shard_size
             analyze_manifoldchain("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
-        

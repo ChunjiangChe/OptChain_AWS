@@ -20,6 +20,7 @@ def get_protocol_config(protocol, exper_id, nodes):
         prop_dff = exper_config["prop_diff"]
         avai_dff = exper_config["avai_diff"]
         in_avai_dff = exper_config["in_avai_diff"]
+        order_dff = exper_config["order_diff"]
         bandwidths = exper_config["bandwidths"]
 
         nodes_config = []
@@ -66,7 +67,8 @@ def get_protocol_config(protocol, exper_id, nodes):
                         "-e TX_DIFF='{}'".format(tx_dff),\
                         "-e PROP_DIFF='{}'".format(prop_dff),\
                         "-e AVAI_DIFF='{}'".format(avai_dff),\
-                        "-e IN_AVAI_DIFF='{}'".format(in_avai_dff)\
+                        "-e IN_AVAI_DIFF='{}'".format(in_avai_dff),\
+                        "-e ORDER_DIFF='{}'".format(order_dff)\
                         ]
 
                 # generate the node config

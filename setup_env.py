@@ -27,8 +27,8 @@ def install_limit_bandwidth_script(ins):
 
 def setup_node(ip, user, ssh_key, ports, image):
     ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
-    # configue_env(ins_handle, hyperparameters["image"])
-    # allow_ufw(ins_handle, ports)
+    configue_env(ins_handle, hyperparameters["image"])
+    allow_ufw(ins_handle, ports)
 
     # ban_ip(ins_handle)
     install_limit_bandwidth_script(ins_handle)
