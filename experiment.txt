@@ -2,21 +2,29 @@ Experiment 1:
 OptChain: 
 * shard_num = 16: 
     exper 20 (prop_size = 64)
+        iter 0 
+    full: exper 36 (prop_size = 64, avai_size = 64, block_size = 8192)
         iter 0
 * shard_num = 8
     exper 23 (prop_size = 32)
         iter 0
+    full: exper 37 (prop_size = 32, avai_size = 16, block_size = 8192)
+        iter 0
 * shard_num = 4
     exper 15 (prop_size = 16)
         iter 0
-    full: exper 27 (prop_size = 16)
-        iter 0
+    full: exper 40 (35) (prop_size = 16, avai_size = 16, block_size = 8192)
+        iter 0 
 * shard_num = 2
     exper 24 (prop_size = 8)
         iter 0
+    full: exper 38 (prop_size = 16, avai_size = 16, block_size = 8192)
+        iter 0 
 * shard_num = 1
     exper 25 (prop_size = 4)
         iter 0
+    full: exper 39 (prop_size = 16, avai_size = 16, block_size = 8192)
+        iter 0 
 
 
 Manifoldchain:
@@ -24,5 +32,5 @@ Manifoldchain:
     exper 5
         iter 0
 * shard_num = 16
-    exper 26
+    exper 6
         iter 0

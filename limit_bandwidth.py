@@ -16,13 +16,16 @@ def limit_bandwidth_old(ins, bandwidth, port, network_interface):
     server_utility.run_cmd_in_ins(ins, cmd5, True)
 
 def limit_download_only(ins, iface, port, bw_mbit):
-    cmd = "sudo ./limit_AWS_bandwidth.sh apply --port {} --rate {}mbit".format(port, bw_mbit)
-    server_utility.run_cmd_in_ins(ins, cmd, True)
+    cmd1 = "echo 'limit bandwidth'"
+    server_utility.run_cmd_in_ins(ins, cmd1, True)
+    cmd2 = "sudo ./limit_AWS_bandwidth.sh apply --port {} --rate {}mbit".format(port, bw_mbit)
+    server_utility.run_cmd_in_ins(ins, cmd2, True)
 
 
 def limit_bandwidth(ip, user, ssh_key, bandwidth, p2p_port, network_interface):
     print(bandwidth)
     ins_handle = server_utility.ssh_connect(ip, user, ssh_key)
+    print("connected to {}".format(ip))
     limit_download_only(ins_handle, network_interface, p2p_port, bandwidth)
 
 

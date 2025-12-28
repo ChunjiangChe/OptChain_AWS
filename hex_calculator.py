@@ -1,9 +1,9 @@
 import math
 # Input hex string (with leading zeros preserved)
 prop_size = 64
-avai_size = prop_size
+avai_size = 16
 shard_num = 16
-tx_hex = "0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc00"
+tx_hex = "00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffff70"
 alpha = 0.67
 alpha_var = 0.42
 lambda_p = 0.08
@@ -25,7 +25,8 @@ print("In Multi Factor Round :", in_multi_factor_round)
 tx_num = int(tx_hex, 16)
 
 prop_num = tx_num // (prop_size + 1)
-avai_num = prop_num // (1+1)
+order_num = prop_num // (1+(prop_size // avai_size))
+avai_num = order_num // (shard_num + 1) * shard_num
 in_avai_num = avai_num // (in_multi_factor_round * shard_num + 1)
 # quotient = num // 5
 manifoldchain_in_num = in_avai_num * avai_size
@@ -34,6 +35,7 @@ manifoldchain_ex_num = avai_num * avai_size
 
 # Format back to hex, padded to the same length
 prop_hex = f"{prop_num:0{len(tx_hex)}x}"
+order_hex = f"{order_num:0{len(tx_hex)}x}"
 avai_hex = f"{avai_num:0{len(tx_hex)}x}"
 in_avai_hex = f"{in_avai_num:0{len(tx_hex)}x}"
 manifoldchain_in_hex = f"{manifoldchain_in_num:0{len(tx_hex)}x}"
@@ -42,6 +44,7 @@ manifoldchain_ex_hex = f"{manifoldchain_ex_num:0{len(tx_hex)}x}"
 
 print("Tx diff :", tx_hex)
 print("Proposer diff :", prop_hex)
+print("Orderer diff :", order_hex)
 print("Availability diff :", avai_hex)
 print("Inclusive Availability diff :", in_avai_hex)
 print("Manifoldchain Inclusive diff :", manifoldchain_in_hex)

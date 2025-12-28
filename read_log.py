@@ -5,6 +5,57 @@ from datetime import datetime
 import server_utility
 import ast
 
+def calculate_mining_rate(chain_list):
+    """
+    Calculates blocks/second.
+    Ignores the first block (index 0) unconditionally.
+    Finds the first and last valid timestamps in the remaining list to calculate duration.
+    Mining Rate = (Index_Last - Index_First) / (Time_Last - Time_First)
+    """
+    if not chain_list or len(chain_list) < 2:
+        return 0.0
+
+    # Ignore the first block as requested
+    working_list = chain_list[1:]
+
+    # Updated Regex: (?:\.\d+)? makes the milliseconds part optional
+    ts_pattern = r"(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(?:\.\d+)?)"
+    
+    first_time = None
+    last_time = None
+    first_idx = -1
+    last_idx = -1
+
+    for i, block in enumerate(working_list):
+        # Ensure block is a string before regex search
+        if isinstance(block, str):
+            match = re.search(ts_pattern, block)
+            if match:
+                dt_str = match.group(1)
+                try:
+                    # Try parsing with milliseconds first
+                    if "." in dt_str:
+                        dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S.%f")
+                    else:
+                        # Fallback for timestamps without milliseconds
+                        dt = datetime.strptime(dt_str, "%Y-%m-%d %H:%M:%S")
+
+                    if first_time is None:
+                        first_time = dt
+                        first_idx = i
+                    last_time = dt
+                    last_idx = i
+                except ValueError:
+                    continue
+
+    if first_time and last_time and last_time > first_time:
+        duration = (last_time - first_time).total_seconds()
+        # Count is the number of blocks generated between start and end
+        count = last_idx - first_idx
+        return count / duration
+
+    return 0.0
+
 def analyze_manifoldchain(file_path):
     with open(file_path, 'r') as f:
         content = f.read().strip()
@@ -30,19 +81,21 @@ def analyze_manifoldchain(file_path):
         except Exception:
             pass
 
+    mining_rate = calculate_mining_rate(chain_list)
+
     chain_list = [b for b in chain_list if "1970-01-01" not in b]
     num_blocks = len(chain_list)
 
     print(f"{file_path}")
     print(f"Number of blocks (excluding genesis): {num_blocks}")
     print(f"Forking rate: {forking_rate if forking_rate is not None else 'N/A'}")
+    print(f"Mining rate: {mining_rate:.4f} blocks/s")
 
 
 def analyze_chain_log(file_path: str):
     """
     Parse proposer, availability, and ordering chains from a log file.
-    Calculates metrics including the total cmts included by the ordering chain
-    handling the hash format mismatch (4 bytes in ordering vs 3 bytes in availability).
+    Calculates metrics including the total cmts included by the ordering chain.
     """
     try:
         with open(file_path, "r", encoding="utf-8") as f:
@@ -53,6 +106,7 @@ def analyze_chain_log(file_path: str):
 
     # --- Helper: Extract JSON list from b'...' string ---
     def load_chain_list(chain_name, raw_content):
+        # Relaxes regex to capture potentially complex nested content inside the list
         pattern = f"{chain_name}: b'(\\[.*?\\])'"
         match = re.search(pattern, raw_content, flags=re.DOTALL)
         if not match:
@@ -71,9 +125,9 @@ def analyze_chain_log(file_path: str):
 
         # Extract Forking Rate if present
         forking_rate = 0.0
-        if isinstance(chain_entries[-1], str) and "forking rate" in chain_entries[-1]:
+        if isinstance(chain_entries[-1], str) and "forking rate" in chain_entries[-1].lower():
             try:
-                fr_match = re.search(r"forking rate:\s*([0-9]*\.?[0-9]+)", chain_entries[-1])
+                fr_match = re.search(r"forking rate:\s*([0-9]*\.?[0-9]+)", chain_entries[-1], re.IGNORECASE)
                 if fr_match:
                     forking_rate = float(fr_match.group(1))
             except:
@@ -115,14 +169,18 @@ def analyze_chain_log(file_path: str):
     avail_cnt, avail_fork, avail_cmts = process_chain_data(avail_raw, "availability")
     order_cnt, order_fork, order_hashes = process_chain_data(order_raw, "ordering")
 
-    # 3. Calculate "Total cmts of availability blocks included by ordering blocks"
+    # 3. Calculate Mining Rates
+    prop_rate = calculate_mining_rate(prop_raw)
+    avail_rate = calculate_mining_rate(avail_raw)
+    order_rate = calculate_mining_rate(order_raw)
+
+    # 4. Calculate "Total cmts of availability blocks included by ordering blocks"
     
     # Step A: Build a map for Availability Blocks -> Number of Cmts
-    # Key = Hash (e.g., "000..ccc"), Value = cmt_count
     avail_block_cmts = {}
     
     for entry in avail_raw:
-        if "forking rate" in entry or "1970-01-01" in entry:
+        if "forking rate" in entry.lower() or "1970-01-01" in entry:
             continue
         
         # Extract Block Hash (everything before the first colon)
@@ -144,39 +202,31 @@ def analyze_chain_log(file_path: str):
     total_included_cmts = 0
     
     for entry in order_raw:
-        if "forking rate" in entry or "1970-01-01" in entry:
+        if "forking rate" in entry.lower() or "1970-01-01" in entry:
             continue
         
         content_match = re.search(r"\[(.*?)\]$", entry)
         if content_match:
             inner = content_match.group(1).strip()
             # Extract hashes from tuples like (0000..aaf6, 0)
-            # We capture the hash part: "0000..aaf6"
             refs = re.findall(r"\(([^,]+),", inner)
             
             for raw_ref_hash in refs:
                 raw_ref_hash = raw_ref_hash.strip()
                 
                 # --- HASH CONVERSION LOGIC ---
-                # Ordering uses 4 chars start/end (e.g., 0000..aaf6)
-                # Availability uses 3 chars start/end (e.g., 000..af6)
-                # Logic: Take first 3 chars of prefix, last 3 chars of suffix
-                
                 if ".." in raw_ref_hash:
                     prefix, suffix = raw_ref_hash.split("..", 1)
-                    # Safe slicing: if string is short, it takes what it can, 
-                    # but typically these are 4 chars long in ordering.
                     new_prefix = prefix[:3]
                     new_suffix = suffix[-3:]
                     converted_hash = f"{new_prefix}..{new_suffix}"
                 else:
                     converted_hash = raw_ref_hash
 
-                # Lookup with converted hash
                 if converted_hash in avail_block_cmts:
                     total_included_cmts += avail_block_cmts[converted_hash]
 
-    # 4. Print Results
+    # 5. Print Results
     print(f"--- Analysis for {file_path} ---")
     print("1. Number of blocks (excluding genesis):")
     print(f"   - Proposer:     {prop_cnt}")
@@ -188,12 +238,17 @@ def analyze_chain_log(file_path: str):
     print(f"   - Availability: {avail_fork}")
     print(f"   - Ordering:     {order_fork}")
 
-    print("\n3. Number of cmts (transactions):")
+    print("\n3. Mining Rates (blocks/s):")
+    print(f"   - Proposer:     {prop_rate:.4f}")
+    print(f"   - Availability: {avail_rate:.4f}")
+    print(f"   - Ordering:     {order_rate:.4f}")
+
+    print("\n4. Number of cmts (transactions):")
     print(f"   - Proposer Chain:         {prop_cmts}")
     print(f"   - Availability Chain:     {avail_cmts}")
     print(f"   - Included by Ordering:   {total_included_cmts}")
 
-    print("\n4. Number of hashes (availability refs):")
+    print("\n5. Number of hashes (availability refs):")
     print(f"   - Ordering Chain:         {order_hashes}")
     print("-" * 30)
 
@@ -201,7 +256,7 @@ def analyze_chain_log(file_path: str):
     incl_cnt = 0
     excl_cnt = 0
     for entry in avail_raw:
-        if "1970-01-01" in entry or "forking rate" in entry: continue
+        if "1970-01-01" in entry or "forking rate" in entry.lower(): continue
         if "(Inclusive)" in entry: incl_cnt += 1
         elif "(Exclusive)" in entry: excl_cnt += 1
 

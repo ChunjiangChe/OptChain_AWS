@@ -1,11 +1,11 @@
 import math
 # Input hex string (with leading zeros preserved)
 
-base_hex = "0000032d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2a"
+base_hex = "000003ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc"
 # Convert to integer
 base_num = int(base_hex, 16)
 
-multi_num = base_num * 16
+multi_num = base_num * 4
 
 # manifoldchain_ex_num = avai_num * avai_size
 

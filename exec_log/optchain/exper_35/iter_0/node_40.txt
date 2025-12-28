@@ -1,0 +1,1788 @@
+output: Running command: ./powchain optchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149 -c 3.112.191.251:6042 -c 52.68.182.110:6042 -c 18.183.184.1:6042 -c 13.230.5.8:6042 -c 18.169.0.178:6042 -c 44.192.106.107:6042 -c 3.239.250.245:6042 -c 15.228.186.24:6042 -c 13.41.72.11:6042 -c 44.193.214.157:6042 -c 3.239.180.58:6042 -c 44.215.71.63:6042 -c 3.92.42.43:6042 -c 18.230.71.71:6042 -c 13.42.105.191:6042 -c 18.231.226.4:6042 -c 54.94.88.106:6042 -c 3.8.56.49:6042 -c 18.228.188.21:6042 -c 98.92.38.242:6042 -c 56.124.102.44:6042 -c 13.42.18.211:6042 -c 18.130.248.20:6042 -c 56.125.166.111:6042 -c 52.195.208.13:6042 -c 44.212.46.131:6042 -c 54.233.45.141:6042 -c 3.239.20.198:6042 -c 44.222.97.187:6042 -c 3.112.1.112:6042 -c 44.203.24.247:6042 -c 13.42.12.157:6042 -c 56.124.122.44:6042 -c 52.195.237.249:6042 -c 18.130.192.230:6042 -c 3.231.4.46:6042 -c 43.207.121.114:6042 -c 15.228.234.230:6042 -c 3.112.191.165:6042 -c 43.207.214.25:6042 --shardId 2 --nodeId 8 --experNumber 35 --experIter 0 --shardNum 4 --shardSize 16 --blockSize 8192 --symbolSize 64 --propSize 16 --avaiSize 16 --eReq 4 --iReq 4 --k 6 --tDiff 000003ffffffffffffffffffffffffffffffffffffffffffffffffffffffffdc --pDiff 0000003c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3a --aDiff 0000001818181818181818181818181818181818181818181818181818181814 --iDiff 00000001da7801da7801da7801da7801da7801da7801da7801da7801da7801da --oDiff 0000001e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1d
+err: [2025-12-26T19:23:31Z INFO  powchain::optchain] configuration: Configuration { tx_diff: 0000..ffdc, prop_diff: 0000..3c3a, avai_diff: 0000..1814, in_avai_diff: 0000..01da, order_diff: 0000..1e1d, block_size: 8192, symbol_size: 64, num_symbol_per_block: 128, prop_size: 16, avai_size: 16, ex_req_num: 4, in_req_num: 4, k: 6, shard_id: 2, node_id: 8, shard_num: 4, shard_size: 16, exper_number: 35, exper_iter: 0 }
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] P2P server listening at 0.0.0.0:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::worker] num of network workers: 8
+[2025-12-26T19:23:32Z INFO  powchain::optchain::miner] Miner initialized into paused mode
+[2025-12-26T19:23:32Z INFO  powchain::optchain::miner::worker] Miner initialized into paused mode
+[2025-12-26T19:23:32Z INFO  powchain::optchain::api] API server listening at 0.0.0.0:7149
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.112.191.251:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:32Z INFO  powchain::optchain] Connected to outgoing peer 3.112.191.251:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Establishing connection to peer 52.68.182.110:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:32Z INFO  powchain::optchain] Connected to outgoing peer 52.68.182.110:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Establishing connection to peer 18.183.184.1:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:32Z INFO  powchain::optchain] Connected to outgoing peer 18.183.184.1:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Establishing connection to peer 13.230.5.8:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:32Z INFO  powchain::optchain] Connected to outgoing peer 13.230.5.8:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Establishing connection to peer 18.169.0.178:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:32Z INFO  powchain::optchain] Connected to outgoing peer 18.169.0.178:6042
+[2025-12-26T19:23:32Z INFO  powchain::optchain::network::server] Establishing connection to peer 44.192.106.107:6042
+[2025-12-26T19:23:33Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:33Z INFO  powchain::optchain] Connected to outgoing peer 44.192.106.107:6042
+[2025-12-26T19:23:33Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.239.250.245:6042
+[2025-12-26T19:23:33Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:33Z INFO  powchain::optchain] Connected to outgoing peer 3.239.250.245:6042
+[2025-12-26T19:23:33Z INFO  powchain::optchain::network::server] Establishing connection to peer 15.228.186.24:6042
+[2025-12-26T19:23:33Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:33Z INFO  powchain::optchain] Connected to outgoing peer 15.228.186.24:6042
+[2025-12-26T19:23:33Z INFO  powchain::optchain::network::server] Establishing connection to peer 13.41.72.11:6042
+[2025-12-26T19:23:34Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:34Z INFO  powchain::optchain] Connected to outgoing peer 13.41.72.11:6042
+[2025-12-26T19:23:34Z INFO  powchain::optchain::network::server] Establishing connection to peer 44.193.214.157:6042
+[2025-12-26T19:23:34Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:34Z INFO  powchain::optchain] Connected to outgoing peer 44.193.214.157:6042
+[2025-12-26T19:23:34Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.239.180.58:6042
+[2025-12-26T19:23:34Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:34Z INFO  powchain::optchain] Connected to outgoing peer 3.239.180.58:6042
+[2025-12-26T19:23:34Z INFO  powchain::optchain::network::server] Establishing connection to peer 44.215.71.63:6042
+[2025-12-26T19:23:35Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:35Z INFO  powchain::optchain] Connected to outgoing peer 44.215.71.63:6042
+[2025-12-26T19:23:35Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.92.42.43:6042
+[2025-12-26T19:23:35Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:35Z INFO  powchain::optchain] Connected to outgoing peer 3.92.42.43:6042
+[2025-12-26T19:23:35Z INFO  powchain::optchain::network::server] Establishing connection to peer 18.230.71.71:6042
+[2025-12-26T19:23:35Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:35Z INFO  powchain::optchain] Connected to outgoing peer 18.230.71.71:6042
+[2025-12-26T19:23:35Z INFO  powchain::optchain::network::server] Establishing connection to peer 13.42.105.191:6042
+[2025-12-26T19:23:36Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:36Z INFO  powchain::optchain] Connected to outgoing peer 13.42.105.191:6042
+[2025-12-26T19:23:36Z INFO  powchain::optchain::network::server] Establishing connection to peer 18.231.226.4:6042
+[2025-12-26T19:23:36Z INFO  powchain::optchain::network::server] Connecting node's shard id: 0
+[2025-12-26T19:23:36Z INFO  powchain::optchain] Connected to outgoing peer 18.231.226.4:6042
+[2025-12-26T19:23:36Z INFO  powchain::optchain::network::server] Establishing connection to peer 54.94.88.106:6042
+[2025-12-26T19:23:37Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:37Z INFO  powchain::optchain] Connected to outgoing peer 54.94.88.106:6042
+[2025-12-26T19:23:37Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.8.56.49:6042
+[2025-12-26T19:23:37Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:37Z INFO  powchain::optchain] Connected to outgoing peer 3.8.56.49:6042
+[2025-12-26T19:23:37Z INFO  powchain::optchain::network::server] Establishing connection to peer 18.228.188.21:6042
+[2025-12-26T19:23:38Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:38Z INFO  powchain::optchain] Connected to outgoing peer 18.228.188.21:6042
+[2025-12-26T19:23:38Z INFO  powchain::optchain::network::server] Establishing connection to peer 98.92.38.242:6042
+[2025-12-26T19:23:38Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:38Z INFO  powchain::optchain] Connected to outgoing peer 98.92.38.242:6042
+[2025-12-26T19:23:38Z INFO  powchain::optchain::network::server] Establishing connection to peer 56.124.102.44:6042
+[2025-12-26T19:23:39Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:39Z INFO  powchain::optchain] Connected to outgoing peer 56.124.102.44:6042
+[2025-12-26T19:23:39Z INFO  powchain::optchain::network::server] Establishing connection to peer 13.42.18.211:6042
+[2025-12-26T19:23:39Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:39Z INFO  powchain::optchain] Connected to outgoing peer 13.42.18.211:6042
+[2025-12-26T19:23:39Z INFO  powchain::optchain::network::server] Establishing connection to peer 18.130.248.20:6042
+[2025-12-26T19:23:40Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:40Z INFO  powchain::optchain] Connected to outgoing peer 18.130.248.20:6042
+[2025-12-26T19:23:40Z INFO  powchain::optchain::network::server] Establishing connection to peer 56.125.166.111:6042
+[2025-12-26T19:23:40Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:40Z INFO  powchain::optchain] Connected to outgoing peer 56.125.166.111:6042
+[2025-12-26T19:23:40Z INFO  powchain::optchain::network::server] Establishing connection to peer 52.195.208.13:6042
+[2025-12-26T19:23:40Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:40Z INFO  powchain::optchain] Connected to outgoing peer 52.195.208.13:6042
+[2025-12-26T19:23:40Z INFO  powchain::optchain::network::server] Establishing connection to peer 44.212.46.131:6042
+[2025-12-26T19:23:41Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:41Z INFO  powchain::optchain] Connected to outgoing peer 44.212.46.131:6042
+[2025-12-26T19:23:41Z INFO  powchain::optchain::network::server] Establishing connection to peer 54.233.45.141:6042
+[2025-12-26T19:23:41Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:41Z INFO  powchain::optchain] Connected to outgoing peer 54.233.45.141:6042
+[2025-12-26T19:23:41Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.239.20.198:6042
+[2025-12-26T19:23:41Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:41Z INFO  powchain::optchain] Connected to outgoing peer 3.239.20.198:6042
+[2025-12-26T19:23:41Z INFO  powchain::optchain::network::server] Establishing connection to peer 44.222.97.187:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:42Z INFO  powchain::optchain] Connected to outgoing peer 44.222.97.187:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.112.1.112:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:42Z INFO  powchain::optchain] Connected to outgoing peer 3.112.1.112:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Establishing connection to peer 44.203.24.247:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:42Z INFO  powchain::optchain] Connected to outgoing peer 44.203.24.247:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Establishing connection to peer 13.42.12.157:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Connecting node's shard id: 1
+[2025-12-26T19:23:42Z INFO  powchain::optchain] Connected to outgoing peer 13.42.12.157:6042
+[2025-12-26T19:23:42Z INFO  powchain::optchain::network::server] Establishing connection to peer 56.124.122.44:6042
+[2025-12-26T19:23:43Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:43Z INFO  powchain::optchain] Connected to outgoing peer 56.124.122.44:6042
+[2025-12-26T19:23:43Z INFO  powchain::optchain::network::server] Establishing connection to peer 52.195.237.249:6042
+[2025-12-26T19:23:43Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:43Z INFO  powchain::optchain] Connected to outgoing peer 52.195.237.249:6042
+[2025-12-26T19:23:43Z INFO  powchain::optchain::network::server] Establishing connection to peer 18.130.192.230:6042
+[2025-12-26T19:23:43Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:43Z INFO  powchain::optchain] Connected to outgoing peer 18.130.192.230:6042
+[2025-12-26T19:23:43Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.231.4.46:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:44Z INFO  powchain::optchain] Connected to outgoing peer 3.231.4.46:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Establishing connection to peer 43.207.121.114:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:44Z INFO  powchain::optchain] Connected to outgoing peer 43.207.121.114:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Establishing connection to peer 15.228.234.230:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:44Z INFO  powchain::optchain] Connected to outgoing peer 15.228.234.230:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Establishing connection to peer 3.112.191.165:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:44Z INFO  powchain::optchain] Connected to outgoing peer 3.112.191.165:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Establishing connection to peer 43.207.214.25:6042
+[2025-12-26T19:23:44Z INFO  powchain::optchain::network::server] Connecting node's shard id: 2
+[2025-12-26T19:23:44Z INFO  powchain::optchain] Connected to outgoing peer 43.207.214.25:6042
+[2025-12-26T19:23:46Z INFO  powchain::optchain::network::server] Incoming peer from 18.228.15.73:41168
+[2025-12-26T19:23:46Z INFO  powchain::optchain::network::server] Coming node's shard id: 2
+[2025-12-26T19:23:46Z INFO  powchain::optchain::network::server] Incoming peer from 35.176.161.231:54926
+[2025-12-26T19:23:46Z INFO  powchain::optchain::network::server] Coming node's shard id: 2
+[2025-12-26T19:23:51Z INFO  powchain::optchain::network::server] Incoming peer from 13.40.199.67:52318
+[2025-12-26T19:23:51Z INFO  powchain::optchain::network::server] Coming node's shard id: 2
+[2025-12-26T19:23:51Z INFO  powchain::optchain::network::server] Incoming peer from 18.176.58.186:59054
+[2025-12-26T19:23:51Z INFO  powchain::optchain::network::server] Coming node's shard id: 2
+[2025-12-26T19:23:54Z INFO  powchain::optchain::network::server] Incoming peer from 56.124.76.166:58528
+[2025-12-26T19:23:54Z INFO  powchain::optchain::network::server] Coming node's shard id: 2
+[2025-12-26T19:23:57Z INFO  powchain::optchain::network::server] Incoming peer from 15.228.185.96:53818
+[2025-12-26T19:23:57Z INFO  powchain::optchain::network::server] Coming node's shard id: 2
+[2025-12-26T19:23:58Z INFO  powchain::optchain::network::server] Incoming peer from 18.168.206.216:55602
+[2025-12-26T19:23:58Z INFO  powchain::optchain::network::server] Coming node's shard id: 2
+[2025-12-26T19:24:00Z INFO  powchain::optchain::network::server] Incoming peer from 98.92.150.75:40682
+[2025-12-26T19:24:00Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:00Z INFO  powchain::optchain::network::server] Incoming peer from 13.41.77.86:49698
+[2025-12-26T19:24:00Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:03Z INFO  powchain::optchain::network::server] Incoming peer from 18.228.235.187:49412
+[2025-12-26T19:24:03Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:05Z INFO  powchain::optchain::network::server] Incoming peer from 13.42.34.13:48134
+[2025-12-26T19:24:05Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:06Z INFO  powchain::optchain::network::server] Incoming peer from 44.201.47.20:41488
+[2025-12-26T19:24:06Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:09Z INFO  powchain::optchain::network::server] Incoming peer from 18.228.116.48:57132
+[2025-12-26T19:24:09Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:12Z INFO  powchain::optchain::network::server] Incoming peer from 44.197.208.147:47322
+[2025-12-26T19:24:12Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:15Z INFO  powchain::optchain::network::server] Incoming peer from 13.231.57.221:51484
+[2025-12-26T19:24:15Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:17Z INFO  powchain::optchain::network::server] Incoming peer from 43.207.87.218:40704
+[2025-12-26T19:24:17Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:18Z INFO  powchain::optchain::network::server] Incoming peer from 13.42.62.181:55632
+[2025-12-26T19:24:18Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:23Z INFO  powchain::optchain::network::server] Incoming peer from 18.183.107.162:45364
+[2025-12-26T19:24:23Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:24Z INFO  powchain::optchain::network::server] Incoming peer from 15.228.231.241:34376
+[2025-12-26T19:24:24Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:26Z INFO  powchain::optchain::network::server] Incoming peer from 98.86.147.213:60554
+[2025-12-26T19:24:26Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:28Z INFO  powchain::optchain::network::server] Incoming peer from 52.196.85.161:58048
+[2025-12-26T19:24:28Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:29Z INFO  powchain::optchain::network::server] Incoming peer from 18.130.219.86:44344
+[2025-12-26T19:24:29Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:24:31Z INFO  powchain::optchain::network::server] Incoming peer from 13.40.197.23:49268
+[2025-12-26T19:24:31Z INFO  powchain::optchain::network::server] Coming node's shard id: 3
+[2025-12-26T19:26:21Z INFO  powchain::optchain::miner] Miner starting in continuous mode with lambda 0
+[2025-12-26T19:26:39Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..ac21
+[2025-12-26T19:26:39Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..ac21)
+[2025-12-26T19:26:57Z INFO  powchain::optchain::miner] mine a transaction block 0000..1a24 in shard 2
+[2025-12-26T19:26:58Z INFO  powchain::optchain::network::worker] Incoming inclusive availability block 0000..5faa
+[2025-12-26T19:26:58Z INFO  powchain::optchain::network::worker] successfully inserting block: InHash(0000..5faa)
+[2025-12-26T19:26:58Z INFO  powchain::optchain::network::worker] successfully inserting block: InHash(0000..5faa)
+[2025-12-26T19:26:58Z INFO  powchain::optchain::network::worker] successfully inserting block: InHash(0000..5faa)
+[2025-12-26T19:26:58Z INFO  powchain::optchain::network::worker] successfully inserting block: InHash(0000..5faa)
+[2025-12-26T19:27:08Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ec0f
+[2025-12-26T19:27:08Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..ec0f)
+[2025-12-26T19:27:08Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ec0f
+[2025-12-26T19:27:08Z INFO  powchain::optchain::network::worker] Proposer block 0000..ec0f already exists
+[2025-12-26T19:27:12Z INFO  powchain::optchain::network::worker] cmt 77f4..e3ea is now available
+[2025-12-26T19:27:13Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ec0f
+[2025-12-26T19:27:13Z INFO  powchain::optchain::network::worker] Proposer block 0000..ec0f already exists
+[2025-12-26T19:27:14Z INFO  powchain::optchain::network::worker] cmt 28c2..0863 is now available
+[2025-12-26T19:27:20Z INFO  powchain::optchain::network::worker] cmt a13d..bb4f is now available
+[2025-12-26T19:27:22Z INFO  powchain::optchain::network::worker] cmt 7edf..95ff is now available
+[2025-12-26T19:27:22Z INFO  powchain::optchain::network::worker] cmt fb22..e5d4 is now available
+[2025-12-26T19:27:23Z INFO  powchain::optchain::network::worker] cmt 2fdb..c0bb is now available
+[2025-12-26T19:27:26Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..cf3a
+[2025-12-26T19:27:26Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..cf3a)
+[2025-12-26T19:27:35Z INFO  powchain::optchain::network::worker] cmt 0f8c..4e31 is now available
+[2025-12-26T19:27:35Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..f6b7
+[2025-12-26T19:27:35Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..f6b7)
+[2025-12-26T19:28:11Z INFO  powchain::optchain::miner] mine a transaction block 0000..989b in shard 2
+[2025-12-26T19:28:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..4d65
+[2025-12-26T19:28:19Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..4d65)
+[2025-12-26T19:28:33Z INFO  powchain::optchain::miner] mine a transaction block 0000..5eba in shard 2
+[2025-12-26T19:28:46Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..6cc4
+[2025-12-26T19:28:46Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..6cc4)
+[2025-12-26T19:28:46Z INFO  powchain::optchain::network::worker] cmt f30a..5bfc has already been requested
+[2025-12-26T19:29:01Z INFO  powchain::optchain::network::worker] cmt 5f25..fcc0 is now available
+[2025-12-26T19:29:02Z INFO  powchain::optchain::network::worker] cmt cd82..fc3d is now available
+[2025-12-26T19:29:05Z INFO  powchain::optchain::network::worker] cmt 79b9..c7bc is now available
+[2025-12-26T19:29:10Z INFO  powchain::optchain::network::worker] cmt d8f9..9493 is now available
+[2025-12-26T19:29:10Z INFO  powchain::optchain::network::worker] cmt cef3..6ebb is now available
+[2025-12-26T19:29:10Z INFO  powchain::optchain::network::worker] cmt cd18..2292 is now available
+[2025-12-26T19:29:11Z INFO  powchain::optchain::network::worker] cmt 3155..c0ed is now available
+[2025-12-26T19:29:12Z INFO  powchain::optchain::network::worker] cmt 8045..d554 is now available
+[2025-12-26T19:29:13Z INFO  powchain::optchain::network::worker] cmt 60cf..7970 is now available
+[2025-12-26T19:29:13Z INFO  powchain::optchain::network::worker] cmt f9f7..63d1 is now available
+[2025-12-26T19:29:14Z INFO  powchain::optchain::network::worker] cmt b555..f7a7 is now available
+[2025-12-26T19:29:16Z INFO  powchain::optchain::network::worker] cmt 3543..c406 is now available
+[2025-12-26T19:29:17Z INFO  powchain::optchain::network::worker] cmt cbea..9415 is now available
+[2025-12-26T19:29:19Z INFO  powchain::optchain::network::worker] cmt 8a16..f5ab is now available
+[2025-12-26T19:29:21Z INFO  powchain::optchain::network::worker] cmt be5b..787f is now available
+[2025-12-26T19:29:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..7073
+[2025-12-26T19:29:28Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..7073)
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f19a
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..f19a)
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt 8045..d554 has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt d8f9..9493 has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt 79b9..c7bc has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt 3543..c406 has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt b555..f7a7 has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt f30a..5bfc has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt 5f25..fcc0 has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt be5b..787f has already been requested
+[2025-12-26T19:29:52Z INFO  powchain::optchain::network::worker] cmt cef3..6ebb has already been requested
+[2025-12-26T19:29:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f19a
+[2025-12-26T19:29:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..f19a already exists
+[2025-12-26T19:29:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f19a
+[2025-12-26T19:29:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..f19a already exists
+[2025-12-26T19:29:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f19a
+[2025-12-26T19:29:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..f19a already exists
+[2025-12-26T19:29:57Z INFO  powchain::optchain::network::worker] cmt b743..e91f is now available
+[2025-12-26T19:30:03Z INFO  powchain::optchain::network::worker] cmt 6da9..6f24 is now available
+[2025-12-26T19:30:04Z INFO  powchain::optchain::network::worker] cmt 71e5..6169 is now available
+[2025-12-26T19:30:05Z INFO  powchain::optchain::network::worker] cmt 1fe8..abde is now available
+[2025-12-26T19:30:06Z INFO  powchain::optchain::network::worker] cmt 0632..660d is now available
+[2025-12-26T19:30:08Z INFO  powchain::optchain::network::worker] cmt 4b0c..3d48 is now available
+[2025-12-26T19:30:09Z INFO  powchain::optchain::network::worker] cmt d915..740c is now available
+[2025-12-26T19:30:38Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..1a7d
+[2025-12-26T19:30:38Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..1a7d)
+[2025-12-26T19:31:03Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..27d4
+[2025-12-26T19:31:03Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..27d4)
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..4096)
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4096
+[2025-12-26T19:31:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4096 already exists
+[2025-12-26T19:31:29Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..dcd3
+[2025-12-26T19:31:29Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..dcd3)
+[2025-12-26T19:31:35Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..5995
+[2025-12-26T19:31:35Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..5995)
+[2025-12-26T19:31:37Z INFO  powchain::optchain::network::worker] cmt c88e..fcf0 is now available
+[2025-12-26T19:31:39Z INFO  powchain::optchain::network::worker] cmt 668e..2f1b is now available
+[2025-12-26T19:31:41Z INFO  powchain::optchain::network::worker] cmt 0470..2bc9 is now available
+[2025-12-26T19:31:41Z INFO  powchain::optchain::network::worker] cmt c834..01c7 is now available
+[2025-12-26T19:31:46Z INFO  powchain::optchain::network::worker] cmt 2390..ed4d is now available
+[2025-12-26T19:31:47Z INFO  powchain::optchain::network::worker] cmt ea76..2681 is now available
+[2025-12-26T19:31:48Z INFO  powchain::optchain::network::worker] cmt 5a58..381e is now available
+[2025-12-26T19:31:51Z INFO  powchain::optchain::network::worker] cmt 742f..4b31 is now available
+[2025-12-26T19:31:51Z INFO  powchain::optchain::network::worker] cmt b9f4..a7ec is now available
+[2025-12-26T19:31:51Z INFO  powchain::optchain::network::worker] cmt dd71..49c5 is now available
+[2025-12-26T19:31:52Z INFO  powchain::optchain::network::worker] cmt 310c..2cf4 is now available
+[2025-12-26T19:31:53Z INFO  powchain::optchain::network::worker] cmt 75b4..1f53 is now available
+[2025-12-26T19:31:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..aa3a
+[2025-12-26T19:31:53Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..aa3a)
+[2025-12-26T19:31:55Z INFO  powchain::optchain::network::worker] cmt e3f6..da26 is now available
+[2025-12-26T19:31:55Z INFO  powchain::optchain::network::worker] cmt 88f3..65db is now available
+[2025-12-26T19:31:55Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..aa3a
+[2025-12-26T19:31:55Z INFO  powchain::optchain::network::worker] Proposer block 0000..aa3a already exists
+[2025-12-26T19:31:56Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..aa3a
+[2025-12-26T19:31:56Z INFO  powchain::optchain::network::worker] Proposer block 0000..aa3a already exists
+[2025-12-26T19:31:58Z INFO  powchain::optchain::network::worker] cmt 5a5c..5ead is now available
+[2025-12-26T19:31:59Z INFO  powchain::optchain::network::worker] cmt 37dd..39f1 is now available
+[2025-12-26T19:31:59Z INFO  powchain::optchain::network::worker] cmt fc95..4062 is now available
+[2025-12-26T19:32:01Z INFO  powchain::optchain::network::worker] cmt 6f21..b52a is now available
+[2025-12-26T19:32:03Z INFO  powchain::optchain::network::worker] cmt 7226..4e10 is now available
+[2025-12-26T19:32:05Z INFO  powchain::optchain::network::worker] cmt 81c1..2c6d is now available
+[2025-12-26T19:32:05Z INFO  powchain::optchain::network::worker] cmt 95ec..da6f is now available
+[2025-12-26T19:32:06Z INFO  powchain::optchain::network::worker] cmt 09d3..3aaa is now available
+[2025-12-26T19:32:07Z INFO  powchain::optchain::network::worker] cmt 1c23..b1a2 is now available
+[2025-12-26T19:32:08Z INFO  powchain::optchain::network::worker] cmt 4e59..c556 is now available
+[2025-12-26T19:32:09Z INFO  powchain::optchain::network::worker] cmt f3c0..c115 is now available
+[2025-12-26T19:32:10Z INFO  powchain::optchain::network::worker] cmt ee75..32e4 is now available
+[2025-12-26T19:32:15Z INFO  powchain::optchain::network::worker] cmt f5f0..a617 is now available
+[2025-12-26T19:32:16Z INFO  powchain::optchain::network::worker] cmt 1f70..f1da is now available
+[2025-12-26T19:32:16Z INFO  powchain::optchain::network::worker] cmt 366b..a4bb is now available
+[2025-12-26T19:32:20Z INFO  powchain::optchain::network::worker] cmt 7bbe..7066 is now available
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..7a2b
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..7a2b)
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..7a2b
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..7a2b already exists
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..7a2b
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..7a2b already exists
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..7a2b
+[2025-12-26T19:32:23Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..7a2b already exists
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ba8b
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..ba8b)
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt 1c23..b1a2 has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt 7bbe..7066 has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt 6f21..b52a has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt 1f70..f1da has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt fc95..4062 has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt ee75..32e4 has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt 09d3..3aaa has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt 95ec..da6f has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt 4e59..c556 has already been requested
+[2025-12-26T19:32:30Z INFO  powchain::optchain::network::worker] cmt f5f0..a617 has already been requested
+[2025-12-26T19:32:39Z INFO  powchain::optchain::network::worker] cmt 0b54..bdd5 is now available
+[2025-12-26T19:32:39Z INFO  powchain::optchain::network::worker] cmt cb8f..eb3e is now available
+[2025-12-26T19:32:40Z INFO  powchain::optchain::network::worker] cmt fa41..9416 is now available
+[2025-12-26T19:32:42Z INFO  powchain::optchain::network::worker] cmt d5e2..0925 is now available
+[2025-12-26T19:32:47Z INFO  powchain::optchain::network::worker] cmt 4fe8..6744 is now available
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..406a
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..406a)
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..406a
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..406a already exists
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..406a
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..406a already exists
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..406a
+[2025-12-26T19:32:57Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..406a already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..d024)
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..d024
+[2025-12-26T19:33:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..d024 already exists
+[2025-12-26T19:33:23Z INFO  powchain::optchain::network::worker] cmt 6223..f7da is now available
+[2025-12-26T19:33:29Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..8a71
+[2025-12-26T19:33:29Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..8a71)
+[2025-12-26T19:33:33Z INFO  powchain::optchain::network::worker] cmt 52b7..0ba0 is now available
+[2025-12-26T19:33:33Z INFO  powchain::optchain::network::worker] cmt b456..3a43 is now available
+[2025-12-26T19:33:39Z INFO  powchain::optchain::network::worker] cmt 6b22..ce27 is now available
+[2025-12-26T19:33:39Z INFO  powchain::optchain::network::worker] cmt 8281..b98f is now available
+[2025-12-26T19:33:40Z INFO  powchain::optchain::network::worker] cmt d129..b986 is now available
+[2025-12-26T19:33:41Z INFO  powchain::optchain::network::worker] cmt d1dc..8f37 is now available
+[2025-12-26T19:33:43Z INFO  powchain::optchain::network::worker] cmt 5cf4..fcf3 is now available
+[2025-12-26T19:33:44Z INFO  powchain::optchain::network::worker] cmt d2b8..a5ae is now available
+[2025-12-26T19:33:44Z INFO  powchain::optchain::network::worker] cmt ecc7..8c83 is now available
+[2025-12-26T19:33:46Z INFO  powchain::optchain::network::worker] cmt 183e..3dc3 is now available
+[2025-12-26T19:33:46Z INFO  powchain::optchain::network::worker] cmt d2b7..f640 is now available
+[2025-12-26T19:33:47Z INFO  powchain::optchain::network::worker] cmt d2b7..f640 is now available
+[2025-12-26T19:33:47Z INFO  powchain::optchain::network::worker] cmt 5b5b..6810 is now available
+[2025-12-26T19:33:48Z INFO  powchain::optchain::network::worker] cmt ce4c..f448 is now available
+[2025-12-26T19:33:50Z INFO  powchain::optchain::network::worker] cmt 6c4f..6f9b is now available
+[2025-12-26T19:33:55Z INFO  powchain::optchain::network::worker] cmt 4730..6d77 is now available
+[2025-12-26T19:33:56Z INFO  powchain::optchain::network::worker] cmt e290..fa50 is now available
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3803
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3803
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..3803)
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3803
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..3803 already exists
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3803
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..3803 already exists
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3803
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..3803 already exists
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3803
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..3803 already exists
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3803
+[2025-12-26T19:34:20Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..3803 already exists
+[2025-12-26T19:34:21Z INFO  powchain::optchain::network::worker] Reject block 0000..3803 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:34:42Z INFO  powchain::optchain::miner] mine a proposer block 0000..1044 in shard 2
+[2025-12-26T19:34:53Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..79c2)
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..79c2 already exists
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..79c2 already exists
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..79c2
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..79c2 already exists
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..79c2 already exists
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..79c2 already exists
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..79c2 already exists
+[2025-12-26T19:34:59Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..79c2 already exists
+[2025-12-26T19:35:21Z INFO  powchain::optchain::miner] mine a transaction block 0000..462e in shard 2
+[2025-12-26T19:35:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c25e
+[2025-12-26T19:35:22Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..c25e)
+[2025-12-26T19:35:28Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c25e
+[2025-12-26T19:35:28Z INFO  powchain::optchain::network::worker] Proposer block 0000..c25e already exists
+[2025-12-26T19:35:28Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c25e
+[2025-12-26T19:35:28Z INFO  powchain::optchain::network::worker] Proposer block 0000..c25e already exists
+[2025-12-26T19:35:30Z INFO  powchain::optchain::network::worker] cmt 31c2..2e66 is now available
+[2025-12-26T19:35:32Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c25e
+[2025-12-26T19:35:32Z INFO  powchain::optchain::network::worker] cmt e1ed..926b is now available
+[2025-12-26T19:35:32Z INFO  powchain::optchain::network::worker] Proposer block 0000..c25e already exists
+[2025-12-26T19:35:32Z INFO  powchain::optchain::network::worker] cmt af3d..b458 is now available
+[2025-12-26T19:35:35Z INFO  powchain::optchain::network::worker] cmt db03..25c1 is now available
+[2025-12-26T19:35:38Z INFO  powchain::optchain::network::worker] cmt 293c..705b is now available
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..cf44
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..cf44)
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt a3c2..9d47 has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt e1ed..926b has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt cb58..72fe has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt af3d..b458 has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt 9ced..3119 has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt 5b32..4242 has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt 98d3..fae4 has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt db03..25c1 has already been requested
+[2025-12-26T19:35:39Z INFO  powchain::optchain::network::worker] cmt 7a54..6486 has already been requested
+[2025-12-26T19:35:43Z INFO  powchain::optchain::network::worker] cmt 78ef..e374 is now available
+[2025-12-26T19:35:44Z INFO  powchain::optchain::network::worker] cmt 98d3..fae4 is now available
+[2025-12-26T19:35:46Z INFO  powchain::optchain::network::worker] cmt ace5..41b7 is now available
+[2025-12-26T19:35:46Z INFO  powchain::optchain::network::worker] cmt 9ced..3119 is now available
+[2025-12-26T19:35:47Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..cf44
+[2025-12-26T19:35:47Z INFO  powchain::optchain::network::worker] Proposer block 0000..cf44 already exists
+[2025-12-26T19:35:48Z INFO  powchain::optchain::network::worker] cmt 8a81..97c2 is now available
+[2025-12-26T19:35:50Z INFO  powchain::optchain::network::worker] cmt cb58..72fe is now available
+[2025-12-26T19:35:50Z INFO  powchain::optchain::network::worker] cmt 7a54..6486 is now available
+[2025-12-26T19:35:50Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..cf44
+[2025-12-26T19:35:50Z INFO  powchain::optchain::network::worker] Proposer block 0000..cf44 already exists
+[2025-12-26T19:35:51Z INFO  powchain::optchain::network::worker] cmt 204b..e638 is now available
+[2025-12-26T19:35:53Z INFO  powchain::optchain::network::worker] cmt d2a4..3b0c is now available
+[2025-12-26T19:35:54Z INFO  powchain::optchain::network::worker] cmt 5397..5011 is now available
+[2025-12-26T19:35:55Z INFO  powchain::optchain::network::worker] cmt 530d..5417 is now available
+[2025-12-26T19:35:57Z INFO  powchain::optchain::network::worker] cmt d08c..f058 is now available
+[2025-12-26T19:35:59Z INFO  powchain::optchain::network::worker] cmt 34cf..f465 is now available
+[2025-12-26T19:35:59Z INFO  powchain::optchain::network::worker] cmt 78d4..d14d is now available
+[2025-12-26T19:36:02Z INFO  powchain::optchain::network::worker] cmt b446..f780 is now available
+[2025-12-26T19:36:03Z INFO  powchain::optchain::network::worker] cmt 8efb..db33 is now available
+[2025-12-26T19:36:04Z INFO  powchain::optchain::network::worker] cmt 8efb..db33 is now available
+[2025-12-26T19:36:05Z INFO  powchain::optchain::network::worker] cmt 5b32..4242 is now available
+[2025-12-26T19:36:06Z INFO  powchain::optchain::network::worker] cmt a3c2..9d47 is now available
+[2025-12-26T19:36:13Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:13Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..ff5a)
+[2025-12-26T19:36:13Z INFO  powchain::optchain::network::worker] cmt d08c..f058 has already been requested
+[2025-12-26T19:36:13Z INFO  powchain::optchain::network::worker] cmt b446..f780 has already been requested
+[2025-12-26T19:36:13Z INFO  powchain::optchain::network::worker] cmt d2a4..3b0c has already been requested
+[2025-12-26T19:36:13Z INFO  powchain::optchain::network::worker] cmt 5397..5011 has already been requested
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:14Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:16Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:16Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:17Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:17Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:17Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:17Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:17Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:17Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:18Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..ff5a
+[2025-12-26T19:36:18Z INFO  powchain::optchain::network::worker] Proposer block 0000..ff5a already exists
+[2025-12-26T19:36:20Z INFO  powchain::optchain::network::worker] cmt d2b1..daed is now available
+[2025-12-26T19:36:22Z INFO  powchain::optchain::network::worker] cmt 70fb..3ad2 is now available
+[2025-12-26T19:36:23Z INFO  powchain::optchain::network::worker] cmt 9a39..048a is now available
+[2025-12-26T19:36:25Z INFO  powchain::optchain::network::worker] cmt 89c2..1d78 is now available
+[2025-12-26T19:36:27Z INFO  powchain::optchain::network::worker] cmt face..c16f is now available
+[2025-12-26T19:36:27Z INFO  powchain::optchain::network::worker] cmt 4880..72bc is now available
+[2025-12-26T19:36:28Z INFO  powchain::optchain::network::worker] cmt 2de9..db31 is now available
+[2025-12-26T19:36:31Z INFO  powchain::optchain::network::worker] cmt f0a7..5687 is now available
+[2025-12-26T19:36:32Z INFO  powchain::optchain::network::worker] cmt 3ac1..e71e is now available
+[2025-12-26T19:36:33Z INFO  powchain::optchain::network::worker] cmt c12e..67a7 is now available
+[2025-12-26T19:36:33Z INFO  powchain::optchain::network::worker] cmt 136d..47e9 is now available
+[2025-12-26T19:36:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..995d
+[2025-12-26T19:36:43Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..995d)
+[2025-12-26T19:36:43Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..995d
+[2025-12-26T19:36:43Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..995d already exists
+[2025-12-26T19:36:43Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..995d
+[2025-12-26T19:36:43Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..995d already exists
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt e381..d00d is now available
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f69b
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..f69b)
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt e1ed..926b has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt cb58..72fe has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt 5397..5011 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt d08c..f058 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt 34cf..f465 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt e381..d00d has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt a3c2..9d47 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt af3d..b458 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt 9ced..3119 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt 5b32..4242 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt db03..25c1 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt 98d3..fae4 has already been requested
+[2025-12-26T19:36:51Z INFO  powchain::optchain::network::worker] cmt 7a54..6486 has already been requested
+[2025-12-26T19:36:53Z INFO  powchain::optchain::network::worker] cmt 92c8..52a5 is now available
+[2025-12-26T19:36:55Z INFO  powchain::optchain::network::worker] cmt 97f2..c8ce is now available
+[2025-12-26T19:36:58Z INFO  powchain::optchain::network::worker] cmt 8039..004e is now available
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e02a
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..e02a)
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt d2a4..3b0c has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt d08c..f058 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt b446..f780 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 89c2..1d78 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt face..c16f has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 70fb..3ad2 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 5397..5011 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt a3c2..9d47 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 5b32..4242 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt e1ed..926b has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 78ef..e374 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 9ced..3119 has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 97f2..c8ce has already been requested
+[2025-12-26T19:37:08Z INFO  powchain::optchain::network::worker] cmt 92c8..52a5 has already been requested
+[2025-12-26T19:37:18Z INFO  powchain::optchain::network::worker] cmt c711..f840 is now available
+[2025-12-26T19:37:22Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..9073)
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9073
+[2025-12-26T19:37:24Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9073 already exists
+[2025-12-26T19:37:29Z INFO  powchain::optchain::network::worker] Reject block 0000..9073 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:37:29Z INFO  powchain::optchain::network::worker] Reject block 0000..9073 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:37:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..5db7
+[2025-12-26T19:37:33Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..5db7)
+[2025-12-26T19:37:36Z INFO  powchain::optchain::network::worker] cmt 0bef..1ac0 is now available
+[2025-12-26T19:37:42Z INFO  powchain::optchain::network::worker] cmt 7950..e50b is now available
+[2025-12-26T19:37:43Z INFO  powchain::optchain::network::worker] cmt 5b51..dca2 is now available
+[2025-12-26T19:37:45Z INFO  powchain::optchain::network::worker] cmt fdbf..91d5 is now available
+[2025-12-26T19:37:45Z INFO  powchain::optchain::network::worker] cmt 5ee8..fd2e is now available
+[2025-12-26T19:37:45Z INFO  powchain::optchain::network::worker] cmt bf30..3d23 is now available
+[2025-12-26T19:37:46Z INFO  powchain::optchain::network::worker] cmt fe71..c5a8 is now available
+[2025-12-26T19:37:49Z INFO  powchain::optchain::network::worker] cmt 2df0..1928 is now available
+[2025-12-26T19:37:51Z INFO  powchain::optchain::network::worker] cmt 1341..9823 is now available
+[2025-12-26T19:37:52Z INFO  powchain::optchain::network::worker] cmt f0c3..e46f is now available
+[2025-12-26T19:37:53Z INFO  powchain::optchain::network::worker] cmt ed1e..2806 is now available
+[2025-12-26T19:37:54Z INFO  powchain::optchain::miner] mine a transaction block 0000..9813 in shard 2
+[2025-12-26T19:37:59Z INFO  powchain::optchain::network::worker] cmt bc0e..398e is now available
+[2025-12-26T19:38:00Z INFO  powchain::optchain::network::worker] cmt cde9..53d4 is now available
+[2025-12-26T19:38:03Z INFO  powchain::optchain::network::worker] cmt 943b..b307 is now available
+[2025-12-26T19:38:04Z INFO  powchain::optchain::network::worker] cmt 968b..9387 is now available
+[2025-12-26T19:38:13Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fbff
+[2025-12-26T19:38:16Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..fbff)
+[2025-12-26T19:38:22Z INFO  powchain::optchain::network::worker] cmt d697..9654 is now available
+[2025-12-26T19:38:50Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:50Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..0af6
+[2025-12-26T19:38:50Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..0af6)
+[2025-12-26T19:38:50Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:50Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: unavailable, unavailable cmts: [b0aa..5115, cddf..ec78]
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: unavailable, unavailable cmts: [b0aa..5115, cddf..ec78]
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:51Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:52Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:53Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:54Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:55Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:55Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:56Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:57Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:57Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:57Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:57Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:58Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:58Z INFO  powchain::optchain::network::worker] cmt b0aa..5115 should not be available!
+[2025-12-26T19:38:58Z INFO  powchain::optchain::network::worker] cmt b0aa..5115 is now available
+[2025-12-26T19:38:58Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:38:58Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:38:59Z INFO  powchain::optchain::network::worker] cmt b0aa..5115 should not be available!
+[2025-12-26T19:38:59Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:00Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:00Z INFO  powchain::optchain::network::worker] cmt b0aa..5115 should not be available!
+[2025-12-26T19:39:00Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:00Z INFO  powchain::optchain::network::worker] handle block 0000..4f39 for cmt b0aa..5115 becoming available
+[2025-12-26T19:39:00Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:00Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:01Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:01Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:02Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:02Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:05Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:05Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:07Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:08Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:08Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:09Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:13Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:13Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:15Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:19Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:19Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:20Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:20Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:23Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:25Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:25Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:30Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:30Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:41Z INFO  powchain::optchain::network::worker] cmt 3974..a7b3 is now available
+[2025-12-26T19:39:45Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:45Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:45Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:45Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:45Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:45Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:46Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:46Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:46Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:46Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:47Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:48Z INFO  powchain::optchain::network::worker] Reject block 0000..4f39: in unavailable hash table
+[2025-12-26T19:39:49Z INFO  powchain::optchain::network::worker] cmt cddf..ec78 is now available
+[2025-12-26T19:39:49Z INFO  powchain::optchain::network::worker] handle block 0000..4f39 for cmt cddf..ec78 becoming available
+[2025-12-26T19:39:49Z INFO  powchain::optchain::network::worker] block 0000..4f39 is now available
+[2025-12-26T19:39:49Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..4f39)
+[2025-12-26T19:39:50Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:39:50Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4f39 already exists
+[2025-12-26T19:40:03Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:40:03Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4f39 already exists
+[2025-12-26T19:40:09Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..3055
+[2025-12-26T19:40:09Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..3055)
+[2025-12-26T19:40:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:40:12Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4f39 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::miner] mine a transaction block 0000..08ab in shard 2
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..9cb5)
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..9cb5
+[2025-12-26T19:40:19Z INFO  powchain::optchain::network::worker] Ordering block 0000..9cb5 already exists
+[2025-12-26T19:40:38Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..0330
+[2025-12-26T19:40:38Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..0330)
+[2025-12-26T19:40:41Z INFO  powchain::optchain::network::worker] cmt 2e62..a62f is now available
+[2025-12-26T19:40:42Z INFO  powchain::optchain::network::worker] cmt 79a7..94de is now available
+[2025-12-26T19:40:42Z INFO  powchain::optchain::network::worker] cmt 13db..18d0 is now available
+[2025-12-26T19:40:43Z INFO  powchain::optchain::network::worker] cmt 6479..1351 is now available
+[2025-12-26T19:40:50Z INFO  powchain::optchain::network::worker] cmt 1f8b..6bcb is now available
+[2025-12-26T19:40:51Z INFO  powchain::optchain::network::worker] cmt fb90..f1ee is now available
+[2025-12-26T19:40:52Z INFO  powchain::optchain::network::worker] cmt 730c..7203 is now available
+[2025-12-26T19:40:53Z INFO  powchain::optchain::network::worker] cmt ed64..1a8f is now available
+[2025-12-26T19:40:55Z INFO  powchain::optchain::network::worker] cmt 56f3..28b0 is now available
+[2025-12-26T19:40:55Z INFO  powchain::optchain::network::worker] cmt 2b1d..6c4e is now available
+[2025-12-26T19:40:56Z INFO  powchain::optchain::network::worker] cmt d701..2001 is now available
+[2025-12-26T19:40:56Z INFO  powchain::optchain::network::worker] cmt 290b..b54a is now available
+[2025-12-26T19:40:58Z INFO  powchain::optchain::network::worker] cmt 69a7..54a1 is now available
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..60f4
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..60f4)
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] cmt 290b..b54a has already been requested
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] cmt 1f8b..6bcb has already been requested
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] cmt fb90..f1ee has already been requested
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] cmt 31d3..6d47 has already been requested
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] cmt f479..97bb has already been requested
+[2025-12-26T19:40:59Z INFO  powchain::optchain::network::worker] cmt ed64..1a8f has already been requested
+[2025-12-26T19:41:03Z INFO  powchain::optchain::network::worker] cmt 31d3..6d47 is now available
+[2025-12-26T19:41:06Z INFO  powchain::optchain::network::worker] cmt 9fd1..89fa is now available
+[2025-12-26T19:41:16Z INFO  powchain::optchain::miner] mine a transaction block 0000..b8c0 in shard 2
+[2025-12-26T19:41:18Z INFO  powchain::optchain::network::worker] cmt d308..73d4 is now available
+[2025-12-26T19:41:21Z INFO  powchain::optchain::network::worker] cmt 168b..d252 is now available
+[2025-12-26T19:41:21Z INFO  powchain::optchain::network::worker] cmt 8e7e..72ec is now available
+[2025-12-26T19:41:22Z INFO  powchain::optchain::network::worker] cmt 3664..4c15 is now available
+[2025-12-26T19:41:22Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..4f39
+[2025-12-26T19:41:22Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..4f39 already exists
+[2025-12-26T19:41:22Z INFO  powchain::optchain::network::worker] cmt bc20..270c is now available
+[2025-12-26T19:41:23Z INFO  powchain::optchain::network::worker] cmt 4727..8ad4 is now available
+[2025-12-26T19:41:26Z INFO  powchain::optchain::network::worker] cmt a2b9..24c0 is now available
+[2025-12-26T19:41:27Z INFO  powchain::optchain::network::worker] cmt 6fd5..671e is now available
+[2025-12-26T19:41:32Z INFO  powchain::optchain::network::worker] cmt f479..97bb is now available
+[2025-12-26T19:41:36Z INFO  powchain::optchain::network::worker] cmt 89b9..2198 is now available
+[2025-12-26T19:41:37Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..21f9
+[2025-12-26T19:41:37Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..21f9)
+[2025-12-26T19:41:37Z INFO  powchain::optchain::network::worker] cmt 69a7..54a1 has already been requested
+[2025-12-26T19:41:41Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..21f9
+[2025-12-26T19:41:41Z INFO  powchain::optchain::network::worker] Proposer block 0000..21f9 already exists
+[2025-12-26T19:41:41Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..21f9
+[2025-12-26T19:41:41Z INFO  powchain::optchain::network::worker] Proposer block 0000..21f9 already exists
+[2025-12-26T19:41:47Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..21f9
+[2025-12-26T19:41:47Z INFO  powchain::optchain::network::worker] Proposer block 0000..21f9 already exists
+[2025-12-26T19:41:49Z INFO  powchain::optchain::network::worker] cmt 50e1..ebde is now available
+[2025-12-26T19:41:51Z INFO  powchain::optchain::network::worker] cmt caa1..1ab2 is now available
+[2025-12-26T19:41:53Z INFO  powchain::optchain::network::worker] cmt e5b2..3d5b is now available
+[2025-12-26T19:41:53Z INFO  powchain::optchain::network::worker] cmt f56c..8410 is now available
+[2025-12-26T19:41:53Z INFO  powchain::optchain::network::worker] cmt 0d7d..5076 is now available
+[2025-12-26T19:41:53Z INFO  powchain::optchain::network::worker] cmt e331..227a is now available
+[2025-12-26T19:41:55Z INFO  powchain::optchain::network::worker] cmt 9864..cb46 is now available
+[2025-12-26T19:41:56Z INFO  powchain::optchain::network::worker] cmt a700..519c is now available
+[2025-12-26T19:41:57Z INFO  powchain::optchain::network::worker] cmt 0cae..b3c4 is now available
+[2025-12-26T19:41:58Z INFO  powchain::optchain::network::worker] cmt cedd..f0d6 is now available
+[2025-12-26T19:41:59Z INFO  powchain::optchain::network::worker] cmt ea8b..0daa is now available
+[2025-12-26T19:42:00Z INFO  powchain::optchain::network::worker] cmt f176..90ba is now available
+[2025-12-26T19:42:00Z INFO  powchain::optchain::miner] mine a transaction block 0000..4e34 in shard 2
+[2025-12-26T19:42:00Z INFO  powchain::optchain::network::worker] cmt f176..90ba is now available
+[2025-12-26T19:42:00Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..21f9
+[2025-12-26T19:42:00Z INFO  powchain::optchain::network::worker] Proposer block 0000..21f9 already exists
+[2025-12-26T19:42:05Z INFO  powchain::optchain::network::worker] cmt 2d92..9cfe is now available
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] cmt 4ed5..b60c is now available
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..4f97
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..4f97)
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] cmt 4727..8ad4 has already been requested
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] cmt a700..519c has already been requested
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] cmt 69a7..54a1 has already been requested
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] cmt caa1..1ab2 has already been requested
+[2025-12-26T19:42:08Z INFO  powchain::optchain::network::worker] cmt 9fd1..89fa has already been requested
+[2025-12-26T19:42:09Z INFO  powchain::optchain::network::worker] cmt 0e89..b501 is now available
+[2025-12-26T19:42:15Z INFO  powchain::optchain::network::worker] cmt 88dc..bd1d is now available
+[2025-12-26T19:42:17Z INFO  powchain::optchain::network::worker] cmt f119..bd3f is now available
+[2025-12-26T19:42:21Z INFO  powchain::optchain::network::worker] cmt dc20..1b73 is now available
+[2025-12-26T19:42:22Z INFO  powchain::optchain::network::worker] cmt 7f50..3634 is now available
+[2025-12-26T19:42:24Z INFO  powchain::optchain::network::worker] cmt af4d..044d is now available
+[2025-12-26T19:42:24Z INFO  powchain::optchain::network::worker] cmt 899d..0d4b is now available
+[2025-12-26T19:42:27Z INFO  powchain::optchain::network::worker] cmt 0b4f..42c8 is now available
+[2025-12-26T19:42:30Z INFO  powchain::optchain::miner] mine a transaction block 0000..278a in shard 2
+[2025-12-26T19:42:46Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:47Z INFO  powchain::optchain::network::worker] cmt 251f..1eae is now available
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..8548)
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:49Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:50Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:51Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:51Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:52Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:52Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:54Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..8548
+[2025-12-26T19:42:54Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..8548 already exists
+[2025-12-26T19:42:58Z INFO  powchain::optchain::network::worker] Reject block 0000..8548 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:42:59Z INFO  powchain::optchain::network::worker] Reject block 0000..8548 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:42:59Z INFO  powchain::optchain::network::worker] Reject block 0000..8548 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:43:00Z INFO  powchain::optchain::network::worker] cmt c351..0306 is now available
+[2025-12-26T19:43:01Z INFO  powchain::optchain::network::worker] Reject block 0000..8548 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:43:03Z INFO  powchain::optchain::miner] mine a transaction block 0000..58ab in shard 2
+[2025-12-26T19:43:53Z INFO  powchain::optchain::miner] mine a transaction block 0000..7cfa in shard 2
+[2025-12-26T19:44:16Z INFO  powchain::optchain::miner] mine a transaction block 0000..41c5 in shard 2
+[2025-12-26T19:44:23Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..3470
+[2025-12-26T19:44:23Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..3470)
+[2025-12-26T19:44:32Z INFO  powchain::optchain::network::worker] cmt 72b9..7a96 is now available
+[2025-12-26T19:44:32Z INFO  powchain::optchain::network::worker] cmt 9f34..79cc is now available
+[2025-12-26T19:44:33Z INFO  powchain::optchain::network::worker] cmt f9f7..1e78 is now available
+[2025-12-26T19:44:34Z INFO  powchain::optchain::network::worker] cmt f7b8..d021 is now available
+[2025-12-26T19:44:34Z INFO  powchain::optchain::network::worker] cmt ff4c..859d is now available
+[2025-12-26T19:44:35Z INFO  powchain::optchain::network::worker] cmt a742..3ef6 is now available
+[2025-12-26T19:44:39Z INFO  powchain::optchain::network::worker] cmt b35b..54e2 is now available
+[2025-12-26T19:44:40Z INFO  powchain::optchain::network::worker] cmt 311b..f9d1 is now available
+[2025-12-26T19:44:43Z INFO  powchain::optchain::network::worker] cmt eb05..29ea is now available
+[2025-12-26T19:44:45Z INFO  powchain::optchain::network::worker] cmt 3457..b107 is now available
+[2025-12-26T19:44:46Z INFO  powchain::optchain::network::worker] cmt 2734..8115 is now available
+[2025-12-26T19:44:47Z INFO  powchain::optchain::network::worker] cmt 979e..5679 is now available
+[2025-12-26T19:44:48Z INFO  powchain::optchain::network::worker] cmt 34d8..c766 is now available
+[2025-12-26T19:44:49Z INFO  powchain::optchain::network::worker] cmt 3a10..ec2f is now available
+[2025-12-26T19:44:50Z INFO  powchain::optchain::network::worker] cmt 2748..d36b is now available
+[2025-12-26T19:44:52Z INFO  powchain::optchain::network::worker] cmt bc5a..9947 is now available
+[2025-12-26T19:44:55Z INFO  powchain::optchain::network::worker] cmt 27c8..c664 is now available
+[2025-12-26T19:45:08Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..dd18
+[2025-12-26T19:45:08Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..dd18)
+[2025-12-26T19:45:08Z INFO  powchain::optchain::network::worker] cmt e5b2..3d5b has already been requested
+[2025-12-26T19:45:08Z INFO  powchain::optchain::network::worker] cmt ea8b..0daa has already been requested
+[2025-12-26T19:45:08Z INFO  powchain::optchain::network::worker] cmt 164c..3187 is now available
+[2025-12-26T19:45:12Z INFO  powchain::optchain::network::worker] cmt 7033..7db6 is now available
+[2025-12-26T19:45:13Z INFO  powchain::optchain::network::worker] cmt b1eb..04a4 is now available
+[2025-12-26T19:45:14Z INFO  powchain::optchain::network::worker] cmt bd04..73ac is now available
+[2025-12-26T19:45:16Z INFO  powchain::optchain::network::worker] cmt eabc..0dbd is now available
+[2025-12-26T19:45:17Z INFO  powchain::optchain::network::worker] cmt e9da..bc26 is now available
+[2025-12-26T19:45:19Z INFO  powchain::optchain::network::worker] cmt 7763..8f6e is now available
+[2025-12-26T19:45:19Z INFO  powchain::optchain::network::worker] cmt 58f3..f5f7 is now available
+[2025-12-26T19:45:21Z INFO  powchain::optchain::network::worker] cmt 46c3..6e3d is now available
+[2025-12-26T19:45:23Z INFO  powchain::optchain::network::worker] cmt 5c11..9c67 is now available
+[2025-12-26T19:45:23Z INFO  powchain::optchain::network::worker] cmt e166..15a1 is now available
+[2025-12-26T19:45:24Z INFO  powchain::optchain::network::worker] cmt 791f..80c4 is now available
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..a19b)
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] cmt 34d8..c766 has already been requested
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] cmt 2e62..a62f has already been requested
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] cmt 13db..18d0 has already been requested
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] cmt 50e1..ebde has already been requested
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:25Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:27Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:27Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:28Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:28Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:28Z INFO  powchain::optchain::network::worker] cmt 1f46..b3aa is now available
+[2025-12-26T19:45:29Z INFO  powchain::optchain::network::worker] cmt b03e..2fa5 is now available
+[2025-12-26T19:45:29Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:29Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:30Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:30Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:31Z INFO  powchain::optchain::network::worker] cmt cb1b..9d1f is now available
+[2025-12-26T19:45:32Z INFO  powchain::optchain::network::worker] cmt 05f2..0bea is now available
+[2025-12-26T19:45:32Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:32Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:32Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:32Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:32Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:32Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:36Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:36Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:36Z INFO  powchain::optchain::network::worker] cmt 7209..25d7 is now available
+[2025-12-26T19:45:36Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:36Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:39Z INFO  powchain::optchain::network::worker] cmt a024..d640 is now available
+[2025-12-26T19:45:40Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..a19b
+[2025-12-26T19:45:40Z INFO  powchain::optchain::network::worker] Proposer block 0000..a19b already exists
+[2025-12-26T19:45:42Z INFO  powchain::optchain::network::worker] cmt 105e..0356 is now available
+[2025-12-26T19:45:43Z INFO  powchain::optchain::network::worker] cmt f752..65f5 is now available
+[2025-12-26T19:45:44Z INFO  powchain::optchain::network::worker] cmt 87a7..785c is now available
+[2025-12-26T19:45:45Z INFO  powchain::optchain::network::worker] cmt d3d7..e088 is now available
+[2025-12-26T19:45:46Z INFO  powchain::optchain::network::worker] cmt 0213..b403 is now available
+[2025-12-26T19:45:47Z INFO  powchain::optchain::network::worker] cmt 7dd0..fc1f is now available
+[2025-12-26T19:45:50Z INFO  powchain::optchain::network::worker] cmt fb53..30a8 is now available
+[2025-12-26T19:45:51Z INFO  powchain::optchain::network::worker] cmt 04fb..976d is now available
+[2025-12-26T19:45:52Z INFO  powchain::optchain::network::worker] cmt e4f1..0a26 is now available
+[2025-12-26T19:45:55Z INFO  powchain::optchain::network::worker] cmt f7b7..9649 is now available
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..094b
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..094b)
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt eabc..0dbd has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt 791f..80c4 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt 5c11..9c67 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt bd04..73ac has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt cedd..f0d6 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt 2734..8115 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt 58f3..f5f7 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt e166..15a1 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt 7763..8f6e has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt 05f2..0bea has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt dc20..1b73 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt af4d..044d has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt 0b4f..42c8 has already been requested
+[2025-12-26T19:46:01Z INFO  powchain::optchain::network::worker] cmt b03e..2fa5 has already been requested
+[2025-12-26T19:46:02Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..094b
+[2025-12-26T19:46:02Z INFO  powchain::optchain::network::worker] Proposer block 0000..094b already exists
+[2025-12-26T19:46:09Z INFO  powchain::optchain::network::worker] cmt 5d23..c93e is now available
+[2025-12-26T19:46:09Z INFO  powchain::optchain::network::worker] cmt 8206..a0e0 is now available
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2562
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..2562)
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] cmt 7f50..3634 has already been requested
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] cmt dc20..1b73 has already been requested
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] cmt 5d23..c93e has already been requested
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] cmt cedd..f0d6 has already been requested
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] cmt 58f3..f5f7 has already been requested
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] cmt e166..15a1 has already been requested
+[2025-12-26T19:46:15Z INFO  powchain::optchain::network::worker] cmt 05f2..0bea has already been requested
+[2025-12-26T19:46:19Z INFO  powchain::optchain::network::worker] cmt a5bb..0257 is now available
+[2025-12-26T19:46:20Z INFO  powchain::optchain::network::worker] cmt 85bb..a719 is now available
+[2025-12-26T19:46:24Z INFO  powchain::optchain::network::worker] cmt 9800..60ed is now available
+[2025-12-26T19:46:26Z INFO  powchain::optchain::network::worker] cmt 485a..583a is now available
+[2025-12-26T19:46:27Z INFO  powchain::optchain::network::worker] cmt 0363..f21a is now available
+[2025-12-26T19:46:28Z INFO  powchain::optchain::network::worker] cmt 5c42..de90 is now available
+[2025-12-26T19:46:29Z INFO  powchain::optchain::network::worker] cmt c736..4d8c is now available
+[2025-12-26T19:46:31Z INFO  powchain::optchain::network::worker] cmt 0532..7dfe is now available
+[2025-12-26T19:46:32Z INFO  powchain::optchain::network::worker] cmt 9c31..ac8f is now available
+[2025-12-26T19:46:39Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:39Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..f924)
+[2025-12-26T19:46:39Z INFO  powchain::optchain::network::worker] cmt caa1..1ab2 has already been requested
+[2025-12-26T19:46:39Z INFO  powchain::optchain::network::worker] cmt 9864..cb46 has already been requested
+[2025-12-26T19:46:39Z INFO  powchain::optchain::network::worker] cmt eabc..0dbd has already been requested
+[2025-12-26T19:46:39Z INFO  powchain::optchain::network::worker] cmt 791f..80c4 has already been requested
+[2025-12-26T19:46:39Z INFO  powchain::optchain::network::worker] cmt 5c11..9c67 has already been requested
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:40Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f924
+[2025-12-26T19:46:41Z INFO  powchain::optchain::network::worker] Proposer block 0000..f924 already exists
+[2025-12-26T19:46:43Z INFO  powchain::optchain::network::worker] cmt dd31..9ec5 is now available
+[2025-12-26T19:46:44Z INFO  powchain::optchain::network::worker] cmt 01c2..8546 is now available
+[2025-12-26T19:46:48Z INFO  powchain::optchain::network::worker] cmt 2b81..c5f4 is now available
+[2025-12-26T19:46:52Z INFO  powchain::optchain::network::worker] cmt d740..628a is now available
+[2025-12-26T19:46:54Z INFO  powchain::optchain::network::worker] cmt 4dd2..9225 is now available
+[2025-12-26T19:46:55Z INFO  powchain::optchain::network::worker] cmt 875d..8254 is now available
+[2025-12-26T19:46:55Z INFO  powchain::optchain::network::worker] cmt 7bc3..4397 is now available
+[2025-12-26T19:46:57Z INFO  powchain::optchain::network::worker] cmt 8ae2..36f3 is now available
+[2025-12-26T19:46:57Z INFO  powchain::optchain::network::worker] cmt 69f6..7892 is now available
+[2025-12-26T19:47:01Z INFO  powchain::optchain::network::worker] cmt 3bc1..6890 is now available
+[2025-12-26T19:47:01Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..dd47
+[2025-12-26T19:47:01Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..dd47)
+[2025-12-26T19:47:01Z INFO  powchain::optchain::network::worker] cmt 7710..acb2 has already been requested
+[2025-12-26T19:47:01Z INFO  powchain::optchain::network::worker] cmt 87a7..785c has already been requested
+[2025-12-26T19:47:02Z INFO  powchain::optchain::network::worker] cmt e18e..d516 is now available
+[2025-12-26T19:47:13Z INFO  powchain::optchain::network::worker] cmt 4e7d..4154 is now available
+[2025-12-26T19:47:14Z INFO  powchain::optchain::network::worker] cmt 89fe..8ff0 is now available
+[2025-12-26T19:47:14Z INFO  powchain::optchain::network::worker] cmt 2ead..53f2 is now available
+[2025-12-26T19:47:19Z INFO  powchain::optchain::network::worker] cmt 1c6a..c2a0 is now available
+[2025-12-26T19:47:19Z INFO  powchain::optchain::network::worker] cmt b300..7e9c is now available
+[2025-12-26T19:47:20Z INFO  powchain::optchain::network::worker] cmt cb88..28e5 is now available
+[2025-12-26T19:47:20Z INFO  powchain::optchain::network::worker] cmt 61e9..6c6a is now available
+[2025-12-26T19:47:23Z INFO  powchain::optchain::network::worker] cmt 4219..f684 is now available
+[2025-12-26T19:47:24Z INFO  powchain::optchain::network::worker] cmt 7699..a95a is now available
+[2025-12-26T19:47:26Z INFO  powchain::optchain::network::worker] cmt 9b4c..752f is now available
+[2025-12-26T19:47:29Z INFO  powchain::optchain::network::worker] cmt 2cc8..442e is now available
+[2025-12-26T19:47:31Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..43b0
+[2025-12-26T19:47:31Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..43b0)
+[2025-12-26T19:47:31Z INFO  powchain::optchain::network::worker] cmt b03e..2fa5 has already been requested
+[2025-12-26T19:47:32Z INFO  powchain::optchain::network::worker] cmt bf64..f903 has already been requested
+[2025-12-26T19:47:32Z INFO  powchain::optchain::network::worker] cmt 2734..8115 has already been requested
+[2025-12-26T19:47:38Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..6c38
+[2025-12-26T19:47:38Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..6c38)
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt 72b9..7a96 has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt 7710..acb2 has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt eb05..29ea has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt 89fe..8ff0 has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt 1c6a..c2a0 has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt 4219..f684 has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt d740..628a has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt 01c2..8546 has already been requested
+[2025-12-26T19:47:39Z INFO  powchain::optchain::network::worker] cmt 7b12..822f has already been requested
+[2025-12-26T19:47:55Z INFO  powchain::optchain::network::worker] cmt 0f74..8580 is now available
+[2025-12-26T19:48:09Z INFO  powchain::optchain::network::worker] cmt 7212..8ad6 is now available
+[2025-12-26T19:48:15Z INFO  powchain::optchain::network::worker] cmt ca0b..51e0 is now available
+[2025-12-26T19:48:17Z INFO  powchain::optchain::network::worker] cmt 75cb..b532 is now available
+[2025-12-26T19:48:20Z INFO  powchain::optchain::network::worker] cmt 0f32..2df4 is now available
+[2025-12-26T19:48:21Z INFO  powchain::optchain::network::worker] cmt e867..cd36 is now available
+[2025-12-26T19:48:22Z INFO  powchain::optchain::network::worker] cmt c0ef..7c87 is now available
+[2025-12-26T19:48:25Z INFO  powchain::optchain::network::worker] cmt cc0d..a459 is now available
+[2025-12-26T19:48:25Z INFO  powchain::optchain::network::worker] cmt 8109..11a2 is now available
+[2025-12-26T19:48:26Z INFO  powchain::optchain::network::worker] cmt 1041..5656 is now available
+[2025-12-26T19:48:30Z INFO  powchain::optchain::network::worker] cmt 281f..3842 is now available
+[2025-12-26T19:48:30Z INFO  powchain::optchain::network::worker] cmt c52a..88ef is now available
+[2025-12-26T19:48:31Z INFO  powchain::optchain::network::worker] cmt a7da..d7ca is now available
+[2025-12-26T19:48:35Z INFO  powchain::optchain::network::worker] cmt 9818..9666 is now available
+[2025-12-26T19:48:39Z INFO  powchain::optchain::network::worker] cmt b880..bd0d is now available
+[2025-12-26T19:48:42Z INFO  powchain::optchain::network::worker] cmt ebc7..cd3a is now available
+[2025-12-26T19:48:44Z INFO  powchain::optchain::network::worker] cmt c2ab..90b4 is now available
+[2025-12-26T19:48:49Z INFO  powchain::optchain::network::worker] cmt 597e..dd00 is now available
+[2025-12-26T19:48:54Z INFO  powchain::optchain::network::worker] cmt b069..c208 is now available
+[2025-12-26T19:48:56Z INFO  powchain::optchain::network::worker] cmt 0702..bd28 is now available
+[2025-12-26T19:48:56Z INFO  powchain::optchain::network::worker] cmt 0702..bd28 is now available
+[2025-12-26T19:48:57Z INFO  powchain::optchain::network::worker] cmt b24a..ab57 is now available
+[2025-12-26T19:48:57Z INFO  powchain::optchain::network::worker] cmt b24a..ab57 is now available
+[2025-12-26T19:48:57Z INFO  powchain::optchain::network::worker] cmt b24a..ab57 is now available
+[2025-12-26T19:49:02Z INFO  powchain::optchain::network::worker] cmt 5793..c5f3 is now available
+[2025-12-26T19:49:14Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fcb0
+[2025-12-26T19:49:16Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..fcb0)
+[2025-12-26T19:49:16Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fcb0
+[2025-12-26T19:49:16Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..fcb0 already exists
+[2025-12-26T19:49:19Z INFO  powchain::optchain::network::worker] cmt eba1..c7e4 is now available
+[2025-12-26T19:49:38Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:39Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..6be7
+[2025-12-26T19:49:39Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..6be7)
+[2025-12-26T19:49:39Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..6be7
+[2025-12-26T19:49:39Z INFO  powchain::optchain::network::worker] Ordering block 0000..6be7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..6be7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Ordering block 0000..6be7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..6be7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Ordering block 0000..6be7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..6be7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Ordering block 0000..6be7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..6be7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Ordering block 0000..6be7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..6be7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Ordering block 0000..6be7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..32d7)
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:40Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..32d7
+[2025-12-26T19:49:41Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..32d7 already exists
+[2025-12-26T19:49:48Z INFO  powchain::optchain::network::worker] Reject block 0000..32d7 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:49:52Z INFO  powchain::optchain::network::worker] Reject block 0000..32d7 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:49:53Z INFO  powchain::optchain::network::worker] Reject block 0000..32d7 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:49:53Z INFO  powchain::optchain::network::worker] Reject block 0000..32d7 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:49:53Z INFO  powchain::optchain::network::worker] Reject block 0000..32d7 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:49:59Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..0b1d
+[2025-12-26T19:49:59Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..0b1d)
+[2025-12-26T19:49:59Z INFO  powchain::optchain::network::worker] cmt 3b6b..cc75 has already been requested
+[2025-12-26T19:50:13Z INFO  powchain::optchain::network::worker] cmt 3069..4125 is now available
+[2025-12-26T19:50:15Z INFO  powchain::optchain::network::worker] cmt e26e..304e is now available
+[2025-12-26T19:50:16Z INFO  powchain::optchain::network::worker] cmt 0832..b635 is now available
+[2025-12-26T19:50:17Z INFO  powchain::optchain::network::worker] cmt dd3c..0b65 is now available
+[2025-12-26T19:50:17Z INFO  powchain::optchain::network::worker] cmt 974b..a8c7 is now available
+[2025-12-26T19:50:18Z INFO  powchain::optchain::network::worker] cmt cb7f..ecfe is now available
+[2025-12-26T19:50:19Z INFO  powchain::optchain::network::worker] cmt 8b2e..5cbe is now available
+[2025-12-26T19:50:23Z INFO  powchain::optchain::network::worker] cmt d3cc..dfad is now available
+[2025-12-26T19:50:23Z INFO  powchain::optchain::network::worker] cmt 9b17..a60c is now available
+[2025-12-26T19:50:27Z INFO  powchain::optchain::network::worker] cmt 774f..9e9a is now available
+[2025-12-26T19:50:28Z INFO  powchain::optchain::network::worker] cmt 637a..ac03 is now available
+[2025-12-26T19:50:31Z INFO  powchain::optchain::network::worker] cmt 27e6..c1c9 is now available
+[2025-12-26T19:50:31Z INFO  powchain::optchain::network::worker] cmt 6fb9..9f8f is now available
+[2025-12-26T19:50:38Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:40Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:41Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:41Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:42Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..6338)
+[2025-12-26T19:50:44Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:44Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..6338 already exists
+[2025-12-26T19:50:46Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:46Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..6338 already exists
+[2025-12-26T19:50:46Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:46Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..6338 already exists
+[2025-12-26T19:50:46Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..6338
+[2025-12-26T19:50:46Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..6338 already exists
+[2025-12-26T19:50:54Z INFO  powchain::optchain::network::worker] Reject block 0000..6338 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:50:55Z INFO  powchain::optchain::network::worker] Reject block 0000..6338 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:50:55Z INFO  powchain::optchain::network::worker] Reject block 0000..6338 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:50:55Z INFO  powchain::optchain::network::worker] Reject block 0000..6338 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:50:56Z INFO  powchain::optchain::network::worker] Reject block 0000..6338 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:50:56Z INFO  powchain::optchain::network::worker] Reject block 0000..6338 in shard 2: insertion fails: Block already exits
+[2025-12-26T19:50:59Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:01Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:01Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:01Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:01Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:01Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:03Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:05Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:08Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..bdfa)
+[2025-12-26T19:51:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:10Z INFO  powchain::optchain::network::worker] Reject block 0000..bdfa in shard 2: insertion fails: Block already exits
+[2025-12-26T19:51:10Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:10Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:12Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:14Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:14Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:18Z INFO  powchain::optchain::network::worker] Reject block 0000..bdfa in shard 2: insertion fails: Block already exits
+[2025-12-26T19:51:18Z INFO  powchain::optchain::network::worker] Reject block 0000..bdfa in shard 2: insertion fails: Block already exits
+[2025-12-26T19:51:18Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:18Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:19Z INFO  powchain::optchain::network::worker] Reject block 0000..bdfa in shard 2: insertion fails: Block already exits
+[2025-12-26T19:51:19Z INFO  powchain::optchain::network::worker] Reject block 0000..bdfa in shard 2: insertion fails: Block already exits
+[2025-12-26T19:51:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:20Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:20Z INFO  powchain::optchain::network::worker] Reject block 0000..bdfa in shard 2: insertion fails: Block already exits
+[2025-12-26T19:51:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..bdfa
+[2025-12-26T19:51:20Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..bdfa already exists
+[2025-12-26T19:51:20Z INFO  powchain::optchain::network::worker] Reject block 0000..bdfa in shard 2: insertion fails: Block already exits
+[2025-12-26T19:51:24Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:24Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..e8b8)
+[2025-12-26T19:51:25Z INFO  powchain::optchain::network::worker] cmt be89..30be has already been requested
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:33Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:34Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:34Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:34Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:34Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:38Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:38Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:38Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:38Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:38Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:38Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:39Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:39Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:39Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..e8b8
+[2025-12-26T19:51:39Z INFO  powchain::optchain::network::worker] Proposer block 0000..e8b8 already exists
+[2025-12-26T19:51:42Z INFO  powchain::optchain::network::worker] cmt d78e..5d0f is now available
+[2025-12-26T19:51:43Z INFO  powchain::optchain::miner] mine a transaction block 0000..4717 in shard 2
+[2025-12-26T19:51:43Z INFO  powchain::optchain::network::worker] cmt 4e62..bda8 is now available
+[2025-12-26T19:51:44Z INFO  powchain::optchain::network::worker] cmt ab44..0312 is now available
+[2025-12-26T19:51:45Z INFO  powchain::optchain::network::worker] cmt 6eb9..3988 is now available
+[2025-12-26T19:51:46Z INFO  powchain::optchain::network::worker] cmt 6eb9..3988 is now available
+[2025-12-26T19:51:46Z INFO  powchain::optchain::network::worker] cmt 36b8..f058 is now available
+[2025-12-26T19:51:47Z INFO  powchain::optchain::network::worker] cmt 12a0..5ffc is now available
+[2025-12-26T19:51:49Z INFO  powchain::optchain::network::worker] cmt 4478..c797 is now available
+[2025-12-26T19:51:49Z INFO  powchain::optchain::network::worker] cmt 4478..c797 is now available
+[2025-12-26T19:51:52Z INFO  powchain::optchain::network::worker] cmt fc5d..d0b6 is now available
+[2025-12-26T19:51:54Z INFO  powchain::optchain::network::worker] cmt 3555..04e2 is now available
+[2025-12-26T19:51:57Z INFO  powchain::optchain::network::worker] cmt ba58..950e is now available
+[2025-12-26T19:52:00Z INFO  powchain::optchain::network::worker] cmt accc..2c2c is now available
+[2025-12-26T19:52:00Z INFO  powchain::optchain::network::worker] cmt c4f7..e6e6 is now available
+[2025-12-26T19:52:02Z INFO  powchain::optchain::network::worker] cmt 174e..0234 is now available
+[2025-12-26T19:52:03Z INFO  powchain::optchain::network::worker] cmt 0120..9bfe is now available
+[2025-12-26T19:52:09Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:09Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..c03c)
+[2025-12-26T19:52:09Z INFO  powchain::optchain::network::worker] cmt 4e62..bda8 has already been requested
+[2025-12-26T19:52:09Z INFO  powchain::optchain::network::worker] cmt cc0d..a459 has already been requested
+[2025-12-26T19:52:18Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:18Z INFO  powchain::optchain::network::worker] Proposer block 0000..c03c already exists
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Proposer block 0000..c03c already exists
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Proposer block 0000..c03c already exists
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Proposer block 0000..c03c already exists
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:19Z INFO  powchain::optchain::network::worker] Proposer block 0000..c03c already exists
+[2025-12-26T19:52:21Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:21Z INFO  powchain::optchain::network::worker] Proposer block 0000..c03c already exists
+[2025-12-26T19:52:21Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..c03c
+[2025-12-26T19:52:21Z INFO  powchain::optchain::network::worker] Proposer block 0000..c03c already exists
+[2025-12-26T19:52:28Z INFO  powchain::optchain::network::worker] cmt 8561..0915 is now available
+[2025-12-26T19:52:36Z INFO  powchain::optchain::network::worker] cmt cb5c..92ab is now available
+[2025-12-26T19:52:37Z INFO  powchain::optchain::network::worker] cmt 4ea6..9ca4 is now available
+[2025-12-26T19:52:38Z INFO  powchain::optchain::network::worker] cmt 1bf8..86e8 is now available
+[2025-12-26T19:52:38Z INFO  powchain::optchain::network::worker] cmt addc..11cd is now available
+[2025-12-26T19:52:40Z INFO  powchain::optchain::network::worker] cmt 3304..dbdf is now available
+[2025-12-26T19:52:40Z INFO  powchain::optchain::network::worker] cmt 281d..b238 is now available
+[2025-12-26T19:52:41Z INFO  powchain::optchain::network::worker] cmt 7381..1d52 is now available
+[2025-12-26T19:52:43Z INFO  powchain::optchain::network::worker] cmt 5e38..19f7 is now available
+[2025-12-26T19:52:45Z INFO  powchain::optchain::network::worker] cmt 3828..ab17 is now available
+[2025-12-26T19:52:45Z INFO  powchain::optchain::network::worker] cmt e800..24d5 is now available
+[2025-12-26T19:52:46Z INFO  powchain::optchain::network::worker] cmt 6db2..2f59 is now available
+[2025-12-26T19:52:48Z INFO  powchain::optchain::network::worker] cmt da4b..332b is now available
+[2025-12-26T19:52:49Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:49Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..2046)
+[2025-12-26T19:52:49Z INFO  powchain::optchain::network::worker] cmt 1b12..718c is now available
+[2025-12-26T19:52:49Z INFO  powchain::optchain::network::worker] cmt ab44..0312 has already been requested
+[2025-12-26T19:52:49Z INFO  powchain::optchain::network::worker] cmt 8b2e..5cbe has already been requested
+[2025-12-26T19:52:49Z INFO  powchain::optchain::network::worker] cmt 974b..a8c7 has already been requested
+[2025-12-26T19:52:52Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:52Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:52Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:52Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:52:53Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:52:58Z INFO  powchain::optchain::network::worker] cmt e930..bf3c is now available
+[2025-12-26T19:53:00Z INFO  powchain::optchain::network::worker] cmt 5236..08ee is now available
+[2025-12-26T19:53:00Z INFO  powchain::optchain::network::worker] cmt c2c6..17a3 is now available
+[2025-12-26T19:53:01Z INFO  powchain::optchain::network::worker] cmt 8dd4..191f is now available
+[2025-12-26T19:53:02Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..2046
+[2025-12-26T19:53:02Z INFO  powchain::optchain::network::worker] Proposer block 0000..2046 already exists
+[2025-12-26T19:53:05Z INFO  powchain::optchain::network::worker] cmt 4fbf..cb14 is now available
+[2025-12-26T19:53:05Z INFO  powchain::optchain::network::worker] cmt 3be8..9954 is now available
+[2025-12-26T19:53:07Z INFO  powchain::optchain::network::worker] cmt 4c6a..57e0 is now available
+[2025-12-26T19:53:07Z INFO  powchain::optchain::network::worker] cmt 174d..a64a is now available
+[2025-12-26T19:53:09Z INFO  powchain::optchain::network::worker] cmt 83f1..c355 is now available
+[2025-12-26T19:53:12Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:13Z INFO  powchain::optchain::network::worker] cmt 0c2f..c572 is now available
+[2025-12-26T19:53:15Z INFO  powchain::optchain::network::worker] cmt 5cf3..6628 is now available
+[2025-12-26T19:53:16Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: unavailable, unavailable cmts: [9743..5b00, 42ba..688a, 3e72..b6e2]
+[2025-12-26T19:53:16Z INFO  powchain::optchain::network::worker] cmt 6e60..3eae is now available
+[2025-12-26T19:53:17Z INFO  powchain::optchain::network::worker] cmt eedb..09fe is now available
+[2025-12-26T19:53:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:18Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:18Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:18Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:18Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:18Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:18Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:19Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:19Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:19Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:19Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:19Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:19Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:19Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:20Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:20Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:20Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:21Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:21Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:21Z INFO  powchain::optchain::network::worker] cmt 3e72..b6e2 is now available
+[2025-12-26T19:53:22Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:22Z INFO  powchain::optchain::network::worker] cmt 3e72..b6e2 should not be available!
+[2025-12-26T19:53:22Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:22Z INFO  powchain::optchain::network::worker] cmt 3e72..b6e2 should not be available!
+[2025-12-26T19:53:22Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:23Z INFO  powchain::optchain::network::worker] cmt 3e72..b6e2 should not be available!
+[2025-12-26T19:53:23Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:23Z INFO  powchain::optchain::network::worker] handle block 0000..73a1 for cmt 3e72..b6e2 becoming available
+[2025-12-26T19:53:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:23Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:23Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:24Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:24Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:24Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:25Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:25Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:26Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:29Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:29Z INFO  powchain::optchain::network::worker] cmt 42ba..688a is now available
+[2025-12-26T19:53:30Z INFO  powchain::optchain::network::worker] cmt 42ba..688a should not be available!
+[2025-12-26T19:53:30Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:30Z INFO  powchain::optchain::network::worker] handle block 0000..73a1 for cmt 42ba..688a becoming available
+[2025-12-26T19:53:31Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:32Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:32Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:32Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:32Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:32Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:36Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:36Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:40Z INFO  powchain::optchain::network::worker] cmt d831..b2de is now available
+[2025-12-26T19:53:41Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:42Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:42Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:43Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:43Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:44Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:45Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:46Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:47Z INFO  powchain::optchain::network::worker] cmt b5f4..88c3 is now available
+[2025-12-26T19:53:48Z INFO  powchain::optchain::network::worker] cmt f7b6..44a4 is now available
+[2025-12-26T19:53:49Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:50Z INFO  powchain::optchain::network::worker] Reject block 0000..73a1: in unavailable hash table
+[2025-12-26T19:53:52Z INFO  powchain::optchain::network::worker] cmt 9743..5b00 is now available
+[2025-12-26T19:53:52Z INFO  powchain::optchain::network::worker] handle block 0000..73a1 for cmt 9743..5b00 becoming available
+[2025-12-26T19:53:52Z INFO  powchain::optchain::network::worker] block 0000..73a1 is now available
+[2025-12-26T19:53:52Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..73a1)
+[2025-12-26T19:53:54Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:54Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:53:54Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:53:54Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:00Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:00Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:00Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:00Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:02Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:02Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:03Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:03Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:06Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:06Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:07Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:07Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:08Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:08Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:14Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:14Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..73a1
+[2025-12-26T19:54:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..73a1 already exists
+[2025-12-26T19:54:23Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:26Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..9e8b)
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..9e8b
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:28Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..9e8b already exists
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fc1b
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fc1b
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..fc1b)
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..fc1b already exists
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fc1b
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..fc1b already exists
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fc1b
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..fc1b already exists
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..fc1b
+[2025-12-26T19:54:48Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..fc1b already exists
+[2025-12-26T19:55:10Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..f7f3
+[2025-12-26T19:55:10Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..f7f3)
+[2025-12-26T19:55:10Z INFO  powchain::optchain::network::worker] cmt e867..cd36 has already been requested
+[2025-12-26T19:55:10Z INFO  powchain::optchain::network::worker] cmt 9818..9666 has already been requested
+[2025-12-26T19:55:10Z INFO  powchain::optchain::network::worker] cmt ebc7..cd3a has already been requested
+[2025-12-26T19:55:10Z INFO  powchain::optchain::network::worker] cmt b880..bd0d has already been requested
+[2025-12-26T19:55:14Z INFO  powchain::optchain::network::worker] cmt d90a..586c is now available
+[2025-12-26T19:55:15Z INFO  powchain::optchain::network::worker] cmt ac1c..6e94 is now available
+[2025-12-26T19:55:15Z INFO  powchain::optchain::network::worker] cmt 1534..cf6a is now available
+[2025-12-26T19:55:16Z INFO  powchain::optchain::network::worker] cmt ebf0..76d0 is now available
+[2025-12-26T19:55:19Z INFO  powchain::optchain::network::worker] cmt f71d..0ed2 is now available
+[2025-12-26T19:55:23Z INFO  powchain::optchain::network::worker] cmt 1496..e9db is now available
+[2025-12-26T19:55:24Z INFO  powchain::optchain::network::worker] cmt d32b..b665 is now available
+[2025-12-26T19:55:24Z INFO  powchain::optchain::network::worker] cmt fae4..a612 is now available
+[2025-12-26T19:55:24Z INFO  powchain::optchain::network::worker] cmt 0261..f399 is now available
+[2025-12-26T19:55:26Z INFO  powchain::optchain::network::worker] cmt c756..9bdd is now available
+[2025-12-26T19:55:27Z INFO  powchain::optchain::network::worker] cmt bdd9..94de is now available
+[2025-12-26T19:55:28Z INFO  powchain::optchain::network::worker] cmt c2ed..63b3 is now available
+[2025-12-26T19:55:42Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..2f48
+[2025-12-26T19:55:42Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..2f48)
+[2025-12-26T19:56:20Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:20Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..db77)
+[2025-12-26T19:56:21Z INFO  powchain::optchain::network::worker] cmt 4219..f684 has already been requested
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:22Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:23Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:23Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:25Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:25Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:25Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:25Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:26Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:26Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:28Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:28Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:29Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:29Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:30Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..db77
+[2025-12-26T19:56:30Z INFO  powchain::optchain::network::worker] Proposer block 0000..db77 already exists
+[2025-12-26T19:56:34Z INFO  powchain::optchain::network::worker] cmt ccab..8646 is now available
+[2025-12-26T19:56:35Z INFO  powchain::optchain::network::worker] cmt 7394..2cb7 is now available
+[2025-12-26T19:56:35Z INFO  powchain::optchain::network::worker] cmt a5b3..bd56 is now available
+[2025-12-26T19:56:37Z INFO  powchain::optchain::network::worker] cmt f4c7..6358 is now available
+[2025-12-26T19:56:38Z INFO  powchain::optchain::network::worker] cmt 2ccc..9449 is now available
+[2025-12-26T19:56:38Z INFO  powchain::optchain::network::worker] cmt ee53..ed8d is now available
+[2025-12-26T19:56:39Z INFO  powchain::optchain::network::worker] cmt b92d..7ad5 is now available
+[2025-12-26T19:56:40Z INFO  powchain::optchain::network::worker] cmt 4fd7..34ec is now available
+[2025-12-26T19:56:41Z INFO  powchain::optchain::network::worker] cmt bbb2..0fd6 is now available
+[2025-12-26T19:56:42Z INFO  powchain::optchain::network::worker] cmt f672..6d09 is now available
+[2025-12-26T19:56:43Z INFO  powchain::optchain::network::worker] cmt 646c..1be7 is now available
+[2025-12-26T19:56:44Z INFO  powchain::optchain::network::worker] cmt e609..118f is now available
+[2025-12-26T19:56:44Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..35dd
+[2025-12-26T19:56:44Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..35dd)
+[2025-12-26T19:56:44Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..35dd
+[2025-12-26T19:56:44Z INFO  powchain::optchain::network::worker] Ordering block 0000..35dd already exists
+[2025-12-26T19:56:45Z INFO  powchain::optchain::network::worker] cmt 2c42..b02d is now available
+[2025-12-26T19:56:49Z INFO  powchain::optchain::network::worker] cmt 36df..f0b7 is now available
+[2025-12-26T19:57:14Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] successfully inserting block: ExHash(0000..06fe)
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:17Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:19Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:19Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:22Z INFO  powchain::optchain::network::worker] Reject block 0000..06fe in shard 2: insertion fails: Block already exits
+[2025-12-26T19:57:22Z INFO  powchain::optchain::network::worker] Incoming exclusive availability block 0000..06fe
+[2025-12-26T19:57:22Z INFO  powchain::optchain::network::worker] Exclusive availability block 0000..06fe already exists
+[2025-12-26T19:57:24Z INFO  powchain::optchain::network::worker] Reject block 0000..06fe in shard 2: insertion fails: Block already exits
+[2025-12-26T19:57:38Z INFO  powchain::optchain::miner] mine a transaction block 0000..4556 in shard 2
+[2025-12-26T19:57:51Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..83ed
+[2025-12-26T19:57:51Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..83ed)
+[2025-12-26T19:57:51Z INFO  powchain::optchain::network::worker] cmt 01c2..8546 has already been requested
+[2025-12-26T19:57:51Z INFO  powchain::optchain::network::worker] cmt ba58..950e has already been requested
+[2025-12-26T19:57:54Z INFO  powchain::optchain::network::worker] cmt bd28..d022 is now available
+[2025-12-26T19:58:00Z INFO  powchain::optchain::network::worker] cmt 825b..0bb5 is now available
+[2025-12-26T19:58:03Z INFO  powchain::optchain::network::worker] cmt 2855..c4ec is now available
+[2025-12-26T19:58:04Z INFO  powchain::optchain::network::worker] cmt aa03..3158 is now available
+[2025-12-26T19:58:05Z INFO  powchain::optchain::network::worker] cmt 87a2..002f is now available
+[2025-12-26T19:58:05Z INFO  powchain::optchain::network::worker] cmt da32..e9ef is now available
+[2025-12-26T19:58:06Z INFO  powchain::optchain::network::worker] cmt 9ea0..b93c is now available
+[2025-12-26T19:58:07Z INFO  powchain::optchain::network::worker] cmt 5701..2960 is now available
+[2025-12-26T19:58:08Z INFO  powchain::optchain::network::worker] cmt 519a..68d0 is now available
+[2025-12-26T19:58:09Z INFO  powchain::optchain::network::worker] cmt 9753..c7ac is now available
+[2025-12-26T19:58:10Z INFO  powchain::optchain::network::worker] cmt 6f7c..47ff is now available
+[2025-12-26T19:58:16Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..c35c
+[2025-12-26T19:58:16Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..c35c)
+[2025-12-26T19:58:16Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..c35c
+[2025-12-26T19:58:16Z INFO  powchain::optchain::network::worker] Ordering block 0000..c35c already exists
+[2025-12-26T19:58:42Z INFO  powchain::optchain::network::worker] cmt 8757..c233 is now available
+[2025-12-26T19:59:06Z INFO  powchain::optchain::miner] mine a transaction block 0000..a130 in shard 2
+[2025-12-26T19:59:16Z INFO  powchain::optchain::network::worker] cmt d2c8..017d is now available
+[2025-12-26T19:59:23Z INFO  powchain::optchain::network::worker] Incoming proposer block 0000..fbbe
+[2025-12-26T19:59:23Z INFO  powchain::optchain::network::worker] successfully inserting block: PropHash(0000..fbbe)
+[2025-12-26T19:59:23Z INFO  powchain::optchain::network::worker] cmt e609..118f has already been requested
+[2025-12-26T19:59:26Z INFO  powchain::optchain::network::worker] cmt 2a19..409a is now available
+[2025-12-26T19:59:39Z INFO  powchain::optchain::network::worker] cmt aa39..5c32 is now available
+[2025-12-26T19:59:39Z INFO  powchain::optchain::network::worker] cmt 1de5..b124 is now available
+[2025-12-26T19:59:39Z INFO  powchain::optchain::network::worker] cmt 431c..4ea1 is now available
+[2025-12-26T19:59:39Z INFO  powchain::optchain::network::worker] cmt 7734..85ca is now available
+[2025-12-26T19:59:40Z INFO  powchain::optchain::network::worker] cmt f0fc..9c1b is now available
+[2025-12-26T19:59:41Z INFO  powchain::optchain::network::worker] cmt 2d6a..69ad is now available
+[2025-12-26T19:59:42Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..b081
+[2025-12-26T19:59:42Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..b081)
+[2025-12-26T19:59:43Z INFO  powchain::optchain::network::worker] cmt 158a..0936 is now available
+[2025-12-26T19:59:43Z INFO  powchain::optchain::network::worker] cmt 313e..970f is now available
+[2025-12-26T19:59:43Z INFO  powchain::optchain::network::worker] cmt 9f24..393d is now available
+[2025-12-26T19:59:45Z INFO  powchain::optchain::network::worker] cmt 0fa3..13d8 is now available
+[2025-12-26T19:59:46Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..b081
+[2025-12-26T19:59:46Z INFO  powchain::optchain::network::worker] Ordering block 0000..b081 already exists
+[2025-12-26T19:59:46Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..b081
+[2025-12-26T19:59:46Z INFO  powchain::optchain::network::worker] Ordering block 0000..b081 already exists
+[2025-12-26T19:59:47Z INFO  powchain::optchain::network::worker] cmt 8502..d604 is now available
+[2025-12-26T19:59:48Z INFO  powchain::optchain::network::worker] cmt 0de0..17c0 is now available
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] successfully inserting block: OrderHash(0000..bc51)
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Ordering block 0000..bc51 already exists
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Ordering block 0000..bc51 already exists
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Ordering block 0000..bc51 already exists
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Ordering block 0000..bc51 already exists
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Ordering block 0000..bc51 already exists
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Ordering block 0000..bc51 already exists
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Incoming ordering block 0000..bc51
+[2025-12-26T19:59:55Z INFO  powchain::optchain::network::worker] Ordering block 0000..bc51 already exists
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::worker] cmt a554..c13e is now available
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 18.169.0.178:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 13.42.18.211:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 18.228.188.21:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 98.92.38.242:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 13.42.12.157:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 18.130.248.20:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 15.228.186.24:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 3.239.250.245:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 44.192.106.107:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 52.68.182.110:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 18.230.71.71:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 44.222.97.187:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 3.231.4.46:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 44.212.46.131:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 44.215.71.63:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 3.112.191.251:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 3.239.180.58:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 3.8.56.49:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 18.130.192.230:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 13.41.72.11:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 44.193.214.157:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 13.42.105.191:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 3.92.42.43:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 44.203.24.247:6042 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 56.124.76.166:58528 disconnected
+[2025-12-26T20:00:01Z INFO  powchain::optchain::network::server] Peer 3.239.20.198:6042 disconnected

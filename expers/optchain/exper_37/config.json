@@ -1,0 +1,20 @@
+{
+  "shard_num": 8,
+  "shard_size": 8,
+  "block_size": 8192,
+  "symbol_size": 64,
+  "prop_size": 32,
+  "avai_size": 16,
+  "ex_req_num": 4,
+  "in_req_num": 4,
+  "confirmation_depth": 6,
+  "mining_interval": 0,
+  "runtime": 200,
+  "tx_diff": "000005ffffffffffffffffffffffffffffffffffffffffffffffffffffffff70",
+  "prop_diff": "0000008d9df51b3bea3677d46cefa8d9df51b3bea3677d46cefa8d9df51b3bdb",
+  "order_diff": "000000620ae4c415c9882b9310572620ae4c415c9882b9310572620ae4c415bf",
+  "avai_diff": "000000572620ae4c415c9882b9310572620ae4c415c9882b9310572620ae4c38",
+  "in_avai_diff": "00000002202642b0b06c679f49332598a4bb95307d68d15eb8a8fbe1b5dec9a9",
+  "bandwidths": [6, 11, 15, 18, 22, 28, 35, 53, 7, 11, 15, 19, 23, 29, 37, 57, 7, 12, 15, 19, 24, 29, 38, 62, 8, 12, 16, 20, 24, 30, 40, 69, 9, 13, 16, 20, 25, 31, 42, 78, 9, 13, 17, 21, 26, 32, 44, 90, 10, 14, 17, 21, 26, 33, 46, 106, 10, 14, 18, 22, 27, 34, 49, 134],
+  "description": "Exper 1 for Optchain"
+}

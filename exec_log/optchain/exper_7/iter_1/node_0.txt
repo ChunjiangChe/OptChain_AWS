@@ -1,2 +1,0 @@
-output: Running command: ./powchain optchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149 --shardId 0 --nodeId 0 --experNumber 7 --experIter 1 --shardNum 2 --shardSize 32 --blockSize 8192 --symbolSize 64 --propSize 3 --avaiSize 3 --eReq 4 --iReq 4 --k 6 --tDiff 00000affffffffffffffffffffffffffffffffffffffffffffffffffffffffff --pDiff 000002bfffffffffffffffffffffffffffffffffffffffffffffffffffffffff --aDiff 0000015fffffffffffffffffffffffffffffffffffffffffffffffffffffffff --iDiff 0000007555555555555555555555555555555555555555555555555555555555
-err: 
