@@ -3,7 +3,7 @@ OptChain:
 * shard_num = 16: 
     exper 20 (prop_size = 64)
         iter 0 
-    full: exper 36 (prop_size = 64, avai_size = 64, block_size = 8192)
+    full: exper 36 (prop_size = 64, avai_size = 16, block_size = 8192)
         iter 0
 * shard_num = 8
     exper 23 (prop_size = 32)

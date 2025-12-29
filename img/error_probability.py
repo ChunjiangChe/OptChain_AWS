@@ -1,8 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import read_log
-import server_utility
 
+block_size = 8192
 shard_nums = [1, 2, 4, 8, 16]
 exper_ids = [25, 24, 15, 23, 20]
 iters = [0, 0, 0, 0, 0]
@@ -12,9 +11,28 @@ base_error = 0.0000000000000000000000000000000000000000000000000001
 # highest_bandwidth = 60
 
 
+# Full list of throughput values extracted from the figure
+download_blocks = [
+    0.02, 0.03, 0.12, 0.13, 0.10, 0.10, 0.13, 0.12, 0.05, 0.27, 
+    0.12, 0.03, 0.08, 0.18, 0.15, 0.12, 0.07, 0.08, 0.17, 0.03, 
+    0.08, 0.07, 0.15, 0.05, 0.03, 0.10, 0.12, 0.07, 0.10, 0.08, 
+    0.15, 0.08, 0.02, 0.13, 0.13, 0.05, 0.07, 0.17, 0.07, 0.15, 
+    0.07, 0.05, 0.08, 0.05, 0.07, 0.13, 0.03, 0.15, 0.10, 0.30, 
+    0.03, 0.12, 0.03, 0.13, 0.05, 0.18, 0.07, 0.12, 0.05, 0.05, 
+    0.13, 0.12, 0.03
+]
+
+# 1. Sort in descending order to prioritize highest performing nodes
+sorted_throughput = sorted(download_blocks, reverse=True)
+
+# 2. Define the specific shard counts we want to calculate
+shard_nums = [1, 2, 4, 8, 16]
+
+print(f"{'Shards':<10} | {'Optimal Throughput (A/s)'}")
+print("-" * 35)
 optimal_throughputs = []
 errors = []
-protocol = "optchain"
+
 
 for j in range(len(shard_nums)):
     shard_num = shard_nums[j]
@@ -22,19 +40,14 @@ for j in range(len(shard_nums)):
     error_1 = (1 - (1 / shard_num)) ** honest_node_num + base_error
     errors.append(error_1)
 
-    exper_id = exper_ids[j]
-    exper_iter = iters[j]
-    nodes_config = server_utility.load_config("./expers/{}/exper_{}/config.json".format(protocol, exper_id))
-    shard_num = nodes_config["shard_num"]
-    avai_size = nodes_config["avai_size"]
 
-    throughput = 0
-    for i in range(shard_num):
-        node_id = i * shard_size
-        excl_cnt, incl_cnt = read_log.analyze_chain_log("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
-        throughput += (excl_cnt + (incl_cnt / shard_num)) * avai_size
+    # 3. Calculate sum of top N values for each shard count
 
-    optimal_throughputs.append(throughput)
+    # Sum the top n values
+    optimal_val = sum(sorted_throughput[:shard_num])
+    opt_tps = optimal_val * block_size
+    optimal_throughputs.append(opt_tps)
+
 
 # Print results
 for i in range(len(shard_nums)):
@@ -50,7 +63,7 @@ plt.ylabel("Optimal Throughput")
 plt.title("Optimal Throughput vs Error for Different Shard Sizes")
 plt.grid(True, which="both", ls="--", lw=0.5)
 plt.tight_layout()
-plt.savefig('./img/optimal_throughput_vs_error.png', dpi=300, bbox_inches='tight')
+plt.savefig('./optimal_throughput_vs_error.png', dpi=300, bbox_inches='tight')
 
 # error = (((64+1)/(64*4+1))**4) * ((64+1)/(64*4*3))
 # print("error: {}", error)

@@ -57,14 +57,29 @@ def calculate_mining_rate(chain_list):
     return 0.0
 
 def analyze_manifoldchain(file_path):
-    with open(file_path, 'r') as f:
-        content = f.read().strip()
+    """
+    Parses Manifoldchain logs with format:
+    longest chain: b'["hash:ts", ..., "forking_rate: X.XX"]'
+    """
+    try:
+        with open(file_path, 'r') as f:
+            content = f.read().strip()
+    except FileNotFoundError:
+        print(f"[Error] File not found: {file_path}")
+        return
 
-    match = re.search(r"b'(\[.*\])'", content)
+    # Attempt to find the specific "longest chain" pattern first
+    match = re.search(r"longest chain:\s*b'(\[.*\])'", content)
+    
+    # Fallback to generic pattern if specific prefix isn't found
+    if not match:
+        match = re.search(r"b'(\[.*\])'", content)
+
     if not match:
         print(f"[Error] No valid chain list found in {file_path}")
         return
 
+    # Clean up escaped quotes if present in the byte string representation
     chain_str = match.group(1).replace('\\"', '"').replace("\\'", "'")
 
     try:
@@ -73,23 +88,33 @@ def analyze_manifoldchain(file_path):
         print(f"[Error] Failed to parse chain list in {file_path}: {e}")
         return
 
+    # Check for metadata (forking_rate) in the last element
     forking_rate = None
     if chain_list and isinstance(chain_list[-1], str) and "forking_rate" in chain_list[-1]:
         try:
-            forking_rate = float(chain_list[-1].split(":")[1].strip())
+            # Expected format: "forking_rate: 0.69"
+            parts = chain_list[-1].split(":")
+            if len(parts) > 1:
+                forking_rate = float(parts[1].strip())
+            
+            # Remove the metadata string from the list so it doesn't affect block counting
             chain_list = chain_list[:-1]
         except Exception:
             pass
 
+    # Calculate Mining Rate
     mining_rate = calculate_mining_rate(chain_list)
 
-    chain_list = [b for b in chain_list if "1970-01-01" not in b]
-    num_blocks = len(chain_list)
+    # Calculate Block Counts (excluding genesis 1970-01-01)
+    valid_blocks = [b for b in chain_list if "1970-01-01" not in b]
+    num_blocks = len(valid_blocks)
 
-    print(f"{file_path}")
+    print(f"--- Analysis for {file_path} ---")
     print(f"Number of blocks (excluding genesis): {num_blocks}")
     print(f"Forking rate: {forking_rate if forking_rate is not None else 'N/A'}")
     print(f"Mining rate: {mining_rate:.4f} blocks/s")
+    print("-" * 30)
+    return mining_rate
 
 
 def analyze_chain_log(file_path: str):
@@ -273,6 +298,9 @@ if __name__ == "__main__":
     nodes_config = server_utility.load_config("./expers/{}/exper_{}/config.json".format(protocol, exper_id))
     shard_num = nodes_config["shard_num"]
     shard_size = nodes_config["shard_size"]
+    block_size = nodes_config["block_size"]
+    print(f"Protocol: {protocol}, Exper ID: {exper_id}, Iteration: {exper_iter}")
+    print(f"Shard Num: {shard_num}, Shard Size: {shard_size}, Block Size: {block_size}")
 
     if protocol == "optchain":
         avai_size = nodes_config["avai_size"]
@@ -282,9 +310,13 @@ if __name__ == "__main__":
             node_id = i * shard_size
             excl_cnt, incl_cnt = analyze_chain_log("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
             throughput += (excl_cnt + (incl_cnt / shard_num)) * avai_size
-        print(f"throughput: {throughput}")
+        print(f"Total Throughput (approx): {throughput}")
+        
     elif protocol == "manifoldchain":
-        total_blocks = 0
+        # Process every node
+        tps = 0
         for i in range(shard_num):
             node_id = i * shard_size
-            analyze_manifoldchain("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
+            mining_rate = analyze_manifoldchain("./exper_log/{}/exper_{}/iter_{}/node_{}.txt".format(protocol, exper_id, exper_iter, node_id))
+            tps += mining_rate * block_size
+        print(f"Total Throughput (approx): {tps} txs/s")
