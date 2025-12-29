@@ -1,2 +1,2 @@
-output: Running command: ./powchain manifoldchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149 -c 15.228.195.141:6042 --shardId 0 --nodeId 1 --experNumber 6 --experIter 0 --shardNum 16 --shardSize 4 --blockSize 8192 --k 6 --domesticRatio 0.7 --eDiff 000001f7e07e07e07e07e07e07e07e07e07e07e07e07e07e07e07e07e07df600 --iDiff 0000000000000000000000000000000000000000000000000000000000000000
+output: Running command: ./powchain manifoldchain --p2p 0.0.0.0:6042 --api 0.0.0.0:7149 -c 13.43.110.51:6042 --shardId 0 --nodeId 1 --experNumber 6 --experIter 0 --shardNum 16 --shardSize 4 --blockSize 2048 --k 6 --domesticRatio 0.7 --eDiff 0000000f0e070381c0e070381c0e070381c0e070381c0e070381c0e070381c0c --iDiff 0000000f0e070381c0e070381c0e070381c0e070381c0e070381c0e070381c0c
 err: 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-exper_id=5
+exper_id=10
 exper_iter=0
 runtime=200
 protocol="manifoldchain"

@@ -2,6 +2,44 @@ import pandas as pd
 import numpy as np
 import json
 
+def get_group_maxes(grouped_flat, m):
+    """
+    Distributes a list into m groups and finds the max of each group.
+    
+    Args:
+        grouped_flat (list): The input ordered list.
+        m (int): The number of groups to split into.
+        
+    Returns:
+        list: A list containing the maximal element from each of the m groups.
+    """
+    n = len(grouped_flat)
+    
+    # Validation
+    if m <= 0:
+        raise ValueError("Number of groups (m) must be greater than 0")
+    if m > n:
+        print("Warning: m is larger than the list size. Some groups will be empty.")
+
+    max_values = []
+
+    for i in range(m):
+        # Calculate start and end indices for the i-th group
+        # This formula distributes the remainder evenly across the groups
+        start_index = (i * n) // m
+        end_index = ((i + 1) * n) // m
+        
+        # Slice the group
+        group = grouped_flat[start_index:end_index]
+        
+        # Calculate max (handle empty groups if m > len(list))
+        if group:
+            max_values.append(max(group))
+        else:
+            max_values.append(None) 
+            
+    return max_values
+
 # Load dataset
 df = pd.read_csv("ethereum_node_bandwidth_synthetic_samples.csv")
 
@@ -47,3 +85,6 @@ print(json.dumps(balanced_flat))
 
 print("\nGrouped distribution (similar bandwidths together, flattened):")
 print(json.dumps(grouped_flat))
+
+result = get_group_maxes(grouped_flat, shard_num)
+print(f"Max of each group: {result}")

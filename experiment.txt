@@ -28,8 +28,19 @@ OptChain:
 
 
 Manifoldchain:
+* shard_num = 1
+    exper 9
+        iter 0
+* shard_num = 2
+    exper 8
+        iter 0
 * shard_num = 4
     exper 5
+        iter 0
+    exper 10
+        iter 0
+* shard_num = 8
+    exper 7
         iter 0
 * shard_num = 16
     exper 6

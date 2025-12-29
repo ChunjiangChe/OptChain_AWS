@@ -1,5 +1,6 @@
 import numpy as np
 import math
+import json
 
 def cal_binary(binary_num):
     num = int(binary_num, 16)
@@ -59,12 +60,25 @@ def cal_targets():
     block_size = 24540 #KB
     propagation_delay = 0.1
     base_bandwidth = 14
-    base_diff = "0000000450ed6300450ed6300450ed6300450ed6300450ed6300450ed6300450"
+    base_diff = "0000000a0e070381c0e070381c0e070381c0e070381c0e070381c0e070381c0c"
     bandwidths = [14, 22, 34, 135]
+    
+    # 1. Create a list to store the generated hex strings
+    ex_diffs_list = []
+    
     for i in range(len(bandwidths)):
+        # Calculate the target (assuming cal_target returns an integer)
         target = cal_target(bandwidths[i], base_bandwidth, base_diff, block_size, propagation_delay)
+        
+        # Format as hex with padding to match base_diff length
         target_hex = f"{target:0{len(base_diff)}x}"
-        print("Bandwidth: {} Mbps, Target diff: {}".format(bandwidths[i], target_hex))
+        
+        # Add to the list instead of printing immediately
+        ex_diffs_list.append(target_hex)
+
+    # 2. Print using json.dumps to achieve the exact requested format
+    # indent=2 (or 4) ensures the pretty-printed vertical list style
+    print(f'"ex_diffs": {json.dumps(ex_diffs_list, indent=2)}')
 
 
 if __name__ == "__main__":
