@@ -47,8 +47,8 @@ df = pd.read_csv("ethereum_node_bandwidth_synthetic_samples.csv")
 df = df[df['mbps'] >= 5].reset_index(drop=True)
 
 num_trials = 100
-sample_size = 64
-shard_num = 4
+sample_size = 20
+shard_num = 2
 
 # Step 1: 100 trials, each sampling 64 data points and sorting them
 sorted_bandwidths = np.zeros((num_trials, sample_size))

@@ -21,7 +21,7 @@ download_blocks = [
     0.12, 0.03, 0.08, 0.18, 0.15, 0.12, 0.07, 0.08, 0.17, 0.03, 
     0.08, 0.07, 0.15, 0.05, 0.03, 0.10, 0.12, 0.07, 0.10, 0.08, 
     0.15, 0.08, 0.02, 0.13, 0.13, 0.05, 0.07, 0.17, 0.07, 0.15, 
-    0.07, 0.05, 0.08, 0.05, 0.07, 0.13, 0.03, 0.15, 0.10, 0.30, 
+    0.07, 0.05, 0.08, 0.05, 0.07, 0.13, 0.03, 0.15, 0.10, 0.20, 
     0.03, 0.12, 0.03, 0.13, 0.05, 0.18, 0.07, 0.12, 0.05, 0.05, 
     0.13, 0.12, 0.03
 ]
@@ -34,7 +34,7 @@ EXPERIMENTS_MANIFOLD = [9, 8, 10, 7, 6]
 ITERATIONS_MANIFOLD = [0, 0, 0, 0, 0]
 
 EXPERIMENTS_OPTCHAIN = [39, 38, 40, 37, 36] 
-ITERATIONS_OPTCHAIN = [0, 0, 0, 0, 0]
+ITERATIONS_OPTCHAIN = [1, 2, 1, 0, 0]
 
 # Paths
 CONFIG_PATH_TEMPLATE = "../expers/{protocol}/exper_{exper_id}/iter_{iter_id}/config.json"
@@ -190,7 +190,7 @@ def analyze_optchain_throughput(exper_id, iter_id, shard_num):
                 
                 # Calculate throughput contribution for this shard
                 # Formula: (ex_rate + in_rate / shard_num) * size_factors
-                shard_tput = (ex_rate + (in_rate / shard_num)) * block_size * avai_size
+                shard_tput = (ex_rate + in_rate) * block_size * avai_size
                 total_throughput += shard_tput
 
     return total_throughput
