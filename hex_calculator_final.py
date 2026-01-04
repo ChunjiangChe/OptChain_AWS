@@ -2,8 +2,8 @@ import math
 # Input hex string (with leading zeros preserved)
 prop_size = 16
 avai_size = 16
-shard_num = 2
-all_hex = "000003ffffffffffffffffffffffffffffffffffffffffffffffffffffffff70"
+shard_num = 5
+all_hex = "000001ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
 alpha = 0.67
 # alpha_var = 0.42
 alpha_var = 0.2

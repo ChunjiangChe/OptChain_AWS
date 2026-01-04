@@ -18,78 +18,17 @@
 38
 54
 72
-connected to 54.83.238.75
+connected to 44.223.7.90
 Running: echo 'limit bandwidth'
-connected to 3.235.53.64
+connected to 98.92.136.16
 Running: echo 'limit bandwidth'
-connected to 44.205.19.119
+connected to 100.48.212.154
 Running: echo 'limit bandwidth'
-connected to 44.200.203.230
+connected to 54.147.89.91
 Running: echo 'limit bandwidth'
-connected to 13.42.45.225
+connected to 44.200.197.12
 Running: echo 'limit bandwidth'
-connected to 18.130.72.212
-Running: echo 'limit bandwidth'
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 30mbit
-connected to 13.43.54.211
-Running: echo 'limit bandwidth'
-connected to 18.133.234.246
-Running: echo 'limit bandwidth'
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 15mbit
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 24mbit
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 22mbit
-connected to 18.228.154.73
-Running: echo 'limit bandwidth'
-connected to 52.67.155.205
-Running: echo 'limit bandwidth'
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=30mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-connected to 56.124.96.15
-Running: echo 'limit bandwidth'
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=24mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-connected to 52.197.79.101
-Running: echo 'limit bandwidth'
-connected to 18.181.211.57
-Running: echo 'limit bandwidth'
-connected to 54.238.209.16
-Running: echo 'limit bandwidth'
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=22mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-connected to 52.193.178.206
-Running: echo 'limit bandwidth'
-connected to 18.231.113.48
-Running: echo 'limit bandwidth'
-connected to 13.230.4.35
-Running: echo 'limit bandwidth'
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=15mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-connected to 54.199.167.25
-Running: echo 'limit bandwidth'
-connected to 3.112.248.25
+connected to 34.234.207.126
 Running: echo 'limit bandwidth'
 Output: limit bandwidth
 
@@ -98,41 +37,19 @@ Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 34mbit
 Output: limit bandwidth
 
 Error: 
-connected to 13.230.241.240
-Running: echo 'limit bandwidth'
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 7mbit
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 11mbit
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 9mbit
-Output: limit bandwidth
-
-Error: 
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 26mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 14mbit
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 17mbit
-Output: limit bandwidth
-
-Error: 
 Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 43mbit
 Output: limit bandwidth
 
 Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 12mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=7mbit，其他端口不受限
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 24mbit
+Output: limit bandwidth
 
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 7mbit
+Output: limit bandwidth
 
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 28mbit
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=34mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
@@ -141,83 +58,19 @@ Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 Output: limit bandwidth
 
 Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 38mbit
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 70mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=11mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=9mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 18mbit
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 54mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=14mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=26mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: limit bandwidth
-
-Error: 
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 72mbit
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 28mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=12mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: limit bandwidth
-
-Error: 
-Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 20mbit
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=17mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
+connected to 18.130.179.86
+Running: echo 'limit bandwidth'
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=43mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=38mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=70mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=18mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=54mbit，其他端口不受限
-
-Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
-Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
-
-Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=72mbit，其他端口不受限
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 54mbit
+connected to 52.67.138.154
+Running: echo 'limit bandwidth'
+connected to 52.67.178.30
+Running: echo 'limit bandwidth'
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=24mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
@@ -227,7 +80,154 @@ Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=28mbit，其�
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
 
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=7mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+connected to 54.233.71.60
+Running: echo 'limit bandwidth'
+connected to 18.231.36.32
+Running: echo 'limit bandwidth'
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 20mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=54mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+connected to 18.230.26.43
+Running: echo 'limit bandwidth'
+connected to 13.112.161.107
+Running: echo 'limit bandwidth'
+connected to 52.197.73.99
+Running: echo 'limit bandwidth'
+connected to 18.183.75.132
+Running: echo 'limit bandwidth'
+connected to 18.177.137.52
+Running: echo 'limit bandwidth'
+connected to 54.238.130.153
+Running: echo 'limit bandwidth'
+connected to 35.72.5.83
+Running: echo 'limit bandwidth'
+connected to 13.114.61.185
+Running: echo 'limit bandwidth'
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 14mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 70mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 12mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 18mbit
 Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=20mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 26mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 15mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 9mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 22mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 38mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 11mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=14mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=70mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 17mbit
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 72mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=12mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=18mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=26mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+connected to 13.42.14.129
+Running: echo 'limit bandwidth'
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=38mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=9mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=15mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=22mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=11mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=72mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=17mbit，其他端口不受限
+
+Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
+Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
+
+Output: limit bandwidth
+
+Error: 
+Running: sudo ./limit_AWS_bandwidth.sh apply --port 6042 --rate 30mbit
+Output: [OK] IFACE=ens5 仅对 dst port=6042 的下载限速 rate=30mbit，其他端口不受限
 
 Error: Warning: sch_htb: quantum of class 10001 is big. Consider r2q change.
 Warning: sch_htb: quantum of class 10002 is big. Consider r2q change.
