@@ -55,7 +55,7 @@ ITERATIONS_MANIFOLD = [
 
 EXPERIMENTS_OPTCHAIN = [42, 43, 44, 45] 
 ITERATIONS_OPTCHAIN = [
-    [0, 2], # Iterations for Exp 42
+    [0, 1, 2, 3, 4], # Iterations for Exp 42
     [1],    # Iterations for Exp 43
     [0],    # Iterations for Exp 44
     [1]     # Iterations for Exp 45

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Configuration ---
-total_iterations=${1:-1}  # Defaults to 1 if no number passed
+total_iterations=5     # <--- Set total number of iterations here
 exp_id=42
 protocol="optchain"       # <--- Set your protocol here
 # ---------------------
