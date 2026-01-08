@@ -5,6 +5,8 @@ OptChain:
         iter 0 
     full: exper 36 (prop_size = 64, avai_size = 16, block_size = 8192)
         iter 0
+    full: exper 54 (prop_size = 64, avai_size = 16, block_size = 8192)
+        iter 0-4
 * shard_num = 8
     exper 23 (prop_size = 32)
         iter 0
@@ -63,3 +65,32 @@ optchain
 * shard_num = 5, node_num = 60
     exper_45
         iter 1
+
+manifoldchain:
+
+* shard_num = 2, node_num = 20
+    exper_11
+        iter 0-4
+
+
+Exper 3:
+
+optchain
+* bandwidth = 10
+    exper_48
+        iter 0-2
+* bandwidth = 30
+    exper_49
+        iter 0-2
+* bandwidth = 50
+    exper_51
+        iter 0-2
+* bandwidth = 70
+    exper_52
+        iter 0-2
+* bandwidth = 90
+    exper_53
+        iter 0-2
+
+Test Bandwidth:
+exper_50

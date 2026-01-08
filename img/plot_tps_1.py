@@ -17,24 +17,37 @@ base_error = 1e-50
 
 # Bandwidth data (Download blocks)
 download_blocks = [
-    0.02, 0.03, 0.12, 0.13, 0.10, 0.10, 0.13, 0.12, 0.05, 0.27, 
-    0.12, 0.03, 0.08, 0.18, 0.15, 0.12, 0.07, 0.08, 0.17, 0.03, 
-    0.08, 0.07, 0.15, 0.05, 0.03, 0.10, 0.12, 0.07, 0.10, 0.08, 
-    0.15, 0.08, 0.02, 0.13, 0.13, 0.05, 0.07, 0.17, 0.07, 0.15, 
-    0.07, 0.05, 0.08, 0.05, 0.07, 0.13, 0.03, 0.15, 0.10, 0.20, 
-    0.03, 0.12, 0.03, 0.13, 0.05, 0.18, 0.07, 0.12, 0.05, 0.05, 
-    0.13, 0.12, 0.03
+    0.03, 0.05, 0.05, 0.06, 0.07, 0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.11, 0.11, 0.13, 0.14, 0.14, 
+    0.04, 0.05, 0.05, 0.06, 0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.10, 0.11, 0.11, 0.11, 0.14, 0.14, 
+    0.04, 0.05, 0.05, 0.07, 0.07, 0.07, 0.08, 0.08, 0.09, 0.10, 0.11, 0.11, 0.13, 0.12, 0.14, 0.17, 
+    0.04, 0.05, 0.06, 0.07, 0.06, 0.07, 0.08, 0.08, 0.10, 0.10, 0.11, 0.12, 0.13, 0.15, 0.15, 0.20
 ]
 
 # ==========================================
 # 2. LOG ANALYSIS CONFIGURATION
 # ==========================================
-# Update these lists to match your specific experiment IDs
-EXPERIMENTS_MANIFOLD = [9, 8, 10, 7, 6]  
-ITERATIONS_MANIFOLD = [0, 0, 0, 0, 0]
+# UPDATE: These are now lists of lists. 
+# Each inner list contains the iteration IDs to average for that specific experiment.
 
-EXPERIMENTS_OPTCHAIN = [39, 38, 40, 37, 36] 
-ITERATIONS_OPTCHAIN = [1, 2, 1, 0, 0]
+EXPERIMENTS_MANIFOLD = [9, 8, 10, 7, 6]  
+# Add your iterations here, e.g., [0, 1, 2]
+ITERATIONS_MANIFOLD = [
+    [0],    # Iterations for Exp 9 (Shard 1)
+    [0],    # Iterations for Exp 8 (Shard 2)
+    [0],    # Iterations for Exp 10 (Shard 4)
+    [0],    # Iterations for Exp 7 (Shard 8)
+    [0]     # Iterations for Exp 6 (Shard 16)
+]
+
+EXPERIMENTS_OPTCHAIN = [39, 38, 40, 37, 54] 
+# Add your iterations here
+ITERATIONS_OPTCHAIN = [
+    [1],    # Iterations for Exp 39 (Shard 1)
+    [2],    # Iterations for Exp 38 (Shard 2)
+    [1],    # Iterations for Exp 40 (Shard 4)
+    [0],    # Iterations for Exp 37 (Shard 8)
+    [0, 1]     # Iterations for Exp 54 (Shard 16)
+]
 
 # Paths
 CONFIG_PATH_TEMPLATE = "../expers/{protocol}/exper_{exper_id}/iter_{iter_id}/config.json"
@@ -47,6 +60,7 @@ LOG_PATH_TEMPLATE = "../exper_log/{protocol}/exper_{exper_id}/iter_{iter_id}/nod
 def load_config(protocol, exper_id, iter_id):
     path = CONFIG_PATH_TEMPLATE.format(protocol=protocol, exper_id=exper_id, iter_id=iter_id)
     if not os.path.exists(path):
+        # Fallback to experiment level config if iteration config doesn't exist
         path = f"../expers/{protocol}/exper_{exper_id}/config.json"
     
     try:
@@ -66,7 +80,7 @@ def parse_timestamp(ts_str):
 
 def analyze_manifold_throughput(exper_id, iter_id, shard_num):
     """
-    Calculates throughput by summing independent mining rates of each shard.
+    Calculates throughput for a single iteration of Manifoldchain.
     """
     protocol = "manifoldchain"
     config = load_config(protocol, exper_id, iter_id)
@@ -123,8 +137,7 @@ def analyze_manifold_throughput(exper_id, iter_id, shard_num):
 
 def analyze_optchain_throughput(exper_id, iter_id, shard_num):
     """
-    Calculates throughput by summing independent mining rates of each shard.
-    Optchain Tput per shard = (ex_rate + in_rate/shard_num) * sizes
+    Calculates throughput for a single iteration of Optchain.
     """
     protocol = "optchain"
     config = load_config(protocol, exper_id, iter_id)
@@ -189,7 +202,6 @@ def analyze_optchain_throughput(exper_id, iter_id, shard_num):
                 in_rate = in_count / duration
                 
                 # Calculate throughput contribution for this shard
-                # Formula: (ex_rate + in_rate / shard_num) * size_factors
                 shard_tput = (ex_rate + in_rate) * block_size * avai_size
                 total_throughput += shard_tput
 
@@ -206,7 +218,7 @@ theo_y = []
 mani_y = []
 opt_y = []
 
-print(f"{'Shards':<8} | {'Error':<10} | {'Theoretical':<15} | {'Manifold':<15} | {'Optchain':<15}")
+print(f"{'Shards':<8} | {'Error':<10} | {'Theoretical':<15} | {'Manifold (Avg)':<15} | {'Optchain (Avg)':<15}")
 print("-" * 80)
 
 for idx, shard_num in enumerate(shard_nums):
@@ -222,35 +234,104 @@ for idx, shard_num in enumerate(shard_nums):
     t_tput = optimal_val * block_size_theoretical
     theo_y.append(t_tput)
     
-    # 3. Manifoldchain
+    # 3. Manifoldchain (Average across iterations)
     m_exp = EXPERIMENTS_MANIFOLD[idx]
-    m_iter = ITERATIONS_MANIFOLD[idx]
-    m_tput = analyze_manifold_throughput(m_exp, m_iter, shard_num)
-    mani_y.append(m_tput)
+    m_iters = ITERATIONS_MANIFOLD[idx]
+    m_results = []
     
-    # 4. Optchain
+    for iter_id in m_iters:
+        res = analyze_manifold_throughput(m_exp, iter_id, shard_num)
+        m_results.append(res)
+    
+    m_tput_avg = np.mean(m_results) if m_results else 0.0
+    mani_y.append(m_tput_avg)
+    
+    # 4. Optchain (Average across iterations)
     o_exp = EXPERIMENTS_OPTCHAIN[idx]
-    o_iter = ITERATIONS_OPTCHAIN[idx]
-    o_tput = analyze_optchain_throughput(o_exp, o_iter, shard_num)
-    opt_y.append(o_tput)
+    o_iters = ITERATIONS_OPTCHAIN[idx]
+    o_results = []
     
-    print(f"{shard_num:<8} | {err:.2e}   | {t_tput:<15.2f} | {m_tput:<15.2f} | {o_tput:<15.2f}")
+    for iter_id in o_iters:
+        res = analyze_optchain_throughput(o_exp, iter_id, shard_num)
+        o_results.append(res)
+
+    o_tput_avg = np.mean(o_results) if o_results else 0.0
+    opt_y.append(o_tput_avg)
+    
+    print(f"{shard_num:<8} | {err:.2e}   | {t_tput:<15.2f} | {m_tput_avg:<15.2f} | {o_tput_avg:<15.2f}")
 
 # Plotting
+# 1. Setup the figure with a clean, academic style
 plt.figure(figsize=(10, 6))
+plt.rcParams['font.family'] = 'sans-serif' # Match the clean font style
+plt.rcParams['font.sans-serif'] = ['Gill Sans MT', 'Gill Sans', 'Arial', 'DejaVu Sans']
 
-plt.plot(errors_x, theo_y, marker='^', linestyle='-', color='black', label='Theoretical Optimal', linewidth=1.5)
-plt.plot(errors_x, mani_y, marker='o', linestyle='-', color='blue', label='Manifoldchain', linewidth=2)
-plt.plot(errors_x, opt_y, marker='s', linestyle='--', color='green', label='Optchain', linewidth=2)
+# 2. Define Colors and Styles matching the reference image style
+# Reference Palette: Muted Blue, Green, Orange/Red
+style_configs = [
+    {
+        "data": theo_y,
+        "label": "Theoretical Optimal",
+        "color": "#4C72B0",      # Muted Blue
+        "linestyle": "--",       # Dashed
+        "marker": ".",
+        "markersize": 10
+    },
+    {
+        "data": opt_y,
+        "label": "Optchain (Avg)",
+        "color": "#55A868",      # Muted Green
+        "linestyle": "-.",       # Dash-dot
+        "marker": ".",
+        "markersize": 10
+    },
+    {
+        "data": mani_y,
+        "label": "Manifoldchain (Avg)",
+        "color": "#C44E52",      # Muted Red/Orange
+        "linestyle": "-",        # Solid
+        "marker": "+",           # Cross marker
+        "markersize": 10
+    }
+]
 
+# 3. Plotting Loop
+for config in style_configs:
+    # Plot the line
+    plt.plot(errors_x, config["data"], 
+             label=config["label"], 
+             color=config["color"], 
+             linestyle=config["linestyle"], 
+             marker=config["marker"], 
+             linewidth=1.5,
+             markersize=config["markersize"])
+    # Text annotations block removed here
+
+# 4. Formatting the Axes
 plt.xscale('log')
-plt.xlabel("Error Probability (log scale)")
-plt.ylabel("Throughput (bytes/s)")
-plt.title("Throughput vs Error Probability: Manifoldchain vs Optchain vs Theoretical")
-plt.legend()
-plt.grid(True, which="both", ls="--", alpha=0.5)
+plt.yscale('log')
+plt.xlabel("Error Probability (log scale)", fontsize=12, fontweight='bold')
+plt.ylabel("Throughput (bytes/s)", fontsize=12, fontweight='bold')
 
-output_file = 'throughput_comparison_per_shard.png'
+# Clean white look (Remove default grid to match reference aesthetic)
+ax = plt.gca()
+ax.spines['top'].set_visible(True)
+ax.spines['right'].set_visible(True)
+ax.spines['bottom'].set_color('black')
+ax.spines['left'].set_color('black')
+ax.grid(False) # Ensure grid is off for the clean look
+
+# Increase tick label size for readability
+ax.tick_params(axis='both', which='major', labelsize=10)
+
+# Legend with a clean frame
+plt.legend(loc='upper left', frameon=True, fontsize=11, framealpha=1, edgecolor='#cccccc')
+
+# Title (Optional, based on reference style usually omitted in papers, but kept here for clarity)
+# plt.title("Throughput vs Error Probability", fontsize=14)
+
+# Output
+output_file = 'exper_1.png'
 plt.savefig(output_file, dpi=300, bbox_inches='tight')
 print(f"\nFigure saved to {output_file}")
 plt.show()

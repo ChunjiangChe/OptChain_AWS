@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # --- Configuration ---
-total_iterations=5     # <--- Set total number of iterations here
-exp_id=47
-protocol="optchain"       # <--- Set your protocol here
+total_iterations=1     # <--- Set total number of iterations here
+exp_id=11
+protocol="manifoldchain"       # <--- Set your protocol here
 # ---------------------
 
 echo "========================================"
@@ -19,7 +19,7 @@ do
     ./start_multi_iterations.sh $i $exp_id $protocol
     
     echo "Cooling down..."
-    sleep 60
+    sleep 30
 done
 
 echo "========================================"

@@ -57,11 +57,11 @@ def cal_err_probability():
     print("Error probability: {}".format(err_pro))
 
 def cal_targets():
-    block_size = 24540 #KB
+    block_size = 6283 #KB
     propagation_delay = 0.1
-    base_bandwidth = 14
-    base_diff = "0000000a0e070381c0e070381c0e070381c0e070381c0e070381c0e070381c0c"
-    bandwidths = [14, 22, 34, 135]
+    base_bandwidth = 23
+    base_diff = "0000001a0e070381c0e070381c0e070381c0e070381c0e070381c0e070381c0c"
+    bandwidths = [23, 64]
     
     # 1. Create a list to store the generated hex strings
     ex_diffs_list = []

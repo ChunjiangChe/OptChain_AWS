@@ -2,6 +2,14 @@ import pandas as pd
 import numpy as np
 import json
 
+# --- Configuration Parameters ---
+min_bandwidth = 10      # Minimum allowed bandwidth (Mbps)
+max_bandwidth = 80   # Maximum allowed bandwidth (Mbps)
+num_trials = 100
+sample_size = 20
+shard_num = 2
+# --------------------------------
+
 def get_group_maxes(grouped_flat, m):
     """
     Distributes a list into m groups and finds the max of each group.
@@ -41,18 +49,34 @@ def get_group_maxes(grouped_flat, m):
     return max_values
 
 # Load dataset
-df = pd.read_csv("ethereum_node_bandwidth_synthetic_samples.csv")
+# Ensure you have this file in your working directory
+try:
+    df = pd.read_csv("ethereum_node_bandwidth_synthetic_samples.csv")
+except FileNotFoundError:
+    # Creating dummy data for demonstration if file doesn't exist
+    print("CSV not found, creating synthetic data for demonstration...")
+    np.random.seed(42)
+    df = pd.DataFrame({'mbps': np.random.lognormal(mean=2, sigma=1, size=1000)})
 
-# Filter out samples with bandwidth < 5 Mbps
-df = df[df['mbps'] >= 5].reset_index(drop=True)
+# --- Filtering Logic Updated ---
+# Filter samples where bandwidth is >= min AND <= max
+initial_count = len(df)
+df = df[
+    (df['mbps'] >= min_bandwidth) & 
+    (df['mbps'] <= max_bandwidth)
+].reset_index(drop=True)
 
-num_trials = 100
-sample_size = 20
-shard_num = 2
+print(f"Data filtered: {len(df)} samples remaining out of {initial_count} "
+      f"(Range: {min_bandwidth}-{max_bandwidth} Mbps)")
 
-# Step 1: 100 trials, each sampling 64 data points and sorting them
+if len(df) < sample_size:
+    raise ValueError(f"Not enough data points ({len(df)}) to sample {sample_size} values. "
+                     "Please widen the bandwidth range.")
+
+# Step 1: 100 trials, each sampling data points and sorting them
 sorted_bandwidths = np.zeros((num_trials, sample_size))
 for t in range(num_trials):
+    # Sample from the filtered dataframe
     sample = df['mbps'].sample(sample_size, replace=False).values
     sorted_bandwidths[t] = np.sort(sample)
 
@@ -77,7 +101,7 @@ balanced_flat = [bw for shard in balanced_shards for bw in shard]
 grouped_flat = [bw for shard in grouped_shards for bw in shard]
 
 # Step 5: print results
-print("Original 64 average bandwidths:")
+print(f"\nOriginal {sample_size} average bandwidths:")
 print(json.dumps(avg_bandwidth_per_rank.tolist()))
 
 print("\nBalanced distribution (round-robin, flattened):")
@@ -87,4 +111,4 @@ print("\nGrouped distribution (similar bandwidths together, flattened):")
 print(json.dumps(grouped_flat))
 
 result = get_group_maxes(grouped_flat, shard_num)
-print(f"Max of each group: {result}")
+print(f"\nMax of each group: {result}")
