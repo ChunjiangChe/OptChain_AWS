@@ -274,8 +274,8 @@ for idx, shard_num in enumerate(shard_nums):
 errors_x_transformed = [np.log2(-np.log10(e)) for e in errors_x]
 
 plt.figure(figsize=(11, 7))
-# plt.rcParams['font.family'] = 'sans-serif'
-# plt.rcParams['font.sans-serif'] = ['Gill Sans MT', 'Gill Sans', 'Arial']
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['Gill Sans MT', 'Gill Sans', 'Arial']
 
 style_configs = [
     {
@@ -342,7 +342,7 @@ plt.ylabel("Throughput (bytes/s)", fontsize=12, fontweight='bold')
 
 # 4. X-Axis Label
 #    Explains that 'x' is the exponent in the formula
-plt.xlabel(r"Error Probability as Function of Transformed Value $x$" + "\n" + r"$\text{Error} = 10^{-(2^x)}$", 
+plt.xlabel(r"$\text{Error} = 10^{-(2^x)}$", 
            fontsize=12, fontweight='bold', labelpad=10)
 
 # 5. Spines and Grid
@@ -350,6 +350,8 @@ ax = plt.gca()
 ax.spines['top'].set_visible(True)
 ax.spines['right'].set_visible(True)
 ax.grid(False)
+
+ax.tick_params(axis='both', which='both', length=0, pad=5, labelsize=10)
 
 plt.legend(loc='upper left', frameon=True, fontsize=11, framealpha=1, edgecolor='#cccccc')
 
