@@ -322,7 +322,7 @@ ax.spines['left'].set_color('black')
 ax.grid(False) # Ensure grid is off for the clean look
 
 # Increase tick label size for readability
-ax.tick_params(axis='both', which='major', labelsize=10)
+ax.tick_params(axis='both', which='both', length=0, pad=5, labelsize=10)
 
 # Legend with a clean frame
 plt.legend(loc='upper left', frameon=True, fontsize=11, framealpha=1, edgecolor='#cccccc')

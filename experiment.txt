@@ -70,8 +70,16 @@ manifoldchain:
 
 * shard_num = 2, node_num = 20
     exper_11
-        iter 0-4
-
+        iter 0
+* shard_num = 3, node_num = 36
+    exper_12
+        iter 0
+* shard_num = 4, node_num = 48
+    exper_13
+        iter 0
+* shard_num = 5, node_num = 60
+    exper_14
+        iter 0
 
 Exper 3:
 

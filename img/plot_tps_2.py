@@ -37,14 +37,13 @@ download_blocks = [
 # MODIFIED: Iterations are now lists of lists. 
 # Each sub-list corresponds to the experiment ID at the same index.
 
-EXPERIMENTS_MANIFOLD = [9, 8, 10, 7, 6]  
+EXPERIMENTS_MANIFOLD = [11, 12, 13, 12]  
 # Example: [ [0, 1], [0], ... ] means Exp 9 uses iter 0 & 1, Exp 8 uses iter 0
 ITERATIONS_MANIFOLD = [
     [0],    # Iterations for Exp 9
     [0],    # Iterations for Exp 8
-    [0],    # Iterations for Exp 10
+    [2],    # Iterations for Exp 10
     [0],    # Iterations for Exp 7
-    [0]     # Iterations for Exp 6
 ]
 
 EXPERIMENTS_OPTCHAIN = [42, 43, 44, 45] 
@@ -307,7 +306,7 @@ for idx, shard_num in enumerate(shard_nums):
 plt.figure(figsize=(10, 6))
 
 plt.plot(honest_node_nums, theo_y, marker='^', linestyle='-', color='black', label='Theoretical Optimal', linewidth=1.5)
-# plt.plot(honest_node_nums, mani_y, marker='o', linestyle='-', color='blue', label='Manifoldchain', linewidth=2)
+plt.plot(honest_node_nums, mani_y, marker='o', linestyle='-', color='blue', label='Manifoldchain', linewidth=2)
 plt.plot(honest_node_nums, opt_y, marker='s', linestyle='--', color='green', label='Optchain', linewidth=2)
 
 plt.xlabel("Number of Honest Nodes")

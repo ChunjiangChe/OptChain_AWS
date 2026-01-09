@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # --- Configuration ---
-total_iterations=1     # <--- Set total number of iterations here
-exp_id=11
+total_iterations=2     # <--- Set total number of iterations here
+exp_id=14
 protocol="manifoldchain"       # <--- Set your protocol here
 # ---------------------
 
