@@ -6,8 +6,8 @@ import json
 min_bandwidth = 10      # Minimum allowed bandwidth (Mbps)
 max_bandwidth = 80   # Maximum allowed bandwidth (Mbps)
 num_trials = 100
-sample_size = 60
-shard_num = 5
+sample_size = 64
+shard_num = 1
 # --------------------------------
 
 def get_group_maxes(grouped_flat, m):

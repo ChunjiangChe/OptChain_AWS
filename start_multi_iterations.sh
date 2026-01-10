@@ -10,7 +10,7 @@ runtime=200
 echo "--- Starting: $protocol | ID $exper_id | Iteration $exper_iter ---"
 
 # Note: Added ${protocol} to the log filename to keep logs distinct if you change protocols
-python3 limit_bandwidth.py $protocol $exper_id $exper_iter > bandwidth_monitor_${protocol}_${exper_iter}.txt
+python3 limit_bandwidth.py $protocol $exper_id $exper_iter > bandwidth_monitor.txt
 python3 start_nodes.py $protocol $exper_id $exper_iter
 
 sleep 120

@@ -17,6 +17,7 @@ base_error = 0.0000000000000000000000000000000000000000000000000001
 given_error = 1e-6
 honest_node_nums = []
 shard_nums = [1, 2, 3, 4, 5]
+
 for shard_num in shard_nums:
     honest_node_num = 1
     while True:
@@ -28,30 +29,29 @@ for shard_num in shard_nums:
 
 # Bandwidth data (Download blocks)
 download_blocks = [
-    0.03, 0.05, 0.05, 0.06, 0.07, 0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.11, 0.11, 0.13, 0.14, 0.14, 0.04, 0.05, 0.05, 0.06, 0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.10, 0.11, 0.11, 0.11, 0.14, 0.14, 0.04, 0.05, 0.05, 0.07, 0.07, 0.07, 0.08, 0.08, 0.09, 0.10, 0.11, 0.11, 0.13, 0.12, 0.14, 0.17, 0.04, 0.05, 0.06, 0.07, 0.06, 0.07, 0.08, 0.08, 0.10, 0.10, 0.11, 0.12, 0.13, 0.15, 0.15, 0.20
+    0.03, 0.05, 0.05, 0.06, 0.07, 0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.11, 0.11, 0.13, 0.14, 0.14, 
+    0.04, 0.05, 0.05, 0.06, 0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.10, 0.11, 0.11, 0.11, 0.14, 0.14, 
+    0.04, 0.05, 0.05, 0.07, 0.07, 0.07, 0.08, 0.08, 0.09, 0.10, 0.11, 0.11, 0.13, 0.12, 0.14, 0.17, 
+    0.04, 0.05, 0.06, 0.07, 0.06, 0.07, 0.08, 0.08, 0.10, 0.10, 0.11, 0.12, 0.13, 0.15, 0.15, 0.20
 ]
 
 # ==========================================
 # 2. LOG ANALYSIS CONFIGURATION
 # ==========================================
-# MODIFIED: Iterations are now lists of lists. 
-# Each sub-list corresponds to the experiment ID at the same index.
-
-EXPERIMENTS_MANIFOLD = [11, 12, 13, 12]  
-# Example: [ [0, 1], [0], ... ] means Exp 9 uses iter 0 & 1, Exp 8 uses iter 0
+EXPERIMENTS_MANIFOLD = [11, 12, 13, 14]  
 ITERATIONS_MANIFOLD = [
-    [0],    # Iterations for Exp 9
-    [0],    # Iterations for Exp 8
-    [2],    # Iterations for Exp 10
-    [0],    # Iterations for Exp 7
+    [0],       # Iterations for Exp 11
+    [0],       # Iterations for Exp 12
+    [1],       # Iterations for Exp 13
+    [0, 1],    # Iterations for Exp 14
 ]
 
 EXPERIMENTS_OPTCHAIN = [42, 43, 44, 45] 
 ITERATIONS_OPTCHAIN = [
     [0, 1, 2, 3, 4], # Iterations for Exp 42
-    [0, 1, 2, 3, 4],    # Iterations for Exp 43
-    [0],    # Iterations for Exp 44
-    [1]     # Iterations for Exp 45
+    [0, 1, 2, 3, 4], # Iterations for Exp 43
+    [0],             # Iterations for Exp 44
+    [1]              # Iterations for Exp 45
 ]
 
 # Paths
@@ -65,7 +65,6 @@ LOG_PATH_TEMPLATE = "../exper_log/{protocol}/exper_{exper_id}/iter_{iter_id}/nod
 def load_config(protocol, exper_id, iter_id):
     path = CONFIG_PATH_TEMPLATE.format(protocol=protocol, exper_id=exper_id, iter_id=iter_id)
     if not os.path.exists(path):
-        # Fallback to experiment level config if iter config missing
         path = f"../expers/{protocol}/exper_{exper_id}/config.json"
     
     try:
@@ -84,9 +83,6 @@ def parse_timestamp(ts_str):
         return None
 
 def analyze_manifold_throughput(exper_id, iter_id, shard_num):
-    """
-    Calculates throughput by summing independent mining rates of each shard.
-    """
     protocol = "manifoldchain"
     config = load_config(protocol, exper_id, iter_id)
     block_size = config.get("block_size", 1024)
@@ -94,7 +90,6 @@ def analyze_manifold_throughput(exper_id, iter_id, shard_num):
 
     total_mining_rate = 0.0
 
-    # Iterate over each shard independently
     for i in range(shard_num):
         node_id = i * shard_size
         file_path = LOG_PATH_TEMPLATE.format(protocol=protocol, exper_id=exper_id, iter_id=iter_id, node_id=node_id)
@@ -103,7 +98,6 @@ def analyze_manifold_throughput(exper_id, iter_id, shard_num):
             continue
 
         shard_timestamps = []
-        
         try:
             with open(file_path, 'r') as f:
                 content = f.read().strip()
@@ -129,22 +123,15 @@ def analyze_manifold_throughput(exper_id, iter_id, shard_num):
         except Exception:
             pass
 
-        # Calculate rate for this specific shard
         if len(shard_timestamps) >= 2:
             duration = (max(shard_timestamps) - min(shard_timestamps)).total_seconds()
             if duration > 0:
-                # Mining rate = Count / Duration
                 shard_rate = len(shard_timestamps) / duration
                 total_mining_rate += shard_rate
 
-    # Final Throughput = Sum(Rates) * BlockSize
     return total_mining_rate * block_size
 
 def analyze_optchain_throughput(exper_id, iter_id, shard_num):
-    """
-    Calculates throughput by summing independent mining rates of each shard.
-    Optchain Tput per shard = (ex_rate + in_rate/shard_num) * sizes
-    """
     protocol = "optchain"
     config = load_config(protocol, exper_id, iter_id)
     block_size = config.get("block_size", 1024)
@@ -153,7 +140,6 @@ def analyze_optchain_throughput(exper_id, iter_id, shard_num):
 
     total_throughput = 0.0
 
-    # Iterate over each shard independently
     for i in range(shard_num):
         node_id = i * shard_size
         file_path = LOG_PATH_TEMPLATE.format(protocol=protocol, exper_id=exper_id, iter_id=iter_id, node_id=node_id)
@@ -198,17 +184,11 @@ def analyze_optchain_throughput(exper_id, iter_id, shard_num):
         except Exception:
             pass
 
-        # Calculate rate for this specific shard
         if len(shard_timestamps) >= 2:
-            # Duration based on first and last block of ANY type in this shard
             duration = (max(shard_timestamps) - min(shard_timestamps)).total_seconds()
-            
             if duration > 0:
                 ex_rate = ex_count / duration
                 in_rate = in_count / duration
-                
-                # Calculate throughput contribution for this shard
-                # Formula: (ex_rate + in_rate / shard_num) * size_factors
                 shard_tput = (ex_rate + in_rate) * block_size * avai_size
                 total_throughput += shard_tput
 
@@ -231,8 +211,8 @@ for idx, shard_num in enumerate(shard_nums):
     honest_node_num = honest_node_nums[idx]
     
     # 2. Theoretical
-    x = honest_node_num                # Size of each sample
-    iterations = 1000    # How many times to repeat
+    x = honest_node_num                
+    iterations = 1000    
 
     # 1. Collect all samples
     all_samples = []
@@ -251,70 +231,114 @@ for idx, shard_num in enumerate(shard_nums):
     # 3. Manifoldchain - Calculate AVERAGE over iterations
     m_tput = 0.0
     if shard_num == 1:
-        mani_y.append(t_tput) # Assuming theoretical for base case
+        mani_y.append(t_tput) 
     else:
         m_exp = EXPERIMENTS_MANIFOLD[idx-1]
-        m_iters_list = ITERATIONS_MANIFOLD[idx-1] # This is now a list of iterations
+        m_iters_list = ITERATIONS_MANIFOLD[idx-1]
         
         temp_sum_tput = 0.0
         valid_iter_count = 0
         
         for iter_id in m_iters_list:
             try:
-                # Calculate for single iteration
                 val = analyze_manifold_throughput(m_exp, iter_id, shard_num)
                 temp_sum_tput += val
                 valid_iter_count += 1
             except Exception as e:
                 print(f"Warning: Failed to process Manifold Exp {m_exp} Iter {iter_id}: {e}")
 
-        # Compute Average
-        if valid_iter_count > 0:
-            m_tput = temp_sum_tput / valid_iter_count
-        
+        m_tput = temp_sum_tput / valid_iter_count if valid_iter_count > 0 else 0.0
         mani_y.append(m_tput)
     
     # 4. Optchain - Calculate AVERAGE over iterations
     o_tput = 0.0
     if shard_num == 1:
-        opt_y.append(t_tput) # Assuming theoretical for base case
+        opt_y.append(t_tput) 
     else:
         o_exp = EXPERIMENTS_OPTCHAIN[idx-1]
-        o_iters_list = ITERATIONS_OPTCHAIN[idx-1] # This is now a list of iterations
+        o_iters_list = ITERATIONS_OPTCHAIN[idx-1]
         
         temp_sum_tput = 0.0
         valid_iter_count = 0
 
         for iter_id in o_iters_list:
             try:
-                # Calculate for single iteration
                 val = analyze_optchain_throughput(o_exp, iter_id, shard_num)
                 temp_sum_tput += val
                 valid_iter_count += 1
             except Exception as e:
                  print(f"Warning: Failed to process Optchain Exp {o_exp} Iter {iter_id}: {e}")
 
-        # Compute Average
-        if valid_iter_count > 0:
-            o_tput = temp_sum_tput / valid_iter_count
-            
+        o_tput = temp_sum_tput / valid_iter_count if valid_iter_count > 0 else 0.0
         opt_y.append(o_tput)
     
     print(f"{shard_num:<8} | {honest_node_num:<10} | {t_tput:<15.2f} | {m_tput:<15.2f} | {o_tput:<15.2f}")
 
-# Plotting
+
+# Plotting - UPDATED TO MATCH REFERENCE STYLE
+# 1. Setup the figure with a clean, academic style
 plt.figure(figsize=(10, 6))
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['Gill Sans MT', 'Gill Sans', 'Arial', 'DejaVu Sans']
 
-plt.plot(honest_node_nums, theo_y, marker='^', linestyle='-', color='black', label='Theoretical Optimal', linewidth=1.5)
-plt.plot(honest_node_nums, mani_y, marker='o', linestyle='-', color='blue', label='Manifoldchain', linewidth=2)
-plt.plot(honest_node_nums, opt_y, marker='s', linestyle='--', color='green', label='Optchain', linewidth=2)
+# 2. Define Colors and Styles matching the reference style
+style_configs = [
+    {
+        "data": theo_y,
+        "label": "Theoretical Optimal",
+        "color": "#4C72B0",      # Muted Blue
+        "linestyle": "--",       # Dashed
+        "marker": ".",
+        "markersize": 10
+    },
+    {
+        "data": opt_y,
+        "label": "Optchain (Avg)",
+        "color": "#55A868",      # Muted Green
+        "linestyle": "-.",       # Dash-dot
+        "marker": ".",
+        "markersize": 10
+    },
+    {
+        "data": mani_y,
+        "label": "Manifoldchain (Avg)",
+        "color": "#C44E52",      # Muted Red/Orange
+        "linestyle": "-",        # Solid
+        "marker": "+",           # Cross marker
+        "markersize": 10
+    }
+]
 
-plt.xlabel("Number of Honest Nodes")
-plt.ylabel("Throughput (bytes/s)")
-plt.title("Throughput vs Number of Honest Nodes: Manifoldchain vs Optchain vs Theoretical")
-plt.legend()
-plt.grid(True, which="both", ls="--", alpha=0.5)
+# 3. Plotting Loop
+for config in style_configs:
+    plt.plot(honest_node_nums, config["data"], 
+             label=config["label"], 
+             color=config["color"], 
+             linestyle=config["linestyle"], 
+             marker=config["marker"], 
+             linewidth=1.5,
+             markersize=config["markersize"])
 
+# 4. Formatting the Axes
+plt.yscale('log')
+plt.xlabel("Number of Honest Nodes", fontsize=12, fontweight='bold')
+plt.ylabel("Throughput (bytes/s)", fontsize=12, fontweight='bold')
+
+# Clean white look (Remove default grid to match reference aesthetic)
+ax = plt.gca()
+ax.spines['top'].set_visible(True)
+ax.spines['right'].set_visible(True)
+ax.spines['bottom'].set_color('black')
+ax.spines['left'].set_color('black')
+ax.grid(False) # Ensure grid is off for the clean look
+
+# Increase tick label size for readability
+ax.tick_params(axis='both', which='both', length=0, pad=5, labelsize=10)
+
+# Legend with a clean frame
+plt.legend(loc='upper left', frameon=True, fontsize=11, framealpha=1, edgecolor='#cccccc')
+
+# Output
 output_file = 'exper_2.png'
 plt.savefig(output_file, dpi=300, bbox_inches='tight')
 print(f"\nFigure saved to {output_file}")

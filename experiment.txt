@@ -28,6 +28,11 @@ OptChain:
     full: exper 39 (prop_size = 16, avai_size = 16, block_size = 8192)
         iter 0 
 
+Prism: 
+* shard_num = 1
+    exper 55 (prop_size = 16, avai_size = 16, block_size = 8192)
+        iter 0 
+
 
 Manifoldchain:
 * shard_num = 1
@@ -98,6 +103,23 @@ optchain
         iter 0-2
 * bandwidth = 90
     exper_53
+        iter 0-2
+
+manifoldchain
+* bandwidth = 10
+    exper_15
+        iter 0-2
+* bandwidth = 30
+    exper_16
+        iter 0-2
+* bandwidth = 50
+    exper_17
+        iter 0-2
+* bandwidth = 70
+    exper_18
+        iter 0-2
+* bandwidth = 90
+    exper_19
         iter 0-2
 
 Test Bandwidth:
