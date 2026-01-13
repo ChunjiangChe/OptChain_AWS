@@ -44,6 +44,14 @@ ITERATIONS_OPTCHAIN = [
     [0, 1],    # Iterations for Exp 53
 ]
 
+EXPERIMENTS_PRISM = [56, 57, 58, 59, 60]
+ITERATIONS_PRISM = [
+    [0, 1, 2],    # Iterations for Exp 56
+    [0, 1], # Iterations for Exp 57
+    [0, 1],       # Iterations for Exp 58
+    [1],       # Iterations for Exp 59
+    [0],    # Iterations for Exp 60
+]
 # Paths
 CONFIG_PATH_TEMPLATE = "../expers/{protocol}/exper_{exper_id}/iter_{iter_id}/config.json"
 LOG_PATH_TEMPLATE = "../exper_log/{protocol}/exper_{exper_id}/iter_{iter_id}/node_{node_id}.txt"
@@ -210,8 +218,9 @@ def analyze_optchain_throughput(exper_id, iter_id, shard_num):
 theo_y = []
 mani_y = []
 opt_y = []
+prism_y = []
 
-print(f"{'Shards':<8} | {'Bandwidth':<10} | {'Theoretical':<15} | {'Manifold':<15} | {'Optchain':<15}")
+print(f"{'Shards':<8} | {'Bandwidth':<10} | {'Theoretical':<15} | {'Manifold':<15} | {'Optchain':<15} | {'Prism':<15}")
 print("-" * 80)
 
 for idx, bandwidth in enumerate(bandwidths):
@@ -255,8 +264,20 @@ for idx, bandwidth in enumerate(bandwidths):
     # Compute Average
     o_tput = temp_sum_tput / valid_iter_count if valid_iter_count > 0 else 0.0
     opt_y.append(o_tput)
-    
-    print(f"{shard_num:<8} | {bandwidth:<10} | {t_tput:<15.2f} | {m_tput:<15.2f} | {o_tput:<15.2f}")
+
+    # 5. Prism
+    p_exp = EXPERIMENTS_PRISM[idx] # idx is 0 here, so this is safe
+    p_iters = ITERATIONS_PRISM[idx]
+    p_results = []
+    for iter_id in p_iters:
+        # Assuming Prism uses the same analysis logic as Optchain
+        res = analyze_optchain_throughput(p_exp, iter_id, shard_num)
+        p_results.append(res)
+
+    p_tput_avg = np.mean(p_results) if p_results else 0.0
+    prism_y.append(p_tput_avg)
+
+    print(f"{shard_num:<8} | {bandwidth:<10} | {t_tput:<15.2f} | {m_tput:<15.2f} | {o_tput:<15.2f} | {p_tput_avg:<15.2f}")
 
 # Plotting - UPDATED TO MATCH REFERENCE STYLE
 # 1. Setup the figure with a clean, academic style
@@ -288,6 +309,14 @@ style_configs = [
         "color": "#C44E52",      # Muted Red/Orange
         "linestyle": "-",        # Solid
         "marker": "+",           # Cross marker
+        "markersize": 10
+    },
+    {
+        "data": prism_y,
+        "label": "Prism (Avg)",
+        "color": "#8172B2",      # Muted Purple
+        "linestyle": ":",
+        "marker": "x",
         "markersize": 10
     }
 ]

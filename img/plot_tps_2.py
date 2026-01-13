@@ -19,14 +19,16 @@ honest_node_nums = []
 shard_nums = [1, 2, 3, 4, 5]
 
 for shard_num in shard_nums:
-    honest_node_num = 1
+    honest_node_num = 10
     while True:
         error = (1 - (1 / shard_num)) ** honest_node_num + base_error
         if error <= given_error:
             break
         honest_node_num += 1
     honest_node_nums.append(honest_node_num)
+  # Scale by 2 for better visualization
 
+print(honest_node_nums)
 # Bandwidth data (Download blocks)
 download_blocks = [
     0.03, 0.05, 0.05, 0.06, 0.07, 0.07, 0.07, 0.08, 0.08, 0.09, 0.09, 0.11, 0.11, 0.13, 0.14, 0.14, 
@@ -38,16 +40,18 @@ download_blocks = [
 # ==========================================
 # 2. LOG ANALYSIS CONFIGURATION
 # ==========================================
-EXPERIMENTS_MANIFOLD = [11, 12, 13, 14]  
+EXPERIMENTS_MANIFOLD = [20, 21, 22, 23, 24]  
 ITERATIONS_MANIFOLD = [
-    [0],       # Iterations for Exp 11
+    [0, 1, 2],       # Iterations for Exp 11
+    [0, 1],       # Iterations for Exp 11
     [0],       # Iterations for Exp 12
-    [1],       # Iterations for Exp 13
-    [0, 1],    # Iterations for Exp 14
+    [0, 1, 2],       # Iterations for Exp 13
+    [0, 1, 2],    # Iterations for Exp 14
 ]
 
-EXPERIMENTS_OPTCHAIN = [42, 43, 44, 45] 
+EXPERIMENTS_OPTCHAIN = [61, 42, 43, 44, 45] 
 ITERATIONS_OPTCHAIN = [
+    [0, 1],
     [0, 1, 2, 3, 4], # Iterations for Exp 42
     [0, 1, 2, 3, 4], # Iterations for Exp 43
     [0],             # Iterations for Exp 44
@@ -198,7 +202,7 @@ def analyze_optchain_throughput(exper_id, iter_id, shard_num):
 # 4. MAIN EXECUTION & PLOTTING
 # ==========================================
 
-# A. Theoretical Calculation
+# A. Theoretical Calculation & Data Collection
 sorted_throughput = sorted(download_blocks, reverse=True)
 theo_y = []
 mani_y = []
@@ -228,115 +232,121 @@ for idx, shard_num in enumerate(shard_nums):
     t_tput = optimal_val * block_size_theoretical
     theo_y.append(t_tput)
     
-    # 3. Manifoldchain - Calculate AVERAGE over iterations
-    m_tput = 0.0
-    if shard_num == 1:
-        mani_y.append(t_tput) 
-    else:
-        m_exp = EXPERIMENTS_MANIFOLD[idx-1]
-        m_iters_list = ITERATIONS_MANIFOLD[idx-1]
-        
-        temp_sum_tput = 0.0
-        valid_iter_count = 0
-        
-        for iter_id in m_iters_list:
-            try:
-                val = analyze_manifold_throughput(m_exp, iter_id, shard_num)
-                temp_sum_tput += val
-                valid_iter_count += 1
-            except Exception as e:
-                print(f"Warning: Failed to process Manifold Exp {m_exp} Iter {iter_id}: {e}")
-
-        m_tput = temp_sum_tput / valid_iter_count if valid_iter_count > 0 else 0.0
-        mani_y.append(m_tput)
+    # 3. Manifoldchain
     
-    # 4. Optchain - Calculate AVERAGE over iterations
-    o_tput = 0.0
-    if shard_num == 1:
-        opt_y.append(t_tput) 
-    else:
-        o_exp = EXPERIMENTS_OPTCHAIN[idx-1]
-        o_iters_list = ITERATIONS_OPTCHAIN[idx-1]
-        
-        temp_sum_tput = 0.0
-        valid_iter_count = 0
+    m_exp = EXPERIMENTS_MANIFOLD[idx]
+    m_iters_list = ITERATIONS_MANIFOLD[idx]
+    
+    temp_sum_tput = 0.0
+    valid_iter_count = 0
+    
+    for iter_id in m_iters_list:
+        try:
+            val = analyze_manifold_throughput(m_exp, iter_id, shard_num)
+            temp_sum_tput += val
+            valid_iter_count += 1
+        except Exception as e:
+            print(f"Warning: Failed to process Manifold Exp {m_exp} Iter {iter_id}: {e}")
 
-        for iter_id in o_iters_list:
-            try:
-                val = analyze_optchain_throughput(o_exp, iter_id, shard_num)
-                temp_sum_tput += val
-                valid_iter_count += 1
-            except Exception as e:
-                 print(f"Warning: Failed to process Optchain Exp {o_exp} Iter {iter_id}: {e}")
+    m_tput = temp_sum_tput / valid_iter_count if valid_iter_count > 0 else 0.0
+    mani_y.append(m_tput)
+    
+    # 4. Optchain
+    
+    o_exp = EXPERIMENTS_OPTCHAIN[idx]
+    o_iters_list = ITERATIONS_OPTCHAIN[idx]
+    
+    temp_sum_tput = 0.0
+    valid_iter_count = 0
 
-        o_tput = temp_sum_tput / valid_iter_count if valid_iter_count > 0 else 0.0
-        opt_y.append(o_tput)
+    for iter_id in o_iters_list:
+        try:
+            val = analyze_optchain_throughput(o_exp, iter_id, shard_num)
+            temp_sum_tput += val
+            valid_iter_count += 1
+        except Exception as e:
+                print(f"Warning: Failed to process Optchain Exp {o_exp} Iter {iter_id}: {e}")
+
+    o_tput = temp_sum_tput / valid_iter_count if valid_iter_count > 0 else 0.0
+    opt_y.append(o_tput)
     
     print(f"{shard_num:<8} | {honest_node_num:<10} | {t_tput:<15.2f} | {m_tput:<15.2f} | {o_tput:<15.2f}")
 
 
-# Plotting - UPDATED TO MATCH REFERENCE STYLE
-# 1. Setup the figure with a clean, academic style
-plt.figure(figsize=(10, 6))
+# ==========================================
+# B. PLOTTING (Bar + Line Hybrid)
+# ==========================================
+
+# 1. Setup Data for Plotting
+honest_node_nums = [x*2 for x in honest_node_nums]
+x_indices = np.array(honest_node_nums)
+
+# Calculate dynamic width: find the smallest gap between X values to ensure bars don't overlap
+if len(x_indices) > 1:
+    min_gap = np.min(np.diff(x_indices))
+    # We have 3 bars. Let's make the total cluster width 60% of the gap
+    bar_width = min_gap * 0.2 
+else:
+    bar_width = 5 # Default fallback if only 1 point
+
+# 2. Setup Figure
+plt.figure(figsize=(11, 7))
 plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['font.sans-serif'] = ['Gill Sans MT', 'Gill Sans', 'Arial', 'DejaVu Sans']
+plt.rcParams['font.sans-serif'] = ['Gill Sans MT', 'Arial', 'DejaVu Sans']
 
-# 2. Define Colors and Styles matching the reference style
-style_configs = [
-    {
-        "data": theo_y,
-        "label": "Theoretical Optimal",
-        "color": "#4C72B0",      # Muted Blue
-        "linestyle": "--",       # Dashed
-        "marker": ".",
-        "markersize": 10
-    },
-    {
-        "data": opt_y,
-        "label": "Optchain (Avg)",
-        "color": "#55A868",      # Muted Green
-        "linestyle": "-.",       # Dash-dot
-        "marker": ".",
-        "markersize": 10
-    },
-    {
-        "data": mani_y,
-        "label": "Manifoldchain (Avg)",
-        "color": "#C44E52",      # Muted Red/Orange
-        "linestyle": "-",        # Solid
-        "marker": "+",           # Cross marker
-        "markersize": 10
-    }
-]
+# Colors
+color_theo = "#4C72B0" # Blue
+color_opt = "#55A868"  # Green
+color_mani = "#C44E52" # Red
 
-# 3. Plotting Loop
-for config in style_configs:
-    plt.plot(honest_node_nums, config["data"], 
-             label=config["label"], 
-             color=config["color"], 
-             linestyle=config["linestyle"], 
-             marker=config["marker"], 
-             linewidth=1.5,
-             markersize=config["markersize"])
+# 3. Plot BARS (The Discrete Results)
+# We shift the x-position for each bar so they stand side-by-side
+# Order: Theoretical (Left), Optchain (Middle), Manifold (Right)
+plt.bar(x_indices - bar_width, theo_y, width=bar_width, label='Theoretical', 
+        color=color_theo, alpha=0.6, edgecolor='black', linewidth=0.5)
 
-# 4. Formatting the Axes
+plt.bar(x_indices, opt_y, width=bar_width, label='Optchain (Avg)', 
+        color=color_opt, alpha=0.6, edgecolor='black', linewidth=0.5)
+
+plt.bar(x_indices + bar_width, mani_y, width=bar_width, label='Manifoldchain (Avg)', 
+        color=color_mani, alpha=0.6, edgecolor='black', linewidth=0.5)
+
+
+# 4. Plot LINES (The Trend) - FIXED ALIGNMENT
+# Shift theoretical line/points LEFT to match the blue bars
+plt.plot(x_indices - bar_width, theo_y, color=color_theo, linestyle='--', marker='o', 
+         linewidth=2, markersize=6, alpha=1.0)
+
+# Optchain line/points stay CENTERED to match the green bars
+plt.plot(x_indices, opt_y, color=color_opt, linestyle='-.', marker='s', 
+         linewidth=2, markersize=6, alpha=1.0)
+
+# Shift Manifold line/points RIGHT to match the red bars
+plt.plot(x_indices + bar_width, mani_y, color=color_mani, linestyle=':', marker='^', 
+         linewidth=2.5, markersize=6, alpha=1.0)
+
+
+# 5. Formatting
 plt.yscale('log')
-plt.xlabel("Number of Honest Nodes", fontsize=12, fontweight='bold')
-plt.ylabel("Throughput (bytes/s)", fontsize=12, fontweight='bold')
+plt.xlabel("Number of Nodes", fontsize=13, fontweight='bold', labelpad=10)
+plt.ylabel("Throughput (bytes/s)", fontsize=13, fontweight='bold', labelpad=10)
 
-# Clean white look (Remove default grid to match reference aesthetic)
+# Clean look adjustments
 ax = plt.gca()
-ax.spines['top'].set_visible(True)
-ax.spines['right'].set_visible(True)
-ax.spines['bottom'].set_color('black')
-ax.spines['left'].set_color('black')
-ax.grid(False) # Ensure grid is off for the clean look
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_linewidth(1.2)
+ax.spines['left'].set_linewidth(1.2)
 
-# Increase tick label size for readability
-ax.tick_params(axis='both', which='both', length=0, pad=5, labelsize=10)
+# Ensure tick labels match x_values exactly if they are sparse
+ax.set_xticks(x_indices)
+ax.tick_params(axis='both', which='major', length=5, width=1, labelsize=11)
 
-# Legend with a clean frame
-plt.legend(loc='upper left', frameon=True, fontsize=11, framealpha=1, edgecolor='#cccccc')
+# Legend
+# Deduplicate the legend handles
+handles, labels = plt.gca().get_legend_handles_labels()
+by_label = dict(zip(labels, handles))
+plt.legend(by_label.values(), by_label.keys(), loc='upper left', frameon=True, fontsize=11, framealpha=0.9, edgecolor='#cccccc')
 
 # Output
 output_file = 'exper_2.png'

@@ -56,6 +56,9 @@ Manifoldchain:
 Exper 2:
 
 optchain
+* shard_num = 1, node_num = 10
+    exper_61
+        iter 0-2
 * shard_num = 2, node_num = 20
     exper_42
         iter 0-4
@@ -73,18 +76,25 @@ optchain
 
 manifoldchain:
 
+* shard_num = 1, node_num = 10
+    exper_20
+        iter 0
 * shard_num = 2, node_num = 20
     exper_11
         iter 0
+    exper_21
 * shard_num = 3, node_num = 36
     exper_12
         iter 0
+    exper_22
 * shard_num = 4, node_num = 48
     exper_13
         iter 0
+    exper_23
 * shard_num = 5, node_num = 60
     exper_14
         iter 0
+    exper_24
 
 Exper 3:
 
@@ -120,6 +130,24 @@ manifoldchain
         iter 0-2
 * bandwidth = 90
     exper_19
+        iter 0-2
+
+Prism:
+
+* bandwidth = 10
+    exper_56
+        iter 0-2
+* bandwidth = 30
+    exper_57
+        iter 0-2
+* bandwidth = 50
+    exper_58
+        iter 0-2
+* bandwidth = 70
+    exper_59
+        iter 0-2
+* bandwidth = 90
+    exper_60
         iter 0-2
 
 Test Bandwidth:

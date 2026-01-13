@@ -1,0 +1,15 @@
+{
+  "shard_num": 1,
+  "shard_size": 10,
+  "block_size": 1024,
+  "confirmation_depth": 6,
+  "mining_interval": 0,
+  "runtime": 200,
+  "domestic_rate": 0.7,
+  "in_diff": "0000000000000000000000000000000000000000000000000000000000000000",
+  "ex_diffs": [
+    "0000004338abb201f6bdee53529f1218685d2454b9b905787ecec38abb201f66"
+  ],
+  "bandwidths": [12, 15, 18, 20, 22, 26, 30, 34, 44, 57],
+  "description": "test for demo"
+}

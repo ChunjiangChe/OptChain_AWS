@@ -32,21 +32,25 @@ download_blocks = [
 EXPERIMENTS_MANIFOLD = [9, 8, 10, 7, 6]  
 # Add your iterations here, e.g., [0, 1, 2]
 ITERATIONS_MANIFOLD = [
-    [0],    # Iterations for Exp 9 (Shard 1)
-    [0],    # Iterations for Exp 8 (Shard 2)
-    [0],    # Iterations for Exp 10 (Shard 4)
-    [0],    # Iterations for Exp 7 (Shard 8)
-    [0]     # Iterations for Exp 6 (Shard 16)
+    [0, 2],    # Iterations for Exp 9 (Shard 1)
+    [1, 2],    # Iterations for Exp 8 (Shard 2)
+    [0, 1, 2],    # Iterations for Exp 10 (Shard 4)
+    [0, 1, 2],    # Iterations for Exp 7 (Shard 8)
+    [0, 1, 2]     # Iterations for Exp 6 (Shard 16)
 ]
 
 EXPERIMENTS_OPTCHAIN = [39, 38, 40, 37, 54] 
 # Add your iterations here
 ITERATIONS_OPTCHAIN = [
-    [1],    # Iterations for Exp 39 (Shard 1)
+    [0, 2],    # Iterations for Exp 39 (Shard 1)
     [2],    # Iterations for Exp 38 (Shard 2)
     [1],    # Iterations for Exp 40 (Shard 4)
     [0],    # Iterations for Exp 37 (Shard 8)
     [0, 1]     # Iterations for Exp 54 (Shard 16)
+]
+EXPERIMENTS_PRISM = [55]
+ITERATIONS_PRISM = [
+    [0, 1],    # Iterations for Exp 55 (Shard 1)
 ]
 
 # Paths
@@ -217,6 +221,7 @@ errors_x = []
 theo_y = []
 mani_y = []
 opt_y = []
+prism_y = []
 
 print(f"{'Shards':<8} | {'Error':<10} | {'Theoretical':<15} | {'Manifold (Avg)':<15} | {'Optchain (Avg)':<15}")
 print("-" * 80)
@@ -257,7 +262,24 @@ for idx, shard_num in enumerate(shard_nums):
 
     o_tput_avg = np.mean(o_results) if o_results else 0.0
     opt_y.append(o_tput_avg)
-    
+
+    # 5. Prism (Average across iterations)
+
+    if shard_num == 1:
+        p_exp = EXPERIMENTS_PRISM[idx] # idx is 0 here, so this is safe
+        p_iters = ITERATIONS_PRISM[idx]
+        p_results = []
+        for iter_id in p_iters:
+            # Assuming Prism uses the same analysis logic as Optchain
+            res = analyze_optchain_throughput(p_exp, iter_id, shard_num)
+            p_results.append(res)
+
+        p_tput_avg = np.mean(p_results) if p_results else 0.0
+        prism_y.append(p_tput_avg)
+    else:
+        # Append None for other shards to keep list length consistent with errors_x
+        prism_y.append(None)
+
     print(f"{shard_num:<8} | {err:.2e}   | {t_tput:<15.2f} | {m_tput_avg:<15.2f} | {o_tput_avg:<15.2f}")
 
 # Plotting
@@ -291,6 +313,14 @@ style_configs = [
         "color": "#C44E52",      # Muted Red/Orange
         "linestyle": "-",        # Solid
         "marker": "+",           # Cross marker
+        "markersize": 10
+    },
+    {
+        "data": prism_y,
+        "label": "Prism (Avg)",
+        "color": "#8172B2",      # Muted Purple
+        "linestyle": "-.",       # Dash-dot
+        "marker": "x",
         "markersize": 10
     }
 ]

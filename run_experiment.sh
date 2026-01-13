@@ -1,12 +1,16 @@
 #!/bin/bash
 
 # --- Configuration ---
-protocol="optchain"
+protocol="manifoldchain"
 
 # List your experiments below in the format: "exper_id:num_iterations"
 # Example: "14:2" means Experiment 14 will run iterations 0 and 1.
 batch_config=(
-    "55:2"  
+    "20:3"  
+    "21:3"  
+    "22:3"  
+    "23:3"  
+    "24:3"  
 )
 # ---------------------
 
