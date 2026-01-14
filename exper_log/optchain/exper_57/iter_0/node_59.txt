@@ -1,3 +1,0 @@
-proposer chain: b'["b42a..63a0:1970-01-01 00:00:00:[]","0000..f99f:2026-01-11 19:38:52:[58d3..aabf, f7d0..2e43]","0000..6d44:2026-01-11 19:41:16:[33f6..a9c9, 863a..53a5]","0000..c006:2026-01-11 19:42:05:[9b39..ce3b]","Proposer chain forking rate: 1"]'
-availability chain: b'["5d0a..e2c2:1970-01-01 00:00:00(Exclusive):[]","0000..86d3:2026-01-11 19:28:22(Exclusive):[]","0000..f2be:2026-01-11 19:28:53(Exclusive):[]","Availability chain at shard 0 forking rate: 1"]'
-ordering chain: b'["5d0a..e2c2:1970-01-01 00:00:00:[(5d0a..e2c2, 0)]","0000..b6e0:2026-01-11 19:26:16:[]","0000..c0f2:2026-01-11 19:29:40:[]","Ordering chain forking rate: 1"]'

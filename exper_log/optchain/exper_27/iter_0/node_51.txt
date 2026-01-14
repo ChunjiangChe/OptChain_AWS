@@ -1,3 +1,0 @@
-proposer chain: b''
-availability chain: b''
-ordering chain: b''
